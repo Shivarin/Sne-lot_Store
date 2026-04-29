@@ -7,6 +7,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-22d3ee.svg)](LICENSE)
 [![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-0a0c13?logo=html5&logoColor=fff)](https://developer.mozilla.org/)
 
+<p align="center">
+  <a href="https://shivarin.github.io/Sne-lot_Store/" title="Открыть демо">
+    <img src="docs/landing-hero.png" alt="Снэплот — главная страница: лендинг витрины цифровых товаров" width="920" />
+  </a>
+</p>
+<p align="center"><sub>Главная: тёмная тема, поиск, CTA в каталог, карточки лотов и блок доверия (эскроу, выдача, поддержка).</sub></p>
+
 ---
 
 ## Содержание
@@ -204,6 +211,7 @@ flowchart LR
 
 ```
 ├── index.html              # Лендинг
+├── docs/                   # Скриншоты для README (не часть сайта)
 ├── index2.html             # Редирект/совместимость
 ├── pages/                  # Все основные экраны
 ├── assets/

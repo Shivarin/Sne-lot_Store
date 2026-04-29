@@ -2,6 +2,7 @@
 
 Корень (точка входа и общие файлы)
   index.html          главная, лендинг
+  docs/               скриншоты для README (не деплоятся как страницы)
   favicon.svg, robots.txt, sitemap.xml
   styles.css          legacy; основной UI в assets/css/
   offline.html, sw.js — PWA / офлайн
