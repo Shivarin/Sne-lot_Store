@@ -2,7 +2,7 @@
 
 Корень (точка входа и общие файлы)
   index.html          главная, лендинг
-  docs/               скрин README, wireframe структуры (wireframe.html)
+  docs/               скрин README, wireframe.html, гайд под Figma (figma-wireframe-guide.md)
   favicon.svg, robots.txt, sitemap.xml
   styles.css          legacy; основной UI в assets/css/
   offline.html, sw.js — PWA / офлайн
