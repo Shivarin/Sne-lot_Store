@@ -1,5 +1,6 @@
 # Снэплот · демо витрины цифровых товаров
 
+[![GitHub](https://img.shields.io/badge/GitHub-репозиторий-24292f?logo=github)](https://github.com/Shivarin/Sne-lot_Store)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22d3ee.svg)](LICENSE)
 [![Static site](https://img.shields.io/badge/stack-static%20HTML%2FCSS%2FJS-0a0c13?logo=html5&logoColor=fff)](https://pages.github.com/)
 [![Demo](https://img.shields.io/badge/режим-локальное%20демо-5eead4.svg)](#-демо-вход)
@@ -27,8 +28,8 @@
 Клонируйте репозиторий и поднимите **любой статический HTTP-сервер** из корня проекта (открытие через `file://` может ломать загрузку модулей и JSON).
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Shivarin/Sne-lot_Store.git
+cd Sne-lot_Store
 ```
 
 ```bash
@@ -62,8 +63,9 @@ python -m http.server 8080
 1. В репозитории: **Settings → Pages**.
 2. **Build and deployment**: Source — *Deploy from a branch*.
 3. Branch: `main` (или `master`), folder: **`/` (root)**.
-4. После деплоя сайт будет доступен по адресу вида  
-   `https://YOUR_USERNAME.github.io/YOUR_REPO/`
+4. После деплоя сайт будет доступен по адресу  
+   **[https://shivarin.github.io/Sne-lot_Store/](https://shivarin.github.io/Sne-lot_Store/)**  
+   (включите Pages в настройках репозитория, если ссылка ещё не открывается.)
 
 Главная страница — `index.html` в корне; пути к `pages/` и `assets/` уже относительные.
 
