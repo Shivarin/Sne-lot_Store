@@ -171,14 +171,15 @@ flowchart TB
     L1[listings-seed.js]
     L2[listings.js]
   end
-  subgraph ls [(localStorage)]
-    K1[snaplot:jwt]
-    K2[snaplot:local-session]
-    K3[snaplot:store:v1]
-    K4[snaplot:demo-orders]
-    K5[snaplot:demo-sold-listings]
-    K6[snaplot:demo-extra-listings]
-    K7[snaplot:local-accounts]
+  LISTINGS["window.LISTINGS"]
+  subgraph LS [localStorage]
+    K1["snaplot:jwt"]
+    K2["snaplot:local-session"]
+    K3["snaplot:store:v1"]
+    K4["snaplot:demo-orders"]
+    K5["snaplot:demo-sold-listings"]
+    K6["snaplot:demo-extra-listings"]
+    K7["snaplot:local-accounts"]
   end
   IDX --> APP
   IDX --> HDR
@@ -187,7 +188,7 @@ flowchart TB
   LOT --> LTJS
   CHK --> CHJS
   ADM --> ADJS
-  L1 --> LISTINGS[(window.LISTINGS)]
+  L1 --> LISTINGS
   L2 --> LISTINGS
   DEMO --> LISTINGS
   MKJS --> API
