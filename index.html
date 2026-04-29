@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Снэплот — официальный магазин цифровых товаров" />
+  <meta property="og:description" content="Снэплот — официальный магазин: подписки, аккаунты, ключи и AI-доступы. Эскроу, автопроверки, быстрая выдача." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров: подписки, ключи, игры и нейросети. Эскроу и поддержка 24/7." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Снэплот — официальный магазин цифровых товаров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/vars.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/new-pages.css" />
+  <link rel="stylesheet" href="assets/css/landing.css?v=2" />
+  <link rel="stylesheet" href="assets/css/cart.css" />
+  <link rel="stylesheet" href="assets/css/home-grotesk.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="logo__name">Снэплот</span>
+      </a>
+
+      <div class="nav__search">
+        <svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" />
+      </div>
+
+      <nav class="nav__links" aria-label="Меню">
+        <a href="pages/market.html">Каталог</a>
+        <a href="index.html#feat-heading">Безопасность</a>
+        <a href="pages/rules.html">Правила</a>
+        <a href="pages/faq.html">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        
+        <div class="nav__bell">
+          <button class="nav__bell-btn" type="button" aria-label="Уведомления">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span>
+          </button>
+          <div class="nav__notif-drop" role="dialog" aria-label="Уведомления">
+            <div class="notif-drop__head">
+              <span class="notif-drop__title">Уведомления</span>
+              <a class="notif-drop__all" href="pages/notifications.html">Все</a>
+            </div>
+            <div style="padding:18px;color:var(--c-dim);font-size:.84rem;text-align:center;">Нет уведомлений</div>
+            <div class="notif-drop__footer"><a href="pages/notifications.html">Показать все</a></div>
+          </div>
+        </div>
+
+        
+        <a class="nav__balance" href="pages/wallet.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          ₽ 0
+        </a>
+
+        
+        <div class="nav__user">
+          <button class="nav__user-btn" type="button" aria-label="Меню пользователя">
+            <span class="nav__avatar">—</span>
+            <span class="nav__user-name">Гость</span>
+            <svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav__user-drop" role="menu">
+            <a class="user-drop__item" href="pages/profile.html" role="menuitem">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Мой профиль
+            </a>
+            <a class="user-drop__item" href="pages/cabinet.html" role="menuitem">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/></svg>
+              Кабинет
+            </a>
+            <a class="user-drop__item" href="pages/wallet.html" role="menuitem">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>
+              Кошелёк
+            </a>
+            <a class="user-drop__item" href="pages/orders.html" role="menuitem">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Мои сделки
+            </a>
+            <a class="user-drop__item user-drop__item--danger" href="pages/login.html" role="menuitem">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Выйти
+            </a>
+          </div>
+        </div>
+
+        
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    
+    <nav class="nav__mobile" aria-label="Мобильное меню">
+      <a href="pages/market.html">Каталог</a>
+      <a href="pages/cabinet.html">Кабинет</a>
+      <a href="pages/wallet.html">Кошелёк ₽ 0</a>
+      <a href="pages/orders.html">Мои сделки</a>
+      <a href="pages/chat.html">Сообщения</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="pages/rules.html">Правила</a>
+      <a href="pages/faq.html">FAQ</a>
+      <a href="pages/contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    
+    <section class="hero">
+      <div class="hero__wrap">
+        <div class="hero__left">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Официальный магазин · автопроверка лотов
+          </div>
+          <h1 class="hero__h1">
+            Покупай аккаунты,<br>
+            подписки и AI&#x2011;доступы<br>
+            <span class="grad">без риска</span>
+          </h1>
+          <p class="hero__sub">Steam, ChatGPT, Discord, Roblox — один официальный каталог. Без частных продавцов: все позиции от магазина Снэплот, эскроу и быстрая выдача.</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary btn-lg" href="pages/market.html">Открыть каталог</a>
+            <a class="btn btn-ghost btn-lg" href="index.html#how-heading">Как это работает</a>
+          </div>
+          <div class="hero__nums">
+            <div class="hero__num">
+              <span class="hero__num-val">98.4%</span>
+              <span class="hero__num-lbl">сделок без споров</span>
+            </div>
+            <div class="hero__num-divider" aria-hidden="true"></div>
+            <div class="hero__num">
+              <span class="hero__num-val">&lt;&nbsp;2&nbsp;мин</span>
+              <span class="hero__num-lbl">средняя выдача</span>
+            </div>
+            <div class="hero__num-divider" aria-hidden="true"></div>
+            <div class="hero__num">
+              <span class="hero__num-val">24/7</span>
+              <span class="hero__num-lbl">поддержка</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__right" aria-label="Примеры лотов на маркете">
+          <div class="hero__deck" id="heroDeck">
+            <div class="hcard" style="--ac:#818cf8;--deck-twist:1.15deg;--deck-dx:7px;--deck-dy:-5px;--deck-z:2">
+              <div class="hcard__face">
+                <div class="hcard__banner"><div class="hcard__logo"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="72" height="72" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></div><div class="hcard__banner-text"><span class="hcard__cat">Подписка</span><span class="hcard__platform">Discord Nitro</span></div><span class="hcard__chk"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+                <div class="hcard__body"><p class="hcard__desc">12 мес · гифт-ссылка · новая</p><div class="hcard__items"><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Ссылка не активирована</div><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Выдача за минуту</div></div></div>
+                <div class="hcard__footer"><span class="hcard__price">690 ₽</span><span class="hcard__badge">Авточек</span></div>
+              </div>
+            </div>
+            <div class="hcard" style="--ac:#4ade80;--deck-twist:-1.25deg;--deck-dx:-6px;--deck-dy:6px;--deck-z:0">
+              <div class="hcard__face">
+                <div class="hcard__banner"><div class="hcard__logo"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" width="72" height="72" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></div><div class="hcard__banner-text"><span class="hcard__cat">Подписка</span><span class="hcard__platform">Spotify Premium</span></div><span class="hcard__chk"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+                <div class="hcard__body"><p class="hcard__desc">12 мес · Personal · новый</p><div class="hcard__items"><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Код активен</div><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Один владелец</div></div></div>
+                <div class="hcard__footer"><span class="hcard__price">349 ₽</span><span class="hcard__badge">Авточек</span></div>
+              </div>
+            </div>
+            <div class="hcard" style="--ac:#22d3ee;--deck-twist:.55deg;--deck-dx:4px;--deck-dy:3px;--deck-z:3">
+              <div class="hcard__face">
+                <div class="hcard__banner"><div class="hcard__logo"><img src="https://cdn.simpleicons.org/supercell/E13238" alt="" width="72" height="72" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></div><div class="hcard__banner-text"><span class="hcard__cat">Игровой аккаунт</span><span class="hcard__platform">Brawl Stars</span></div><span class="hcard__chk"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+                <div class="hcard__body"><p class="hcard__desc">Легендарки 4шт · Алмаз · EU</p><div class="hcard__items"><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Статус аккаунта <strong>Активен</strong></div><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Без ограничений</div><div class="hitem hitem--warn"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M6 2v5M6 9v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Привязка почты <strong>через 24 ч</strong></div></div></div>
+                <div class="hcard__footer"><span class="hcard__price">1 490 ₽</span><a class="btn btn-primary btn-sm" href="pages/lot.html?id=brawl-acc">Купить</a></div>
+              </div>
+            </div>
+            <div class="hcard" style="--ac:#c084fc;--deck-twist:-.95deg;--deck-dx:-8px;--deck-dy:-4px;--deck-z:1">
+              <div class="hcard__face">
+                <div class="hcard__banner"><div class="hcard__logo"><img src="assets/icons/chatgpt.svg" alt="" width="72" height="72" loading="lazy" decoding="async" /></div><div class="hcard__banner-text"><span class="hcard__cat">Нейросеть</span><span class="hcard__platform">ChatGPT Plus</span></div><span class="hcard__chk"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+                <div class="hcard__body"><p class="hcard__desc">Личный слот · GPT-4o · без лимитов</p><div class="hcard__items"><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Подписка активна</div><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Выдача сразу</div></div></div>
+                <div class="hcard__footer"><span class="hcard__price">1 190 ₽</span><span class="hcard__badge">Авточек</span></div>
+              </div>
+            </div>
+            <div class="hcard" style="--ac:#f87171;--deck-twist:1.35deg;--deck-dx:5px;--deck-dy:8px;--deck-z:0">
+              <div class="hcard__face">
+                <div class="hcard__banner"><div class="hcard__logo"><img src="https://cdn.simpleicons.org/valorant/FF4655" alt="" width="72" height="72" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></div><div class="hcard__banner-text"><span class="hcard__cat">Игровой аккаунт</span><span class="hcard__platform">Valorant</span></div><span class="hcard__chk"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></div>
+                <div class="hcard__body"><p class="hcard__desc">Platinum III · EU · без банов</p><div class="hcard__items"><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Вход проверен</div><div class="hitem hitem--ok"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6.5L4.5 9 10 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Ограничений нет</div></div></div>
+                <div class="hcard__footer"><span class="hcard__price">2 100 ₽</span><span class="hcard__badge">Авточек</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="home-dirs" aria-labelledby="dirs-heading">
+      <div class="home-dirs__inner">
+        <h2 id="dirs-heading" class="home-dirs__h">Направления</h2>
+        <p class="home-dirs__lead">Выберите платформу — в каталоге останутся только подходящие позиции.</p>
+        <div class="home-dirs__grid">
+          <a class="home-dir" href="pages/discord.html"><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Discord</span><span class="home-dir__d">Nitro и подписки</span></a>
+          <a class="home-dir" href="pages/telegram.html"><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Telegram</span><span class="home-dir__d">Premium</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=steam" role="group" aria-label="Steam — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/steam/66c0f4" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Steam</span><span class="home-dir__d">Аккаунты и игры</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=spotify" role="group" aria-label="Spotify — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Spotify</span><span class="home-dir__d">Подписки</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=chatgpt" role="group" aria-label="ChatGPT — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic home-dir__ic--svg" aria-hidden="true"><img src="assets/icons/chatgpt.svg" alt="" width="28" height="28" loading="lazy" decoding="async" /></span><span class="home-dir__t">ChatGPT</span><span class="home-dir__d">Plus и AI</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=cursor" role="group" aria-label="Cursor — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic home-dir__ic--svg" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 4L18 19l-5.5-3-3 3L14.5 4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><span class="home-dir__t">Cursor</span><span class="home-dir__d">Pro</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=roblox" role="group" aria-label="Roblox — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/roblox/E60012" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Roblox</span><span class="home-dir__d">Аккаунты</span></a>
+          <a class="home-dir home-dir--soon" href="pages/coming-soon.html?from=windows" role="group" aria-label="Ключи ОС — скоро"><span class="home-dir__soon">Скоро</span><span class="home-dir__ic" aria-hidden="true"><img src="https://cdn.simpleicons.org/windows/0078D4" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="home-dir__t">Ключи ОС</span><span class="home-dir__d">Windows и др.</span></a>
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Steam</span><span>Epic Games</span><span>Battle.net</span><span>PlayStation</span><span>Xbox</span>
+        <span>ChatGPT Plus</span><span>Claude Pro</span><span>Midjourney</span><span>Cursor Pro</span><span>Perplexity</span>
+        <span>Discord Nitro</span><span>Spotify</span><span>YouTube Premium</span><span>Netflix</span><span>Notion</span>
+        <span>Roblox</span><span>Minecraft</span><span>Fortnite</span><span>Valorant</span><span>Genshin Impact</span>
+        <span>Steam</span><span>Epic Games</span><span>Battle.net</span><span>PlayStation</span><span>Xbox</span>
+        <span>ChatGPT Plus</span><span>Claude Pro</span><span>Midjourney</span><span>Cursor Pro</span><span>Perplexity</span>
+        <span>Discord Nitro</span><span>Spotify</span><span>YouTube Premium</span><span>Netflix</span><span>Notion</span>
+        <span>Roblox</span><span>Minecraft</span><span>Fortnite</span><span>Valorant</span><span>Genshin Impact</span>
+      </div>
+    </div>
+
+    
+    <section class="section steps-section" aria-labelledby="how-heading">
+      <div class="section__label">Как работает</div>
+      <h2 id="how-heading" class="section__h2">Четыре шага от выбора до получения</h2>
+      <div class="steps">
+        <div class="step"><span class="step__n font-mono">01</span><h3 class="step__t">Выбираешь лот</h3><p class="step__d">Фильтры по типу товара, платформе и цене. Каждый лот с описанием и пометкой проверки.</p></div>
+        <div class="step__arrow" aria-hidden="true">→</div>
+        <div class="step"><span class="step__n font-mono">02</span><h3 class="step__t">Видишь сводку</h3><p class="step__d">Перед оплатой — отчёт: статус аккаунта, регион, ограничения.</p></div>
+        <div class="step__arrow" aria-hidden="true">→</div>
+        <div class="step"><span class="step__n font-mono">03</span><h3 class="step__t">Платишь под гарантом</h3><p class="step__d">Средства удерживаются эскроу до выдачи товара — магазин получает оплату только после вашего подтверждения.</p></div>
+        <div class="step__arrow" aria-hidden="true">→</div>
+        <div class="step"><span class="step__n font-mono">04</span><h3 class="step__t">Получаешь товар</h3><p class="step__d">Код, данные или доступ — в течение минут. Подтверждаешь и сделка закрывается.</p></div>
+      </div>
+    </section>
+
+    
+    <section class="section" aria-labelledby="cat-heading">
+      <div class="section__label">Каталог</div>
+      <h2 id="cat-heading" class="section__h2">Не только игры</h2>
+      <div class="cats">
+        <div class="cat cat--lg">
+          <div class="cat__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h2m2 0h2M12 10v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3 class="cat__t">Игровые аккаунты</h3>
+          <p class="cat__d">Steam, Epic, Riot, мобильные игры — проверка входа, уровней, ограничений и регионов.</p>
+          <span class="cat__tag">Авточек входа</span>
+        </div>
+        <div class="cat">
+          <div class="cat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3 class="cat__t">Подписки</h3>
+          <p class="cat__d">Discord, Spotify, стриминг, облака, SaaS — период доступа с подтверждением.</p>
+          <span class="cat__tag">Валидация кода</span>
+        </div>
+        <div class="cat">
+          <div class="cat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 3h5M9 9h6M9 13h5M8 17h8M5 21h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3 class="cat__t">Нейросети и AI</h3>
+          <p class="cat__d">ChatGPT Plus, Claude, Midjourney, Cursor — личные слоты и Pro‑доступы.</p>
+          <span class="cat__tag">Статус подписки</span>
+        </div>
+        <div class="cat">
+          <div class="cat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 3H9a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 7h6M9 11h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3 class="cat__t">Ключи и коды</h3>
+          <p class="cat__d">Активации, гифты, внутриигровая валюта — быстрая валидация ключа до оплаты.</p>
+          <span class="cat__tag">Мгновенная выдача</span>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section fan-section" aria-labelledby="examples-heading">
+      <div class="section__label">Примеры</div>
+      <h2 id="examples-heading" class="section__h2">Разные товары — одна логика сделки</h2>
+      <p class="section__lead">Перед оплатой покупатель видит сводку. Набор параметров зависит от типа лота.</p>
+      <div class="fan-row">
+        <div class="fan-card fc-1"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Cursor Pro</p><p class="fc-meta">1 месяц · регион совпал</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус активен</li><li><span class="fc-ok">✓</span> Код за 60 сек</li></ul></div>
+        <div class="fan-card fc-2"><span class="fc-pill fc-pill--game">Игра</span><p class="fc-name">Brawl Stars</p><p class="fc-meta">Аккаунт · легендарки</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Проверка входа</li><li><span class="fc-ok">✓</span> Гарант на сделку</li></ul></div>
+        <div class="fan-card fc-3"><span class="fc-pill fc-pill--ai">Нейросеть</span><p class="fc-name">ChatGPT Plus</p><p class="fc-meta">Личный слот · актив</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус подписки</li><li><span class="fc-warn">!</span> Выдача сразу</li></ul></div>
+        <div class="fan-card fc-4"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Discord Nitro</p><p class="fc-meta">12 мес · гифт-ссылка</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Активация сразу</li><li><span class="fc-ok">✓</span> Лог сохранён</li></ul></div>
+        <div class="fan-card fc-5"><span class="fc-pill fc-pill--key">Ключ</span><p class="fc-name">Windows 11 Pro</p><p class="fc-meta">OEM ключ · EU/RU</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Ключ активен</li><li><span class="fc-ok">✓</span> Один владелец</li></ul></div>
+      </div>
+    </section>
+
+    
+    <section class="section" aria-labelledby="feat-heading">
+      <div class="section__label">Почему Снэплот</div>
+      <h2 id="feat-heading" class="section__h2">Безопасно, быстро, прозрачно</h2>
+      <div class="feats">
+        <div class="feat feat--wide feat--glow">
+          <div class="feat__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <h3 class="feat__t">Минуты, не часы</h3>
+          <p class="feat__d">Автоматические сценарии проверки убирают ручные переговоры. Резерв — проверка — оплата — выдача: всё в один сеанс, без ожидания сторонних продавцов.</p>
+        </div>
+        <div class="feat">
+          <div class="feat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <h3 class="feat__t">Эскроу на каждой сделке</h3>
+          <p class="feat__d">Оплата удерживается гарантом до подтверждения выдачи. Средства не перечисляются магазину, пока вы не подтвердите получение.</p>
+        </div>
+        <div class="feat">
+          <div class="feat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <h3 class="feat__t">Проверка под тип лота</h3>
+          <p class="feat__d">Для игрового аккаунта — вход и ограничения. Для подписки — период и статус. Для ключа — активация.</p>
+        </div>
+        <div class="feat feat--tall">
+          <div class="feat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 10h16M4 14h10M4 18h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3 class="feat__t">Правила возврата по категориям</h3>
+          <p class="feat__d">Для каждого типа товара — свой регламент споров. Покупатель заранее знает, что доказывает и в каком случае деньги возвращаются.</p>
+          <a class="feat__link" href="pages/rules.html">Читать регламент →</a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <div class="cta-inner__text">
+          <h2 id="cta-heading" class="cta-inner__h">Готовы к покупке?</h2>
+          <p class="cta-inner__sub">Пополните кошелёк, выберите лот в каталоге и получите товар с гарантией Снэплот. Бонусы начисляются за каждую сделку.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="pages/market.html">Перейти в каталог</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links" aria-label="Ссылки">
+        <a href="pages/rules.html">Правила и гарантии</a>
+        <a href="pages/faq.html">FAQ</a>
+        <a href="pages/aml.html">AML / KYC</a>
+        <a href="pages/contacts.html">Контакты</a>
+      </nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/pages/app.js"></script>
+  <script src="assets/js/data/listings.js"></script>
+  <script src="assets/js/data/listings-seed.js"></script>
+  <script src="assets/js/core/store.js"></script>
+  <script src="assets/js/core/cart.js"></script>
+  <script src="assets/js/core/ui.js"></script>
+  <script src="assets/js/core/nav-shell.js"></script>
+    <script src="assets/js/core/demo-state.js"></script>
+    <script src="assets/js/core/api.js"></script>
+    <script src="assets/js/core/auth-session.js"></script>
+  <script src="assets/js/core/header.js"></script>
+    <script src="assets/js/core/cmdk.js"></script>
+    <script src="assets/js/core/quickview.js"></script>
+    <script src="assets/js/core/compare.js"></script>
+    <script src="assets/js/core/forms.js"></script>
+    <script src="assets/js/core/infinity.js"></script>
+    <script src="assets/js/core/mobnav.js"></script>
+    <script src="assets/js/core/lazy-img.js"></script>
+    <script src="assets/js/core/partials.js"></script>
+    <script src="assets/js/core/i18n.js"></script>
+    <script src="assets/js/core/saved-recent.js"></script>
+    <script src="assets/js/core/footer-plus.js"></script>
+    <script src="assets/js/core/sw-register.js"></script>
+</body>
+</html>

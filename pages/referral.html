@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Реферальная программа — Снэплот" />
+  <meta property="og:description" content="Приглашайте друзей и получайте 10% от их покупок." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Реферальная программа Снэплот." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Реферальная программа — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__bell"><button class="nav__bell-btn" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.4-1.4a2 2 0 0 1-.6-1.4V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button><div class="nav__notif-drop"></div></div>
+        <div class="nav__user"><button class="nav__user-btn"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item" href="orders.html">Мои заказы</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="referral.html">Рефералы</a><a href="rules.html">Правила</a></nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <nav class="crumb"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="cabinet.html">Кабинет</a><span class="crumb__sep">/</span>Рефералы</nav>
+
+    <section class="ref-hero">
+      <h1 class="ref-hero__title">Приведи друга — <span class="grad">получи 10%</span></h1>
+      <p class="ref-hero__sub">Вы получаете 10% от каждой покупки приглашённого друга (в течение первых 30 дней). Друг — получает промокод SNAPLOT10 на первый заказ.</p>
+      <div class="ref-link">
+        <span class="ref-link__code" id="refLink">https://snaplot.ru/r/IVAN-M-4821</span>
+        <button class="btn btn-ghost btn-sm" id="refCopy" type="button">Скопировать</button>
+        <button class="btn btn-primary btn-sm" id="refShare" type="button">Поделиться</button>
+      </div>
+    </section>
+
+    <div class="ref-stats">
+      <div class="ref-stat"><div class="ref-stat__n">0</div><div class="ref-stat__l">переходов</div></div>
+      <div class="ref-stat"><div class="ref-stat__n">0</div><div class="ref-stat__l">зарегистрировалось</div></div>
+      <div class="ref-stat"><div class="ref-stat__n">0</div><div class="ref-stat__l">совершили покупку</div></div>
+      <div class="ref-stat"><div class="ref-stat__n grad">0 ₽</div><div class="ref-stat__l">заработано</div></div>
+    </div>
+
+    <div class="page-shell__head" style="padding-top:0;margin-bottom:14px;">
+      <h2 style="font-size:1.3rem;font-weight:800;">Как это работает</h2>
+    </div>
+    <div class="bs-steps">
+      <div class="bs-step"><div class="bs-step__t">Поделитесь ссылкой</div><div class="bs-step__d">Отправьте её в мессенджере, соцсетях или разместите на своём сайте.</div></div>
+      <div class="bs-step"><div class="bs-step__t">Друг регистрируется</div><div class="bs-step__d">Переход по вашей ссылке → автоматическая привязка к вашему аккаунту.</div></div>
+      <div class="bs-step"><div class="bs-step__t">Друг покупает лот</div><div class="bs-step__d">После первой успешной сделки — вам начисляется бонус 10%.</div></div>
+      <div class="bs-step"><div class="bs-step__t">Вывод заработанного</div><div class="bs-step__d">Бонус копится на отдельном балансе. Вывод — через кошелёк.</div></div>
+    </div>
+
+    <div class="bs-card" style="margin-top:30px;padding:24px;max-width:42rem;">
+      <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:10px;">Важные правила</h3>
+      <ul style="padding-left:20px;color:var(--c-muted);font-size:.9rem;line-height:1.7;">
+        <li>Бонус выплачивается с <strong>первых 30 дней</strong> после регистрации реферала.</li>
+        <li>За одним пользователем может быть закреплён только <strong>один реферер</strong>.</li>
+        <li>Самолинкование и фейковые аккаунты → блокировка и обнуление бонусов.</li>
+        <li>Минимальная сумма вывода реферального бонуса — <strong>500 ₽</strong>.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    (function () {
+      var link = document.getElementById('refLink').textContent.trim();
+      document.getElementById('refCopy').addEventListener('click', function () { UI.copy(link); });
+      document.getElementById('refShare').addEventListener('click', function () {
+        if (navigator.share) navigator.share({ title: 'Снэплот', text: 'Заходи на Снэплот и получи 10% скидку', url: link }).catch(function(){});
+        else { UI.copy(link); }
+      });
+    })();
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

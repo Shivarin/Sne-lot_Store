@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Промокоды — Снэплот" />
+  <meta property="og:description" content="Мои промокоды и скидки." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Промокоды и скидки." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Промокоды — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.4-1.4a2 2 0 0 1-.6-1.4V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button><div class="nav__notif-drop"></div></div>
+        <div class="nav__user"><button class="nav__user-btn"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item" href="favorites.html">Избранное</a><a class="user-drop__item" href="orders.html">Мои заказы</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="favorites.html">Избранное</a><a href="promo.html">Промокоды</a><a href="rules.html">Правила</a></nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="cabinet.html">Кабинет</a><span class="crumb__sep">/</span>Промокоды</nav>
+
+    <div class="page-shell__head">
+      <div>
+        <h1 class="page-shell__title">Мои промокоды</h1>
+        <p class="page-shell__sub">Здесь хранятся все ваши активные и использованные промокоды. Вводите их при оформлении заказа.</p>
+      </div>
+    </div>
+
+    <div class="promo-input">
+      <input type="text" id="promoCode" placeholder="SNAPLOT2026" autocomplete="off" />
+      <button class="btn btn-primary btn-sm" id="promoActivate" type="button">Активировать</button>
+    </div>
+
+    <h2 style="font-size:1.1rem;font-weight:800;margin-bottom:14px;">Активные</h2>
+    <div class="promo-grid" id="promoActive"></div>
+
+    <h2 style="font-size:1.1rem;font-weight:800;margin:30px 0 14px;">Использованные</h2>
+    <div class="promo-grid" id="promoUsed"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    (function () {
+      function render () {
+        var promos = window.Store ? window.Store.getPromos() : [];
+        var active = promos.filter(function (p) { return !p.used; });
+        var used = promos.filter(function (p) { return p.used; });
+        var $a = document.getElementById('promoActive');
+        var $u = document.getElementById('promoUsed');
+        function tpl (p) {
+          return '<div class="promo-card' + (p.used ? ' is-used' : '') + '">' +
+            '<div class="promo-card__pct">-' + p.discount + '%</div>' +
+            '<div class="promo-card__desc">' + UI.esc(p.desc) + '</div>' +
+            '<div class="promo-card__code" data-code="' + UI.esc(p.code) + '" title="Нажмите, чтобы скопировать">' +
+              '📋 ' + UI.esc(p.code) +
+            '</div>' +
+            '<div class="promo-card__foot">' +
+              '<span>' + (p.used ? 'Использован' : 'Действует до ' + UI.esc(p.expires)) + '</span>' +
+            '</div>' +
+          '</div>';
+        }
+        $a.innerHTML = active.map(tpl).join('') || '<div style="color:var(--c-muted);font-size:.9rem;grid-column:1/-1;">Активных промокодов нет. Активируйте код выше.</div>';
+        $u.innerHTML = used.map(tpl).join('')   || '<div style="color:var(--c-muted);font-size:.9rem;grid-column:1/-1;">Пока ничего не использовано.</div>';
+        Array.prototype.forEach.call(document.querySelectorAll('.promo-card__code'), function (el) {
+          el.addEventListener('click', function () { UI.copy(el.dataset.code); });
+        });
+      }
+      document.getElementById('promoActivate').addEventListener('click', function () {
+        var v = document.getElementById('promoCode').value.trim().toUpperCase();
+        if (!v) { UI.toast('Введите код', { kind: 'warn' }); return; }
+        window.Store.addPromo(v, 15, 'Активирован по коду');
+        UI.toast('Промокод активирован', { kind: 'success' });
+        document.getElementById('promoCode').value = '';
+        render();
+      });
+      if (window.Store) window.Store.subscribe(render);
+      render();
+    })();
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

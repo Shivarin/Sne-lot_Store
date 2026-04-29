@@ -1,0 +1,73 @@
+
+
+
+body[data-platform="telegram"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(38,165,228,.22), transparent 60%),
+    radial-gradient(760px 300px at 92% 10%, rgba(99,102,241,.14), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="discord"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(88,101,242,.24), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(167,139,250,.16), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="spotify"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(29,185,84,.18), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(34,211,238,.14), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="instagram"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(228,64,95,.22), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(251,191,36,.12), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="tiktok"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(34,211,238,.20), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(244,114,182,.12), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="chatgpt"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(134,239,172,.18), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(34,211,238,.12), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="cursor"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(167,243,208,.20), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(167,139,250,.12), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="claude"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(252,165,165,.20), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(34,211,238,.10), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="perplexity"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(147,197,253,.18), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(167,139,250,.12), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+
+body[data-platform="gemini"] .mk-hero__inner {
+  background:
+    radial-gradient(900px 320px at 18% 0%, rgba(251,191,36,.18), transparent 60%),
+    radial-gradient(740px 280px at 92% 10%, rgba(34,211,238,.10), transparent 60%),
+    linear-gradient(165deg, rgba(255,255,255,.06), rgba(10,12,20,.92));
+}
+

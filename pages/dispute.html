@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Открыть спор — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Открыть спор — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 550</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="orders.html">Мои сделки</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="dispute-page">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="orders.html">Мои сделки</a><span class="crumb__sep">/</span>Открыть спор</nav>
+
+    <div class="dispute-wrap">
+      
+      <div class="dispute-status" id="disputeStatusBlock" hidden>
+        <div class="dispute-status__icon dispute-status__icon--review"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h1 class="dispute-status__h">Спор рассматривается</h1>
+        <p class="dispute-status__sub">Арбитр изучает материалы. Ожидайте решения в течение 24 часов.</p>
+        <div class="dispute-status__deal font-mono">SNP-19891</div>
+        <div class="dispute-timeline">
+          <div class="dispute-timeline__item dispute-timeline__item--done"><span class="dispute-timeline__dot"></span><span>Спор открыт — 1 апр 2026</span></div>
+          <div class="dispute-timeline__item dispute-timeline__item--active"><span class="dispute-timeline__dot"></span><span>Рассмотрение арбитром</span></div>
+          <div class="dispute-timeline__item"><span class="dispute-timeline__dot"></span><span>Решение арбитра</span></div>
+          <div class="dispute-timeline__item"><span class="dispute-timeline__dot"></span><span>Исполнение решения</span></div>
+        </div>
+      </div>
+
+      
+      <div id="disputeFormBlock">
+        <h1 class="dispute-h">Открыть спор</h1>
+        <p class="dispute-sub">Спор возможен в течение 48 ч после получения товара. Перед открытием спора попробуйте решить вопрос через чат поддержки магазина.</p>
+
+        <form class="dispute-form" id="disputeForm" novalidate>
+          <div class="auth-field">
+            <label class="auth-field__label" for="disputeDeal">Сделка <span class="req">*</span></label>
+            <select class="auth-field__input" id="disputeDeal" required>
+              <option value="">— Выберите сделку —</option>
+              <option value="SNP-20490">SNP-20490 · Discord Nitro (690 ₽) · Активна</option>
+              <option value="SNP-19891">SNP-19891 · Valorant аккаунт (2 100 ₽) · Активна</option>
+            </select>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-field__label" for="disputeReason">Причина спора <span class="req">*</span></label>
+            <select class="auth-field__input" id="disputeReason" required>
+              <option value="">— Выберите причину —</option>
+              <option>Товар не соответствует описанию</option>
+              <option>Магазин не вышел на связь</option>
+              <option>Аккаунт/ключ не рабочий</option>
+              <option>Неправильный регион или период</option>
+              <option>Аккаунт уже был продан ранее</option>
+              <option>Другое</option>
+            </select>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-field__label" for="disputeDesc">Описание проблемы <span class="req">*</span></label>
+            <textarea class="auth-field__input" id="disputeDesc" rows="5" placeholder="Подробно опишите ситуацию. Укажите что именно не соответствует описанию лота, когда это обнаружили, что пробовали сделать…" required></textarea>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-field__label">Скриншоты-доказательства</label>
+            <div class="sell-drop" id="disputeDrop">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p>Перетащите скриншоты или <button type="button" class="sell-drop__browse" onclick="document.getElementById('disputeFileInput').click()">выберите файлы</button></p>
+              <p class="sell-drop__hint">Максимум 5 файлов, PNG/JPG до 5 МБ</p>
+              <input type="file" id="disputeFileInput" multiple accept="image/*" class="visually-hidden" />
+            </div>
+            <div class="sell-thumbs" id="disputeThumbs"></div>
+          </div>
+
+          <div class="dispute-notice">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            После открытия спора средства остаются заморожены. Арбитр рассмотрит заявку и примет решение в течение 24 ч. Ложные споры могут привести к предупреждению аккаунта.
+          </div>
+
+          <div class="dispute-form__actions">
+            <a class="btn btn-ghost" href="orders.html">Отмена</a>
+            <button class="btn btn-primary" type="submit">Открыть спор</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    document.getElementById('disputeForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('disputeFormBlock').hidden = true;
+      document.getElementById('disputeStatusBlock').hidden = false;
+    });
+    const dropEl = document.getElementById('disputeDrop');
+    const fileInput = document.getElementById('disputeFileInput');
+    const thumbs = document.getElementById('disputeThumbs');
+    dropEl.addEventListener('dragover', e => { e.preventDefault(); dropEl.classList.add('is-over'); });
+    dropEl.addEventListener('dragleave', () => dropEl.classList.remove('is-over'));
+    dropEl.addEventListener('drop', e => { e.preventDefault(); dropEl.classList.remove('is-over'); handleFiles(e.dataTransfer.files); });
+    fileInput.addEventListener('change', () => handleFiles(fileInput.files));
+    function handleFiles(files) {
+      Array.from(files).forEach(f => {
+        const r = new FileReader(); r.onload = ev => { const d = document.createElement('div'); d.className = 'sell-thumb'; d.style.backgroundImage = `url(${ev.target.result})`; thumbs.appendChild(d); }; r.readAsDataURL(f);
+      });
+    }
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

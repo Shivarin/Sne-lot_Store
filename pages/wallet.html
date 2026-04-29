@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Кошелёк — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Кошелёк — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/wallet.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a></nav>
+      <div class="nav__actions">
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button>
+          <div class="nav__notif-drop"><div class="notif-drop__head"><span class="notif-drop__title">Уведомления</span><a class="notif-drop__all" href="notifications.html">Все</a></div><div class="notif-drop__footer"><a href="notifications.html">Показать все</a></div></div>
+        </div>
+        <a class="nav__balance is-active-page" href="wallet.html">₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item" href="orders.html">Мои сделки</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html" class="is-active">Кошелёк</a></nav>
+  </header>
+
+  <main id="main" class="wallet-page">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="cabinet.html">Кабинет</a><span class="crumb__sep">/</span>Кошелёк</nav>
+
+    <h1 class="wallet-h">Кошелёк</h1>
+
+    <div class="wallet-layout">
+      
+      <div class="wallet-balance-card">
+        <div class="wallet-balance-card__label">Доступный баланс</div>
+        <div class="wallet-balance-card__amount">₽ 0,00</div>
+        <div class="wallet-balance-card__actions">
+          <button class="btn btn-primary" type="button" id="depositBtn">Пополнить</button>
+          <button class="btn btn-ghost" type="button" id="withdrawBtn">Вывести</button>
+        </div>
+        <div class="wallet-balance-card__info">
+          <div class="wallet-stat"><span>Заморожено</span><strong>690 ₽</strong></div>
+          <div class="wallet-stat"><span>Выведено за месяц</span><strong>0 ₽</strong></div>
+        </div>
+      </div>
+
+      
+      <div class="wallet-methods">
+        <div class="wallet-methods__h">Способы пополнения</div>
+        <div class="wallet-method-grid">
+          <div class="wallet-method is-on" data-method="card"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="1" y="4" width="22" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M1 10h22" stroke="currentColor" stroke-width="1.6"/></svg><span>Карта</span></div>
+          <div class="wallet-method" data-method="sbp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>СБП</span></div>
+          <div class="wallet-method" data-method="crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9l-5.5-6z" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 3v6H15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Крипто</span></div>
+          <div class="wallet-method" data-method="qiwi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="11" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 15v4M9 19h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>ЮMoney</span></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="wallet-tx">
+      <h2 class="wallet-tx__h">История транзакций</h2>
+      <div class="wallet-tx__filters">
+        <button class="wallet-tx__filter is-on" type="button" data-type="all">Все</button>
+        <button class="wallet-tx__filter" type="button" data-type="in">Пополнения</button>
+        <button class="wallet-tx__filter" type="button" data-type="out">Списания</button>
+        <button class="wallet-tx__filter" type="button" data-type="hold">Заморозки</button>
+      </div>
+      <table class="wallet-tx__table">
+        <thead><tr><th>Дата</th><th>Описание</th><th>Тип</th><th>Сумма</th><th>Статус</th></tr></thead>
+        <tbody>
+          <tr><td class="font-mono">22.04.26, 13:42</td><td>Покупка: Discord Nitro</td><td><span class="tx-type tx-type--hold">Заморожено</span></td><td class="tx-amt tx-amt--out">−690 ₽</td><td><span class="status-badge status-badge--pending">Холд</span></td></tr>
+          <tr><td class="font-mono">21.04.26, 10:05</td><td>Пополнение картой *4242</td><td><span class="tx-type tx-type--in">Пополнение</span></td><td class="tx-amt tx-amt--in">+2 000 ₽</td><td><span class="status-badge status-badge--done">Готово</span></td></tr>
+          <tr><td class="font-mono">15.04.26, 18:30</td><td>Покупка: ChatGPT Plus</td><td><span class="tx-type tx-type--out">Списание</span></td><td class="tx-amt tx-amt--out">−1 190 ₽</td><td><span class="status-badge status-badge--done">Готово</span></td></tr>
+          <tr><td class="font-mono">10.04.26, 09:11</td><td>Пополнение СБП</td><td><span class="tx-type tx-type--in">Пополнение</span></td><td class="tx-amt tx-amt--in">+1 500 ₽</td><td><span class="status-badge status-badge--done">Готово</span></td></tr>
+          <tr><td class="font-mono">05.04.26, 15:20</td><td>Покупка: Steam аккаунт</td><td><span class="tx-type tx-type--out">Списание</span></td><td class="tx-amt tx-amt--out">−3 200 ₽</td><td><span class="status-badge status-badge--done">Готово</span></td></tr>
+          <tr><td class="font-mono">01.04.26, 11:00</td><td>Пополнение крипто</td><td><span class="tx-type tx-type--in">Пополнение</span></td><td class="tx-amt tx-amt--in">+3 000 ₽</td><td><span class="status-badge status-badge--done">Готово</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  
+  <div class="modal-overlay" id="depositModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Пополнение кошелька">
+      <button class="modal__close" type="button" aria-label="Закрыть">&times;</button>
+      <h2 class="modal__h">Пополнить кошелёк</h2>
+      <p class="modal__hint" id="depositLocalHint" hidden>Демо-аккаунт: сумма зачисляется в браузере (localStorage), без оплаты и без сервера.</p>
+      <div class="wallet-method-grid modal-methods" id="depositMethods">
+        <div class="wallet-method is-on" data-method="card">Карта</div>
+        <div class="wallet-method" data-method="sbp">СБП</div>
+        <div class="wallet-method" data-method="crypto">Крипто</div>
+        <div class="wallet-method" data-method="qiwi">ЮMoney</div>
+      </div>
+      <div class="modal__form">
+        <label class="auth-field__label" for="depositAmount">Сумма (₽)</label>
+        <div class="wallet-quick-amts"><button type="button" data-amt="500">500</button><button type="button" data-amt="1000">1 000</button><button type="button" data-amt="2000">2 000</button><button type="button" data-amt="5000">5 000</button></div>
+        <input class="auth-field__input" id="depositAmount" type="number" placeholder="Введите сумму" min="10" />
+        <button class="btn btn-primary btn-lg" type="button" id="depositConfirmBtn" style="width:100%;margin-top:1rem">Зачислить на баланс</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal-overlay" id="withdrawModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Вывод средств">
+      <button class="modal__close" type="button" aria-label="Закрыть">&times;</button>
+      <h2 class="modal__h">Вывести средства</h2>
+      <div class="modal__form">
+        <label class="auth-field__label" for="withdrawMethod">Метод вывода</label>
+        <select class="auth-field__input" id="withdrawMethod"><option>Карта (РФ)</option><option>СБП</option><option>USDT TRC-20</option></select>
+        <label class="auth-field__label" for="withdrawDetails">Реквизиты</label>
+        <input class="auth-field__input" id="withdrawDetails" type="text" placeholder="Номер карты или кошелёк" />
+        <label class="auth-field__label" for="withdrawAmount">Сумма (₽)</label>
+        <input class="auth-field__input" id="withdrawAmount" type="number" placeholder="Доступно: 550 ₽" min="100" max="550" />
+        <p class="modal__hint">Минимальный вывод: 100 ₽ · Обработка: до 24 ч</p>
+        <button class="btn btn-primary btn-lg" type="button" style="width:100%;margin-top:1rem" onclick="document.getElementById('withdrawModal').hidden=true">Отправить заявку</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/wallet.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Админка — Снэплот" />
+  <meta property="og:description" content="Управление каталогом и заказами официального магазина Снэплот." />
+  <meta name="description" content="Панель администратора: товары, заказы, выручка." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Админка — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links" aria-label="Меню">
+        <a href="market.html">Каталог</a>
+        <a href="admin.html" aria-current="page">Админка</a>
+        <a href="rules.html">Правила</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>₽ 0</a>
+        <div class="nav__user">
+          <button class="nav__user-btn" type="button"><span class="nav__avatar">А</span><span class="nav__user-name">Админ</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop">
+            <a class="user-drop__item" href="cabinet.html">Кабинет</a>
+            <a class="user-drop__item" href="profile.html">Профиль</a>
+            <a class="user-drop__item" href="wallet.html">Кошелёк</a>
+            <a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a>
+          </div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="admin.html">Админка</a><a href="cabinet.html">Кабинет</a></nav>
+  </header>
+
+  <main id="main" class="admin-page">
+    <section class="admin-denied" id="adminDenied">
+      <div class="admin-denied__h" id="adminDeniedTitle">Проверка доступа…</div>
+      <p class="admin-denied__p" id="adminDeniedText" style="display:none"></p>
+      <div id="adminDeniedActions" style="display:none;margin-top:12px">
+        <a class="btn btn-primary" href="login.html?return=admin.html">Войти</a>
+        <a class="btn btn-ghost" href="market.html" style="margin-left:8px">В каталог</a>
+      </div>
+    </section>
+
+    <div class="admin-shell" id="adminMain" hidden>
+      <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><span>Админка</span></nav>
+      <header class="admin-head">
+        <h1 class="admin-head__h">Магазин Снэплот</h1>
+        <p class="admin-head__sub">Один владелец — одна витрина. Здесь счёт магазина, позиции каталога и заказы покупателей. Домен и приём платежей подключите позже: для работы достаточно этого интерфейса и API.</p>
+      </header>
+      <div class="admin-actions">
+        <a class="btn btn-primary" href="sell.html">+ Новый товар</a>
+        <a class="btn btn-ghost" href="market.html">Открыть витрину</a>
+        <a class="btn btn-ghost" href="orders.html">Мои сделки (как покупатель)</a>
+      </div>
+
+      <div class="admin-grid" aria-label="Показатели">
+        <div class="admin-stat"><div class="admin-stat__lbl">Баланс магазина</div><div class="admin-stat__val" id="admStoreBal">—</div><div class="admin-stat__hint">Выручка на счёте store</div></div>
+        <div class="admin-stat"><div class="admin-stat__lbl">Выручка (завершённые)</div><div class="admin-stat__val" id="admRevenue">—</div><div class="admin-stat__hint">Сумма завершённых заказов</div></div>
+        <div class="admin-stat"><div class="admin-stat__lbl">В продаже</div><div class="admin-stat__val" id="admActiveLots">—</div><div class="admin-stat__hint">Активные лоты</div></div>
+        <div class="admin-stat"><div class="admin-stat__lbl">Продано лотов</div><div class="admin-stat__val" id="admSoldLots">—</div><div class="admin-stat__hint">Уже куплено</div></div>
+        <div class="admin-stat"><div class="admin-stat__lbl">Заказов</div><div class="admin-stat__val" id="admOrders">—</div><div class="admin-stat__hint">Всего</div></div>
+        <div class="admin-stat"><div class="admin-stat__lbl">Снято / черновики</div><div class="admin-stat__val" id="admOffShelf">—</div><div class="admin-stat__hint">Не в витрине</div></div>
+      </div>
+
+      <section class="admin-panel" aria-labelledby="adm-orders-h">
+        <h2 class="admin-panel__h" id="adm-orders-h">Последние заказы</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>№</th><th>Товар</th><th>Покупатель</th><th>Сумма</th><th>Статус</th></tr></thead>
+            <tbody id="admOrdersBody"><tr><td colspan="5" style="color:var(--c-muted)">Загрузка…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-panel" aria-labelledby="adm-lots-h">
+        <h2 class="admin-panel__h" id="adm-lots-h">Каталог (все позиции)</h2>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead><tr><th>Название</th><th>Статус</th><th>Цена</th><th>Действие</th></tr></thead>
+            <tbody id="admListingsBody"><tr><td colspan="4" style="color:var(--c-muted)">Загрузка…</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/pages/admin.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

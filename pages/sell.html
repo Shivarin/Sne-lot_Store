@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Новый товар — админка Снэплот" />
+  <meta property="og:description" content="Добавление позиции в каталог официального магазина (только администратор)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Форма добавления товара в каталог Снэплот для администратора магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Новый товар — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/sell.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a></nav>
+      <div class="nav__actions">
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button>
+          <div class="nav__notif-drop"><div class="notif-drop__head"><span class="notif-drop__title">Уведомления</span><a class="notif-drop__all" href="notifications.html">Все</a></div><div class="notif-drop__footer"><a href="notifications.html">Показать все</a></div></div>
+        </div>
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a></nav>
+  </header>
+
+  <main id="main" class="sell-page">
+    <div class="sell-wrap">
+      <div class="sell-main">
+        <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="admin.html">Админка</a><span class="crumb__sep">/</span>Новый товар</nav>
+        <h1 class="sell-h">Добавить товар в каталог</h1>
+        <p class="sell-staff-note" style="padding:14px 18px;margin-bottom:1.25rem;background:var(--c-bg-elevated, #141824);border-radius:10px;color:var(--c-muted);font-size:.93rem;max-width:42rem;line-height:1.55;border:1px solid rgba(255,255,255,.06);">
+          На сайте нет сторонних продавцов: все позиции витрины добавляет команда Снэплота. Эта форма работает только при входе под учётной записью <strong>администратора</strong> (создание через API <code>POST /api/v1/listings</code>). Обычные пользователи только покупают в <a href="market.html" style="color:var(--c-cyan);">каталоге</a>.
+        </p>
+
+        
+        <div class="sell-progress" id="sellProgress" aria-label="Шаги оформления">
+          <div class="sell-step is-active" data-step="1"><span class="sell-step__n">1</span><span class="sell-step__lbl">Категория</span></div>
+          <div class="sell-step__line"></div>
+          <div class="sell-step" data-step="2"><span class="sell-step__n">2</span><span class="sell-step__lbl">Данные</span></div>
+          <div class="sell-step__line"></div>
+          <div class="sell-step" data-step="3"><span class="sell-step__n">3</span><span class="sell-step__lbl">Цена</span></div>
+          <div class="sell-step__line"></div>
+          <div class="sell-step" data-step="4"><span class="sell-step__n">4</span><span class="sell-step__lbl">Публикация</span></div>
+        </div>
+
+        
+        <div class="sell-panel is-active" id="sell-panel-1">
+          <h2 class="sell-panel__h">Выберите категорию</h2>
+          <div class="sell-cats" id="sellCats">
+            <button type="button" class="sell-cat" data-cat="sub">
+              <div class="sell-cat__ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="sell-cat__name">Подписка</div>
+              <div class="sell-cat__desc">Discord, Spotify, YouTube, Telegram</div>
+            </button>
+            <button type="button" class="sell-cat" data-cat="game">
+              <div class="sell-cat__ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h2m2 0h2M12 10v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="sell-cat__name">Игровой аккаунт</div>
+              <div class="sell-cat__desc">Steam, Riot, Supercell, Roblox</div>
+            </button>
+            <button type="button" class="sell-cat" data-cat="ai">
+              <div class="sell-cat__ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9.5 3h5M9 9h6M9 13h5M8 17h8M5 21h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+              <div class="sell-cat__name">AI / Нейросеть</div>
+              <div class="sell-cat__desc">ChatGPT, Claude, Midjourney, Cursor</div>
+            </button>
+            <button type="button" class="sell-cat" data-cat="key">
+              <div class="sell-cat__ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="sell-cat__name">Ключ / Код</div>
+              <div class="sell-cat__desc">Windows, игры, гифты, активации</div>
+            </button>
+          </div>
+          <div class="sell-nav"><button class="btn btn-primary" type="button" id="sell-next-1" disabled>Далее →</button></div>
+        </div>
+
+        
+        <div class="sell-panel" id="sell-panel-2">
+          <h2 class="sell-panel__h">Данные лота</h2>
+          <div class="sell-form">
+            <div class="auth-field"><label class="auth-field__label" for="lotTitle">Название лота <span class="req">*</span></label><input class="auth-field__input" id="lotTitle" type="text" placeholder="Напр.: Discord Nitro 12 месяцев, гифт" required /></div>
+            <div class="auth-field"><label class="auth-field__label" for="lotDesc">Описание <span class="req">*</span></label><textarea class="auth-field__input" id="lotDesc" rows="4" placeholder="Что включает лот, как происходит выдача, особые условия…" required></textarea></div>
+            <div class="auth-field">
+              <label class="auth-field__label">Платформа / Сервис</label>
+              <select class="auth-field__input" id="lotPlatform">
+                <option value="">— Выберите —</option>
+                <option>Discord</option><option>Telegram</option><option>Spotify</option><option>YouTube</option>
+                <option>Steam</option><option>Roblox</option><option>Valorant</option><option>Brawl Stars</option>
+                <option>ChatGPT Plus</option><option>Claude</option><option>Midjourney</option><option>Cursor</option>
+                <option>Windows</option><option>Другое</option>
+              </select>
+            </div>
+            <div class="sell-attrs" id="sellAttrs">
+              <div class="auth-field"><label class="auth-field__label" for="attrRegion">Регион</label><input class="auth-field__input" id="attrRegion" type="text" placeholder="EU / RU / Глобальный" /></div>
+              <div class="auth-field"><label class="auth-field__label" for="attrPeriod">Период</label><input class="auth-field__input" id="attrPeriod" type="text" placeholder="Напр.: 12 месяцев" /></div>
+            </div>
+            <div class="auth-field">
+              <label class="auth-field__label">Скриншоты</label>
+              <div class="sell-drop" id="sellDrop">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p>Перетащите скриншоты сюда или <button class="sell-drop__browse" type="button">выберите файлы</button></p>
+                <p class="sell-drop__hint">PNG, JPG — до 5 МБ каждый</p>
+                <input type="file" id="sellFileInput" multiple accept="image/*" class="visually-hidden" />
+              </div>
+              <div class="sell-thumbs" id="sellThumbs"></div>
+            </div>
+          </div>
+          <div class="sell-nav"><button class="btn btn-ghost" type="button" id="sell-back-2">← Назад</button><button class="btn btn-primary" type="button" id="sell-next-2">Далее →</button></div>
+        </div>
+
+        
+        <div class="sell-panel" id="sell-panel-3">
+          <h2 class="sell-panel__h">Цена и тип продажи</h2>
+          <div class="sell-form">
+            <div class="auth-field">
+              <label class="auth-field__label" for="lotPrice">Цена (₽) <span class="req">*</span></label>
+              <div class="auth-field__wrap"><span class="auth-field__prefix">₽</span><input class="auth-field__input auth-field__input--pl" id="lotPrice" type="number" placeholder="0" min="1" /></div>
+            </div>
+            <div class="sell-price-info" id="sellPriceInfo">
+              <div class="sell-price-row"><span>Комиссия маркета (5%)</span><span id="sellComm">—</span></div>
+              <div class="sell-price-row sell-price-row--total"><span>Вы получите</span><span id="sellNet">—</span></div>
+            </div>
+            <div class="auth-field">
+              <label class="auth-field__label">Тип продажи</label>
+              <div class="sell-types">
+                <label class="sell-type"><input type="radio" name="sellType" value="fixed" checked /><span class="sell-type__box"><strong>Фиксированная цена</strong><span>Стандартная продажа по одной цене</span></span></label>
+                <label class="sell-type"><input type="radio" name="sellType" value="auto" /><span class="sell-type__box"><strong>Автовыдача</strong><span>Данные выдаются сразу после оплаты</span></span></label>
+                <label class="sell-type sell-type--disabled" title="Скоро"><input type="radio" name="sellType" value="auction" disabled /><span class="sell-type__box"><strong>Аукцион</strong><span>Скоро</span></span></label>
+              </div>
+            </div>
+          </div>
+          <div class="sell-nav"><button class="btn btn-ghost" type="button" id="sell-back-3">← Назад</button><button class="btn btn-primary" type="button" id="sell-next-3">Предпросмотр →</button></div>
+        </div>
+
+        
+        <div class="sell-panel" id="sell-panel-4">
+          <h2 class="sell-panel__h">Предпросмотр и публикация</h2>
+          <p class="sell-panel__sub">Проверьте, как лот будет отображаться в каталоге.</p>
+          <div class="sell-preview-card" id="sellPreviewCard">
+            <div class="sell-preview-card__top">
+              <span class="sell-preview-card__cat" id="prevCat">Категория</span>
+              <div class="sell-preview-card__badges"><span class="lzt-badge lzt-badge--ok">Проверено</span></div>
+            </div>
+            <h3 class="sell-preview-card__title" id="prevTitle">Название лота</h3>
+            <p class="sell-preview-card__desc" id="prevDesc">Описание лота появится здесь.</p>
+            <div class="sell-preview-card__footer"><span class="sell-preview-card__price" id="prevPrice">₽ 0</span><a class="btn btn-primary btn-sm" href="#">Купить</a></div>
+          </div>
+          <div class="sell-publish-info">
+            <div class="sell-publish-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Лот пройдёт базовую модерацию (обычно 15 мин)</div>
+            <div class="sell-publish-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg>Каждая сделка защищена эскроу-гарантом</div>
+            <div class="sell-publish-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>Выплата на кошелёк после подтверждения</div>
+          </div>
+          <div class="sell-nav"><button class="btn btn-ghost" type="button" id="sell-back-4">← Назад</button><button class="btn btn-primary" type="button" id="sell-publish">Опубликовать лот</button></div>
+        </div>
+      </div>
+
+      
+      <aside class="sell-side" aria-label="Предпросмотр">
+        <div class="sell-side__label">Предпросмотр</div>
+        <div class="lot-buy-card">
+          <div class="lot-buy-card__price"><span id="sidePrevPrice">0</span><span class="lot-buy-card__currency">₽</span></div>
+          <div class="lot-buy-card__comm" id="sidePrevComm">Комиссия: 5%</div>
+          <button class="btn btn-primary btn-lg lot-buy-card__btn" type="button" disabled>Купить — эскроу</button>
+        </div>
+        <div class="sell-side__tip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Укажите точную информацию — это снизит число споров.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/sell.js"></script>
+  <script src="../assets/js/pages/sell-api.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

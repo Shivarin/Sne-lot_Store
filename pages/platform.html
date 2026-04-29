@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Платформа — Снэплот" />
+  <meta property="og:description" content="Выберите категорию внутри платформы и купите товар безопасно через эскроу." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Каталог платформы в официальном магазине Снэплот. AUTO и выдача через сообщения." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Платформа — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/market.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links" aria-label="Меню"><a class="is-active" href="market.html" aria-current="page">Маркет</a><a href="../index.html#feat-heading">Безопасность</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">SM</span><span class="nav__user-name">Профиль</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a class="is-active" href="market.html">Маркет</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a><a href="orders.html">Сделки</a><div class="nav__mobile-divider"></div><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+  </header>
+
+  <main id="main" class="mk-page">
+    <section class="mk-hero" aria-label="Каталог платформы">
+      <div class="mk-hero__inner">
+        <nav class="mk-crumb" aria-label="Навигация">
+          <a href="market.html">Маркет</a><span class="mk-crumb__sep">/</span><span id="platCrumb">Платформа</span>
+        </nav>
+        <div class="mk-hero__row">
+          <div class="mk-hero__left">
+            <h1 class="mk-hero__h" id="platTitle">Платформа</h1>
+            <p class="mk-hero__lead" id="marketLead">Выберите категорию и купите товар безопасно через эскроу.</p>
+            <div class="mk-hero__pills">
+              <span class="mk-pill">Официальный магазин</span>
+              <span class="mk-pill mk-pill--cyan">Эскроу</span>
+              <span class="mk-pill">AUTO / CHAT</span>
+            </div>
+          </div>
+          <div class="mk-hero__right">
+            <a class="btn btn-ghost btn-sm" href="market.html">← Все платформы</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plat-info" aria-label="Особенности платформы">
+      <div class="plat-info__inner">
+        <div class="plat-info__grid">
+          <div class="plat-panel">
+            <div class="plat-panel__h">Что вы получите</div>
+            <div class="plat-panel__list" id="platFeatures"></div>
+          </div>
+          <div class="plat-panel">
+            <div class="plat-panel__h">Как будет выдано</div>
+            <div class="plat-panel__list" id="platDelivery"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mk-tabs" aria-label="Выбор платформы и категории">
+      <div class="mk-tabs__inner">
+        <div class="mk-tabs__block" aria-labelledby="plat-heading">
+          <div class="mk-tabs__hrow">
+            <h2 id="plat-heading" class="mk-tabs__h">Платформа</h2>
+            <div class="mk-tabs__hint">Табы</div>
+          </div>
+          <div class="mk-tabs__scroll mk-plat-grid" id="marketPlatforms" role="tablist">
+            <button type="button" class="mk-plat is-on" data-platform="all" role="tab" aria-selected="true"><span class="mk-plat__ic mk-plat__ic--all"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v4H4V5zm0 6h10v4H4v-4zm0 6h16v4H4v-4z" fill="currentColor" opacity=".85"/></svg></span><span class="mk-plat__name">Все</span><span class="mk-plat__hint">Каталог</span></button>
+            <button type="button" class="mk-plat" data-platform="cursor" role="tab" aria-selected="false"><span class="mk-plat__ic mk-plat__ic--cursor"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.5 4L18 19l-5.5-3-3 3L14.5 4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><span class="mk-plat__name">Cursor</span><span class="mk-plat__hint">Pro</span></button>
+            <button type="button" class="mk-plat" data-platform="chatgpt" role="tab" aria-selected="false"><span class="mk-plat__ic"><img src="../assets/icons/chatgpt.svg" alt="" width="32" height="32" loading="lazy" decoding="async" /></span><span class="mk-plat__name">ChatGPT</span><span class="mk-plat__hint">Plus</span></button>
+            <button type="button" class="mk-plat" data-platform="claude" role="tab" aria-selected="false"><span class="mk-plat__ic"><span style="font-weight:900;">C</span></span><span class="mk-plat__name">Claude</span><span class="mk-plat__hint">Pro</span></button>
+            <button type="button" class="mk-plat" data-platform="perplexity" role="tab" aria-selected="false"><span class="mk-plat__ic"><span style="font-weight:900;">P</span></span><span class="mk-plat__name">Perplexity</span><span class="mk-plat__hint">Pro</span></button>
+            <button type="button" class="mk-plat" data-platform="gemini" role="tab" aria-selected="false"><span class="mk-plat__ic"><span style="font-weight:900;">G</span></span><span class="mk-plat__name">Gemini</span><span class="mk-plat__hint">Advanced</span></button>
+            <button type="button" class="mk-plat" data-platform="telegram" role="tab" aria-selected="false"><span class="mk-plat__ic"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="" width="32" height="32" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="mk-plat__name">Telegram</span><span class="mk-plat__hint">Stars</span></button>
+            <button type="button" class="mk-plat" data-platform="discord" role="tab" aria-selected="false"><span class="mk-plat__ic"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="32" height="32" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="mk-plat__name">Discord</span><span class="mk-plat__hint">Nitro</span></button>
+            <button type="button" class="mk-plat" data-platform="spotify" role="tab" aria-selected="false"><span class="mk-plat__ic"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" width="32" height="32" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span><span class="mk-plat__name">Spotify</span><span class="mk-plat__hint">Premium</span></button>
+            <button type="button" class="mk-plat" data-platform="instagram" role="tab" aria-selected="false"><span class="mk-plat__ic"><span style="font-weight:900;">I</span></span><span class="mk-plat__name">Instagram</span><span class="mk-plat__hint">Автореги</span></button>
+            <button type="button" class="mk-plat" data-platform="tiktok" role="tab" aria-selected="false"><span class="mk-plat__ic"><span style="font-weight:900;">T</span></span><span class="mk-plat__name">TikTok</span><span class="mk-plat__hint">Автореги</span></button>
+          </div>
+        </div>
+
+        <div class="mk-tabs__block" aria-labelledby="subcats-heading">
+          <div class="mk-tabs__hrow">
+            <h2 id="subcats-heading" class="mk-tabs__h">Что можно купить</h2>
+            <div class="mk-tabs__hint">Категории</div>
+          </div>
+          <div class="mk-tabs__scroll subcat-grid" id="marketSubcats" aria-label="Категории платформы"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="market-layout">
+      <aside class="market-side" aria-label="Фильтры">
+        <div class="market-side__section">
+          <div class="market-side__h">Категории</div>
+          <div class="market-chips" id="marketChips">
+            <button type="button" class="market-chip is-on" data-filter="all"><span>Все</span><span class="market-chip__n">·</span></button>
+            <button type="button" class="market-chip" data-filter="sub"><span>Подписки</span><span class="market-chip__n">·</span></button>
+            <button type="button" class="market-chip" data-filter="ai"><span>AI</span><span class="market-chip__n">·</span></button>
+          </div>
+        </div>
+
+        <div class="market-side__section">
+          <div class="market-side__h">Цена (₽)</div>
+          <div class="price-range">
+            <div class="price-range__inputs">
+              <input id="filterMinPrice" class="price-range__input" type="number" placeholder="от" min="0" />
+              <input id="filterMaxPrice" class="price-range__input" type="number" placeholder="до" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <div class="market-side__section" id="marketSmartFilters">
+          <div class="market-side__h">Настройки</div>
+          <div class="market-chips" id="marketSmartChips"></div>
+        </div>
+
+        <div class="market-side__section">
+          <button class="market-side__reset" type="button">↺ Сбросить</button>
+        </div>
+      </aside>
+
+      <div class="market-main">
+        <div class="market-panel">
+          <div class="market-toolbar">
+            <div class="market-search">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <input class="market-search__input" type="search" name="q" placeholder="Поиск по названию…" autocomplete="off" />
+            </div>
+            <label class="market-sort">
+              <select class="market-sort__select" aria-label="Сортировка">
+                <option value="new">Новые сверху</option>
+                <option value="cheap">Дешевле</option>
+                <option value="rich">Дороже</option>
+                <option value="rating">По рейтингу</option>
+              </select>
+            </label>
+            <div class="market-view">
+              <button class="market-view__btn is-active" data-view="list" type="button" title="Список">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </button>
+              <button class="market-view__btn" data-view="grid" type="button" title="Сетка">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="market-meta-row">
+            <p class="market-meta" id="marketCount"><span class="market-meta__count">Загрузка каталога…</span></p>
+            <button type="button" id="marketSaveSearch" class="btn btn-ghost btn-xs" title="Сохранить текущий поиск">☆ Сохранить</button>
+          </div>
+          <div id="savedSearches" class="saved-searches"></div>
+          <div id="recentlyViewed" class="recent-viewed"></div>
+          <div id="marketQuickFilters" class="market-quick"></div>
+
+          <div class="lzt-feed" id="marketGrid"></div>
+          <div class="market-pagination" id="marketPagination"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/cmdk.js"></script>
+  <script src="../assets/js/core/quickview.js"></script>
+  <script src="../assets/js/core/compare.js"></script>
+  <script src="../assets/js/core/forms.js"></script>
+  <script src="../assets/js/core/infinity.js"></script>
+  <script src="../assets/js/core/mobnav.js"></script>
+  <script src="../assets/js/core/lazy-img.js"></script>
+  <script src="../assets/js/core/partials.js"></script>
+  <script src="../assets/js/core/i18n.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/catalog.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/platform-page.js"></script>
+  <script src="../assets/js/pages/market.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>
+

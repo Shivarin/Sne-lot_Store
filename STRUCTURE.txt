@@ -1,0 +1,32 @@
+Снэплот — карта проекта (статический фронт)
+
+Корень (только точка входа и общие файлы)
+  index.html          главная лендинг
+  favicon.svg, robots.txt, sitemap.xml
+  styles.css          legacy-стили для совместимости; основной UI в assets/css/
+  offline.html, sw.js — PWA / офлайн
+  start-server.bat    при необходимости локального сервера
+
+pages/
+  Все рабочие HTML-страницы (каталог pages/market.html, лот pages/lot.html, auth pages/login.html и т.д.)
+
+assets/
+  css/                дизайн-система (vars, base, components) и стили по разделам
+  js/                 скрипты: core/, components/, data/listings-seed.js, страничные *.js
+  icons/
+
+backend/
+  FastAPI + PostgreSQL (docker-compose в backend/, запуск: start-server.bat)
+
+Подключение ресурсов
+  Страницы из pages/ → пути ../assets/...
+  Главная index.html → assets/...
+
+Каталог: Discord и Telegram — отдельные страницы; остальные направления в хабе ведут на единую
+  pages/coming-soon.html?from=... (вместо восьми отдельных заглушек).
+
+deploy/
+  UBUNTU.md — развёртывание на сервере Ubuntu (nginx, systemd, Postgres)
+
+Примечание: дубликаты в корне (старые lot/market/login/register, gallery, inject-скрипты) удалены —
+используйте только pages/* и assets/*.

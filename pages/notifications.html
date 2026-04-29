@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Уведомления — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Уведомления — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 550</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a></nav>
+  </header>
+
+  <main id="main" class="notif-page">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span>Уведомления</nav>
+    <div class="notif-page__head">
+      <h1 class="notif-page__h">Уведомления</h1>
+      <button class="notif-page__read-all" type="button" id="readAllBtn">Отметить все прочитанными</button>
+    </div>
+
+    <div class="notif-page__filters">
+      <button class="notif-page__filter is-on" type="button" data-type="all">Все</button>
+      <button class="notif-page__filter" type="button" data-type="message">Сообщения</button>
+      <button class="notif-page__filter" type="button" data-type="deal">Сделки</button>
+      <button class="notif-page__filter" type="button" data-type="wallet">Кошелёк</button>
+      <button class="notif-page__filter" type="button" data-type="review">Отзывы</button>
+    </div>
+
+    <ul class="notif-page__list" id="notifList">
+      <li class="notif-page__item is-unread" data-type="message">
+        <div class="notif-page__ic notif-page__ic--blue">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Новое сообщение от <strong>NitroMart</strong> по сделке SNP-20490</div>
+          <div class="notif-page__meta">22 апр 2026 · 13:42</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="chat.html">Открыть</a>
+      </li>
+      <li class="notif-page__item is-unread" data-type="deal">
+        <div class="notif-page__ic notif-page__ic--green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Сделка <strong>SNP-20481</strong> успешно завершена</div>
+          <div class="notif-page__meta">21 апр 2026 · 10:15</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="orders.html">Сделки</a>
+      </li>
+      <li class="notif-page__item is-unread" data-type="wallet">
+        <div class="notif-page__ic notif-page__ic--amber">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Пополнение баланса на <strong>2 000 ₽</strong> через карту</div>
+          <div class="notif-page__meta">21 апр 2026 · 10:05</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="wallet.html">Кошелёк</a>
+      </li>
+      <li class="notif-page__item" data-type="review">
+        <div class="notif-page__ic notif-page__ic--purple">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Покупатель <strong>buyer_2921</strong> оставил отзыв ★★★★★</div>
+          <div class="notif-page__meta">20 апр 2026 · 15:30</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="profile.html">Профиль</a>
+      </li>
+      <li class="notif-page__item" data-type="deal">
+        <div class="notif-page__ic notif-page__ic--green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Выдача по сделке SNP-20481 — деньги разморожены магазину</div>
+          <div class="notif-page__meta">17 апр 2026 · 12:20</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="orders.html">Сделки</a>
+      </li>
+      <li class="notif-page__item" data-type="wallet">
+        <div class="notif-page__ic notif-page__ic--amber">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <div class="notif-page__body">
+          <div class="notif-page__text">Пополнение баланса на <strong>1 500 ₽</strong> через СБП</div>
+          <div class="notif-page__meta">10 апр 2026 · 09:11</div>
+        </div>
+        <a class="notif-page__action btn btn-ghost btn-xs" href="wallet.html">Кошелёк</a>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/pages.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

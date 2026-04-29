@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Подтверждение e-mail — Снэплот" />
+  <meta property="og:description" content="Подтвердите e-mail для аккаунта Снэплот." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Подтверждение e-mail на Снэплоте." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Подтверждение e-mail — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/auth.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body class="auth-body">
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <div class="auth-wrap" id="main">
+    <a class="logo auth-logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+
+    <div class="auth-card" id="ceStage1">
+      <div style="text-align:center;margin-bottom:18px;">
+        <div style="font-size:3rem;">✉️</div>
+      </div>
+      <div class="auth-card__head">
+        <h1 class="auth-card__h">Подтверждение e-mail</h1>
+        <p class="auth-card__sub" id="ceSub">Проверяем ссылку из письма…</p>
+      </div>
+      <p class="auth-card__alt" id="ceManual" hidden>Нет ссылки? Вставьте токен из письма вручную:</p>
+      <form class="auth-form" id="ceForm" hidden novalidate>
+        <div class="auth-field">
+          <label class="auth-field__label" for="ceToken">Токен</label>
+          <input class="auth-field__input" id="ceToken" type="text" autocomplete="off" placeholder="Длинная строка из письма" />
+        </div>
+        <button class="btn btn-primary btn-lg auth-form__submit" type="submit">Подтвердить</button>
+      </form>
+      <p class="auth-card__alt"><a href="login.html">Войти</a> · <a href="cabinet.html">Кабинет</a></p>
+    </div>
+
+    <div class="auth-card" id="ceStage2" hidden>
+      <div style="text-align:center;margin:10px 0 18px;"><div style="font-size:3rem;">✅</div></div>
+      <div class="auth-card__head">
+        <h1 class="auth-card__h">E-mail подтверждён</h1>
+        <p class="auth-card__sub">Сейчас перенаправим в кабинет…</p>
+      </div>
+    </div>
+
+    <p class="auth-legal">Проблемы? <a href="contacts.html">Поддержка</a>.</p>
+  </div>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var token = (params.get('token') || '').trim();
+      if (!token) {
+        try { token = (sessionStorage.getItem('snaplot:last-verify-token') || '').trim(); } catch (e0) {}
+      }
+
+      function showOk() {
+        document.getElementById('ceStage1').hidden = true;
+        document.getElementById('ceStage2').hidden = false;
+        if (window.UI) UI.toast('E-mail подтверждён', { kind: 'success' });
+        setTimeout(function () { location.href = 'cabinet.html'; }, 1200);
+      }
+
+      function verify(t) {
+        if (!window.API) {
+          document.getElementById('ceSub').textContent = 'Не загружен API. Откройте сайт через сервер (порт 8000).';
+          return;
+        }
+        if (window.UI && UI.loader) UI.loader(true);
+        window.API.post('/auth/verify-email', { token: t }, null)
+          .then(function () {
+            if (window.UI && UI.loader) UI.loader(false);
+            try { sessionStorage.removeItem('snaplot:last-verify-token'); } catch (e3) {}
+            if (window.Auth && Auth.refreshUser) Auth.refreshUser().catch(function () {});
+            showOk();
+          })
+          .catch(function (err) {
+            if (window.UI && UI.loader) UI.loader(false);
+            document.getElementById('ceSub').textContent = (err && err.message) ? err.message : 'Не удалось подтвердить';
+            document.getElementById('ceManual').hidden = false;
+            document.getElementById('ceForm').hidden = false;
+            document.getElementById('ceToken').value = t;
+          });
+      }
+
+      if (token) {
+        verify(token);
+      } else {
+        document.getElementById('ceSub').textContent = 'Откройте ссылку из письма (она содержит параметр token=). Если письма нет — запросите повтор в кабинете после входа.';
+        document.getElementById('ceManual').hidden = false;
+        document.getElementById('ceForm').hidden = false;
+      }
+
+      document.getElementById('ceForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var t = document.getElementById('ceToken').value.trim();
+        if (!t) { if (window.UI) UI.toast('Вставьте токен', { kind: 'warn' }); return; }
+        verify(t);
+      });
+    })();
+  </script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

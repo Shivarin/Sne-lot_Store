@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="FAQ — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу-гарантом. Подписки, аккаунты, ключи и AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров. Ответы на вопросы о покупках и гарантиях." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>FAQ — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a class="is-active" href="faq.html" aria-current="page">FAQ</a></nav>
+      <div class="nav__actions">
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="static-page">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span>FAQ</nav>
+    <div class="static-page__head static-page__head--center">
+      <h1 class="static-page__h">Часто задаваемые вопросы</h1>
+      <p class="static-page__sub">Не нашли ответ? <a href="contacts.html">Напишите нам</a></p>
+    </div>
+
+    <div class="faq-layout">
+      <div class="faq-cats">
+        <button class="faq-cat is-on" type="button" data-cat="general">Общие</button>
+        <button class="faq-cat" type="button" data-cat="buy">Покупка</button>
+        <button class="faq-cat" type="button" data-cat="sell">Продажа</button>
+        <button class="faq-cat" type="button" data-cat="wallet">Оплата</button>
+        <button class="faq-cat" type="button" data-cat="security">Безопасность</button>
+      </div>
+
+      <div class="faq-list" id="faqList">
+        <div class="faq-item" data-cat="general">
+          <button class="faq-item__q" type="button">Что такое Снэплот?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Снэплот — официальный магазин цифровых товаров: аккаунты, подписки и AI-доступы без частных продавцов. Сделки защищены эскроу: средства перечисляются магазину только после вашего подтверждения получения.</p></div>
+        </div>
+        <div class="faq-item" data-cat="general">
+          <button class="faq-item__q" type="button">Нужна ли регистрация для просмотра лотов?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Просматривать каталог можно без регистрации. Для покупки нужно создать аккаунт покупателя и подтвердить email.</p></div>
+        </div>
+        <div class="faq-item" data-cat="buy">
+          <button class="faq-item__q" type="button">Как купить лот?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><ol><li>Найдите нужный лот в каталоге.</li><li>Нажмите «Купить» — откроется страница оформления.</li><li>Выберите способ оплаты и оплатите.</li><li>Получите товар в чате сделки.</li><li>Нажмите «Подтвердить получение».</li></ol></div>
+        </div>
+        <div class="faq-item" data-cat="buy">
+          <button class="faq-item__q" type="button">Что делать, если товар не соответствует описанию?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Откройте спор в разделе «Мои сделки» или прямо из чата в течение 48 часов после получения товара. Прикрепите скриншоты-доказательства. Арбитр рассмотрит заявку в течение 24 ч и примет решение.</p></div>
+        </div>
+        <div class="faq-item" data-cat="buy">
+          <button class="faq-item__q" type="button">Сколько времени ждать выдачи?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>В среднем менее 15 минут. Лоты с автовыдачей приходят сразу после оплаты. Если нужна ручная выдача, магазин обрабатывает заказ в разумные сроки (ориентир — до 30 минут).</p></div>
+        </div>
+        <div class="faq-item" data-cat="sell">
+          <button class="faq-item__q" type="button">Как разместить лот?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Размещать товары могут только сотрудники официального магазина Снэплот. Покупатели выбирают позиции в <a href="market.html">каталоге</a> и оплачивают с кошелька.</p></div>
+        </div>
+        <div class="faq-item" data-cat="sell">
+          <button class="faq-item__q" type="button">Какая комиссия?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Удерживается сервисный сбор (например, эскроу) — сумма видна на странице оформления. Сторонних продавцов на площадке нет: все товары продаёт официальный магазин.</p></div>
+        </div>
+        <div class="faq-item" data-cat="wallet">
+          <button class="faq-item__q" type="button">Какие способы оплаты доступны?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Пополнить кошелёк можно: банковской картой (Visa, Mastercard, МИР), через СБП, криптовалютой (USDT, BTC, ETH), ЮMoney. Для оплаты лотов используется баланс кошелька.</p></div>
+        </div>
+        <div class="faq-item" data-cat="wallet">
+          <button class="faq-item__q" type="button">Как вывести деньги?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Перейдите в раздел «Кошелёк» → «Вывести». Минимальная сумма — 100 ₽. Обработка заявки до 24 ч. Доступны: карта РФ, СБП, USDT.</p></div>
+        </div>
+        <div class="faq-item" data-cat="security">
+          <button class="faq-item__q" type="button">Безопасно ли покупать на Снэплоте?<svg class="faq-item__arr" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-item__a"><p>Да. Сделки проходят через эскроу: средства удерживаются до подтверждения получения. Товары продаёт только официальный магазин Снэплот — нет случайных частных продавцов.</p></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/pages.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

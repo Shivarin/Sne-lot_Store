@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Вывод средств — Снэплот" />
+  <meta property="og:description" content="Вывод денежных средств из кошелька Снэплота." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Вывод средств на карту, СБП, криптокошелёк." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Вывод — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__bell"><button class="nav__bell-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.4-1.4a2 2 0 0 1-.6-1.4V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button><div class="nav__notif-drop"></div></div>
+        <div class="nav__user"><button class="nav__user-btn"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="security.html">Безопасность</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <nav class="crumb"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="wallet.html">Кошелёк</a><span class="crumb__sep">/</span>Вывод</nav>
+
+    <div class="page-shell__head">
+      <div>
+        <h1 class="page-shell__title">Вывод средств</h1>
+        <p class="page-shell__sub">Быстрый вывод на карту, по СБП или на криптокошелёк. Минимум 500 ₽, комиссия от 0%.</p>
+      </div>
+    </div>
+
+    <div class="wd-balance">
+      <div class="wd-balance__label">Доступно для вывода</div>
+      <div class="wd-balance__val" id="wdBalance">0 ₽</div>
+    </div>
+
+    <section class="sec-section">
+      <div class="sec-section__title" style="margin-bottom:12px;">Способ вывода</div>
+      <div class="wd-methods" id="wdMethods">
+        <div class="wd-method is-on" data-m="card" data-fee="2.5" data-min="500" data-t="до 5 минут">
+          <div class="wd-method__t">💳 Банковская карта</div>
+          <div class="wd-method__d">Visa / MasterCard / МИР · комиссия 2.5% · до 5 минут</div>
+        </div>
+        <div class="wd-method" data-m="sbp" data-fee="0" data-min="500" data-t="мгновенно">
+          <div class="wd-method__t">⚡ СБП</div>
+          <div class="wd-method__d">По номеру телефона · без комиссии · мгновенно</div>
+        </div>
+        <div class="wd-method" data-m="crypto" data-fee="1" data-min="1000" data-t="10–30 минут">
+          <div class="wd-method__t">₿ Криптокошелёк</div>
+          <div class="wd-method__d">USDT (TRC20/ERC20) · комиссия 1% · 10–30 минут</div>
+        </div>
+        <div class="wd-method" data-m="yoo" data-fee="0" data-min="500" data-t="5–15 минут">
+          <div class="wd-method__t">💛 ЮMoney</div>
+          <div class="wd-method__d">Кошелёк ЮMoney · без комиссии · до 15 минут</div>
+        </div>
+      </div>
+
+      <div class="auth-field" style="margin-bottom:12px;">
+        <label class="auth-field__label" id="lblReq">Номер карты</label>
+        <input class="auth-field__input" id="requisites" placeholder="1234 5678 9012 3456" />
+      </div>
+
+      <div class="auth-field" style="margin-bottom:18px;">
+        <label class="auth-field__label">Сумма, ₽</label>
+        <input type="number" class="auth-field__input" id="wdAmount" placeholder="500" min="500" />
+        <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;">
+          <button class="filter-chip" type="button" data-pct="25">25%</button>
+          <button class="filter-chip" type="button" data-pct="50">50%</button>
+          <button class="filter-chip" type="button" data-pct="100">Всё</button>
+        </div>
+      </div>
+
+      <div class="auth-note">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>Сумма:</span><strong id="sumA">0 ₽</strong></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>Комиссия (<span id="feePct">2.5</span>%):</span><strong id="sumF">0 ₽</strong></div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;padding-top:8px;border-top:1px solid rgba(34,211,238,.2);"><span>К получению:</span><strong style="color:var(--c-cyan);" id="sumR">0 ₽</strong></div>
+        <div style="margin-top:8px;font-size:.8rem;">Срок зачисления: <span id="etaT">до 5 минут</span></div>
+      </div>
+
+      <button class="btn btn-primary" id="wdSubmit" type="button" style="width:100%;margin-top:16px;">Запросить вывод</button>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__inner"><a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a><nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav><p class="footer__copy">© 2026 Снэплот</p></div></footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    (function () {
+      var cur = { m: 'card', fee: 2.5, min: 500, t: 'до 5 минут' };
+      var placeholders = { card: '1234 5678 9012 3456', sbp: '+7 (___) ___-__-__', crypto: 'T-адрес (TRC20) или 0x (ERC20)', yoo: '4100 1234 5678 9012' };
+      var labels = { card: 'Номер карты', sbp: 'Номер телефона', crypto: 'Адрес кошелька', yoo: 'Номер кошелька ЮMoney' };
+
+      function recalc () {
+        var amt = Math.max(0, Number(document.getElementById('wdAmount').value) || 0);
+        var fee = amt * cur.fee / 100;
+        document.getElementById('sumA').textContent = UI.fmt(amt) + ' ₽';
+        document.getElementById('sumF').textContent = UI.fmt(Math.round(fee)) + ' ₽';
+        document.getElementById('sumR').textContent = UI.fmt(Math.max(0, Math.round(amt - fee))) + ' ₽';
+        document.getElementById('feePct').textContent = cur.fee;
+        document.getElementById('etaT').textContent = cur.t;
+      }
+
+      Array.prototype.forEach.call(document.querySelectorAll('.wd-method'), function (m) {
+        m.addEventListener('click', function () {
+          document.querySelectorAll('.wd-method').forEach(function (x) { x.classList.remove('is-on'); });
+          m.classList.add('is-on');
+          cur = { m: m.dataset.m, fee: Number(m.dataset.fee), min: Number(m.dataset.min), t: m.dataset.t };
+          document.getElementById('lblReq').textContent = labels[cur.m];
+          document.getElementById('requisites').placeholder = placeholders[cur.m];
+          recalc();
+        });
+      });
+
+      Array.prototype.forEach.call(document.querySelectorAll('button[data-pct]'), function (b) {
+        b.addEventListener('click', function () {
+          var bal = window.Store.balance();
+          document.getElementById('wdAmount').value = Math.floor(bal * Number(b.dataset.pct) / 100);
+          recalc();
+        });
+      });
+
+      document.getElementById('wdAmount').addEventListener('input', recalc);
+
+      document.getElementById('wdSubmit').addEventListener('click', function () {
+        var amt = Number(document.getElementById('wdAmount').value) || 0;
+        var req = document.getElementById('requisites').value.trim();
+        if (amt < cur.min) { UI.toast('Минимальная сумма: ' + cur.min + ' ₽', { kind: 'error' }); return; }
+        if (amt > window.Store.balance()) { UI.toast('Недостаточно средств', { kind: 'error' }); return; }
+        if (!req) { UI.toast('Заполните реквизиты', { kind: 'error' }); return; }
+        UI.confirm({ title: 'Подтвердите вывод', message: 'Вывести ' + UI.fmt(amt) + ' ₽ на «' + labels[cur.m] + '»? На карту будет зачислено ' + UI.fmt(Math.round(amt - amt * cur.fee / 100)) + ' ₽.', okText: 'Да, вывести' }).then(function (ok) {
+          if (!ok) return;
+          UI.loader(true);
+          setTimeout(function () {
+            UI.loader(false);
+            window.Store.addBalance(-amt);
+            window.Store.pushNotification({ type: 'deal', text: 'Заявка на вывод ' + UI.fmt(amt) + ' ₽ принята в обработку', href: 'wallet.html' });
+            document.getElementById('wdAmount').value = '';
+            document.getElementById('requisites').value = '';
+            recalc();
+            UI.toast('Вывод поставлен в очередь', { kind: 'success' });
+          }, 900);
+        });
+      });
+
+      function renderBal () { document.getElementById('wdBalance').textContent = UI.fmt(window.Store.balance()) + ' ₽'; }
+      window.Store.subscribe(renderBal);
+      renderBal();
+      recalc();
+    })();
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

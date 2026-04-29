@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Безопасность — Снэплот" />
+  <meta property="og:description" content="Настройки безопасности аккаунта." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Настройки безопасности аккаунта." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Безопасность — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__bell"><button class="nav__bell-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.4-1.4a2 2 0 0 1-.6-1.4V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button><div class="nav__notif-drop"></div></div>
+        <div class="nav__user"><button class="nav__user-btn"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item is-active" href="security.html">Безопасность</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="cabinet.html">Кабинет</a><a href="security.html">Безопасность</a><a href="verify.html">Верификация</a></nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <nav class="crumb"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="cabinet.html">Кабинет</a><span class="crumb__sep">/</span>Безопасность</nav>
+
+    <div class="page-shell__head">
+      <div>
+        <h1 class="page-shell__title">Безопасность</h1>
+        <p class="page-shell__sub">Настройки защиты аккаунта: 2FA, пароль, активные сессии.</p>
+      </div>
+    </div>
+
+    
+    <section class="sec-section">
+      <div class="sec-section__h">
+        <div>
+          <div class="sec-section__title">Двухфакторная аутентификация (2FA)</div>
+          <div class="sec-section__sub">Защищает аккаунт от входа по скомпрометированному паролю. Код из приложения Google Authenticator или Authy.</div>
+        </div>
+        <div class="sec-switch" id="sw2fa" role="switch" aria-checked="false" tabindex="0"></div>
+      </div>
+    </section>
+
+    
+    <section class="sec-section">
+      <div class="sec-section__h">
+        <div>
+          <div class="sec-section__title">Пароль</div>
+          <div class="sec-section__sub">Последняя смена: <span id="pwLastChanged">3 месяца назад</span>. Рекомендуем менять каждые 90 дней.</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="btnPwChange" type="button">Сменить пароль</button>
+      </div>
+      <div id="pwForm" hidden>
+        <div class="auth-field" style="margin-bottom:10px;">
+          <label class="auth-field__label">Текущий пароль</label>
+          <input type="password" class="auth-field__input" id="pwCur" autocomplete="current-password" />
+        </div>
+        <div class="auth-field" style="margin-bottom:10px;">
+          <label class="auth-field__label">Новый пароль</label>
+          <input type="password" class="auth-field__input" id="pwNew" autocomplete="new-password" />
+        </div>
+        <div class="auth-field" style="margin-bottom:14px;">
+          <label class="auth-field__label">Повторите новый пароль</label>
+          <input type="password" class="auth-field__input" id="pwNew2" autocomplete="new-password" />
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-primary btn-sm" id="pwSave" type="button">Сохранить</button>
+          <button class="btn btn-ghost btn-sm" id="pwCancel" type="button">Отмена</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="sec-section">
+      <div class="sec-section__h">
+        <div>
+          <div class="sec-section__title">E-mail и телефон</div>
+          <div class="sec-section__sub">E-mail: <strong>ivan.m@snaplot.ru</strong> (подтверждён). Телефон: <strong>+7 (926) •••-••-12</strong> (подтверждён).</div>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="confirm-email.html">Подтвердить e-mail</a>
+      </div>
+    </section>
+
+    
+    <section class="sec-section">
+      <div class="sec-section__h">
+        <div>
+          <div class="sec-section__title">Активные сессии</div>
+          <div class="sec-section__sub">Здесь вы видите все устройства, где сейчас открыт ваш аккаунт. Если вы видите незнакомое устройство — завершите сессию и смените пароль.</div>
+        </div>
+        <button class="btn btn-danger btn-sm" id="btnRevokeAll" type="button">Завершить все, кроме текущей</button>
+      </div>
+      <div class="sec-sessions" id="sessionsList"></div>
+    </section>
+
+    
+    <section class="sec-section" style="border-color:rgba(248,113,113,.25);">
+      <div class="sec-section__h">
+        <div>
+          <div class="sec-section__title" style="color:#fca5a5;">Удалить аккаунт</div>
+          <div class="sec-section__sub">Все данные будут удалены без возможности восстановления. Лоты — сняты с продажи.</div>
+        </div>
+        <button class="btn btn-danger btn-sm" id="btnDelete" type="button">Удалить аккаунт</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    (function () {
+      var $2fa = document.getElementById('sw2fa');
+      function render2FA () { var on = window.Store.state.twoFA; $2fa.classList.toggle('is-on', !!on); $2fa.setAttribute('aria-checked', !!on); }
+      $2fa.addEventListener('click', function () {
+        var next = !window.Store.state.twoFA;
+        window.Store.setTwoFA(next);
+        UI.toast(next ? '2FA включена' : '2FA отключена', { kind: next ? 'success' : 'warn' });
+      });
+      $2fa.addEventListener('keydown', function (e) { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); $2fa.click(); } });
+
+      /* Password */
+      var $form = document.getElementById('pwForm');
+      document.getElementById('btnPwChange').addEventListener('click', function () { $form.hidden = !$form.hidden; });
+      document.getElementById('pwCancel').addEventListener('click', function () { $form.hidden = true; });
+      document.getElementById('pwSave').addEventListener('click', function () {
+        var n = document.getElementById('pwNew').value, n2 = document.getElementById('pwNew2').value;
+        if (n.length < 8) { UI.toast('Пароль должен быть не короче 8 символов', { kind: 'error' }); return; }
+        if (n !== n2) { UI.toast('Пароли не совпадают', { kind: 'error' }); return; }
+        $form.hidden = true;
+        UI.toast('Пароль изменён', { kind: 'success' });
+      });
+
+      /* Sessions */
+      function renderSessions () {
+        var ss = window.Store.getSessions();
+        var $list = document.getElementById('sessionsList');
+        $list.innerHTML = ss.map(function (s) {
+          return '<div class="sec-session">' +
+            '<div class="sec-session__ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>' +
+            '<div>' +
+              '<div class="sec-session__device">' + UI.esc(s.device) + (s.current ? ' <span class="status-badge status-badge--active" style="margin-left:6px;">сейчас</span>' : '') + '</div>' +
+              '<div class="sec-session__meta">' + UI.esc(s.ip) + ' · ' + UI.esc(s.location) + ' · ' + UI.relTime(s.at) + '</div>' +
+            '</div>' +
+            (s.current ? '<span style="font-size:.78rem;color:var(--c-muted);">—</span>' : '<button class="btn btn-danger btn-xs" data-ip="' + UI.esc(s.ip) + '">Завершить</button>') +
+          '</div>';
+        }).join('');
+        Array.prototype.forEach.call($list.querySelectorAll('button[data-ip]'), function (b) {
+          b.addEventListener('click', function () { window.Store.revokeSession(b.dataset.ip); UI.toast('Сессия завершена', { kind: 'info' }); });
+        });
+      }
+      document.getElementById('btnRevokeAll').addEventListener('click', function () {
+        UI.confirm({ title: 'Завершить все сессии?', message: 'Вы будете выведены со всех других устройств. Текущая сессия сохранится.', okText: 'Завершить', danger: true }).then(function (ok) {
+          if (!ok) return;
+          var ss = window.Store.getSessions();
+          ss.forEach(function (s) { if (!s.current) window.Store.revokeSession(s.ip); });
+          UI.toast('Все другие сессии завершены', { kind: 'success' });
+        });
+      });
+      document.getElementById('btnDelete').addEventListener('click', function () {
+        UI.confirm({ title: 'Удалить аккаунт?', message: 'Это действие необратимо. Все данные, лоты и история сделок будут удалены.', okText: 'Удалить навсегда', danger: true }).then(function (ok) {
+          if (!ok) return;
+          UI.toast('Запрос на удаление отправлен. Аккаунт будет удалён через 24 часа, ссылка на отмену — на e-mail.', { kind: 'warn', duration: 5000 });
+        });
+      });
+
+      window.Store.subscribe(function () { render2FA(); renderSessions(); });
+      render2FA(); renderSessions();
+    })();
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

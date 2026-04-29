@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Discord — каталог аккаунтов и Nitro — Снэплот" />
+  <meta property="og:description" content="Автореги 2015–2026, Nitro-аккаунты и гифт-ссылки. Фильтр по году, региону, почте и сроку Nitro." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Discord автореги, Nitro-аккаунты и гифт-ссылки на Nitro. Фильтры по году регистрации, региону, доступу к почте и сроку подписки. Автовыдача, эскроу." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Discord — каталог аккаунтов и Nitro — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/discord.css" />
+  <link rel="stylesheet" href="../assets/css/cart.css" />
+</head>
+<body data-platform="discord">
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск по каталогу…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links" aria-label="Меню"><a class="is-active" href="market.html">Каталог</a><a href="../index.html#feat-heading">Безопасность</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a class="is-active" href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a><a href="orders.html">Сделки</a><div class="nav__mobile-divider"></div><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+  </header>
+
+  <main id="main" class="dc-page">
+
+    <section class="dc-hero" aria-labelledby="dc-h1">
+      <div class="dc-hero__inner">
+        <nav class="dc-crumb" aria-label="Навигация">
+          <a href="../index.html">Главная</a><span>/</span><a href="market.html">Каталог</a><span>/</span>Discord
+        </nav>
+
+        <div class="dc-hero__row">
+          <div class="dc-hero__left">
+            <span class="dc-hero__logo" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/discord/ffffff" alt="" width="38" height="38" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            </span>
+            <div>
+              <span class="dc-hero__kicker">Платформа</span>
+              <h1 id="dc-h1" class="dc-hero__h1">Discord</h1>
+            </div>
+          </div>
+          <a class="btn btn-ghost btn-sm dc-hero__back" href="market.html">← Все платформы</a>
+        </div>
+
+        <p class="dc-hero__sub">Автореги с 2015 по 2026 год, аккаунты с активным Nitro и гифт-ссылки. Фильтруйте по году регистрации, региону, доступу к почте и сроку Nitro.</p>
+
+        <ul class="dc-hero__pills" aria-label="Гарантии">
+          <li><span class="dc-pill-dot dc-pill-dot--blurple"></span> Авторег — чистая почта в комплекте</li>
+          <li><span class="dc-pill-dot dc-pill-dot--ok"></span> Автовыдача в кабинет за 60 секунд</li>
+          <li><span class="dc-pill-dot dc-pill-dot--amber"></span> Эскроу: возврат при любой проблеме</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="dc-tabs" aria-label="Категории Discord">
+      <div class="dc-tabs__inner" id="dcTabs" role="tablist">
+        <button type="button" class="dc-tab is-on" data-cat="all" role="tab" aria-selected="true">
+          <span class="dc-tab__ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <span class="dc-tab__t">Весь каталог</span>
+          <span class="dc-tab__s">Все категории сразу</span>
+          <span class="dc-tab__n" data-count="all">32</span>
+        </button>
+        <button type="button" class="dc-tab" data-cat="autoreg" role="tab" aria-selected="false">
+          <span class="dc-tab__ic" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.7"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+          <span class="dc-tab__t">Автореги</span>
+          <span class="dc-tab__s">2015 — 2026</span>
+          <span class="dc-tab__n" data-count="autoreg">22</span>
+        </button>
+        <button type="button" class="dc-tab" data-cat="nitro" role="tab" aria-selected="false">
+          <span class="dc-tab__ic dc-tab__ic--nitro" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="dc-tab__t">Nitro-аккаунты</span>
+          <span class="dc-tab__s">Basic / Full с остатком</span>
+          <span class="dc-tab__n" data-count="nitro">5</span>
+        </button>
+        <button type="button" class="dc-tab" data-cat="gift" role="tab" aria-selected="false">
+          <span class="dc-tab__ic dc-tab__ic--gift" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 12v9H4v-9M2 8h20v4H2zM12 8v13M12 8c-1 0-4-.5-4-3s2-3 3-2 1 5 1 5zM12 8c1 0 4-.5 4-3s-2-3-3-2-1 5-1 5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="dc-tab__t">Гифт-ссылки Nitro</span>
+          <span class="dc-tab__s">1 / 3 / 6 / 12 мес</span>
+          <span class="dc-tab__n" data-count="gift">5</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="dc-layout">
+      <aside class="dc-side" aria-label="Фильтры">
+        <div class="dc-side__head">
+          <span class="dc-side__title">Фильтры</span>
+          <button type="button" class="dc-side__reset" id="dcReset">↺ Сбросить</button>
+        </div>
+
+        <section class="dc-filter" id="filterYearBlock">
+          <h3 class="dc-filter__h">Год регистрации</h3>
+          <p class="dc-filter__hint">Можно выбрать несколько. Актуально для авторегов.</p>
+          <div class="dc-chipgrid" data-filter-group="year">
+            <button type="button" class="dc-chip" data-value="2015">2015</button>
+            <button type="button" class="dc-chip" data-value="2016">2016</button>
+            <button type="button" class="dc-chip" data-value="2017">2017</button>
+            <button type="button" class="dc-chip" data-value="2018">2018</button>
+            <button type="button" class="dc-chip" data-value="2019">2019</button>
+            <button type="button" class="dc-chip" data-value="2020">2020</button>
+            <button type="button" class="dc-chip" data-value="2021">2021</button>
+            <button type="button" class="dc-chip" data-value="2022">2022</button>
+            <button type="button" class="dc-chip" data-value="2023">2023</button>
+            <button type="button" class="dc-chip" data-value="2024">2024</button>
+            <button type="button" class="dc-chip" data-value="2025">2025</button>
+            <button type="button" class="dc-chip" data-value="2026">2026</button>
+          </div>
+          <div class="dc-filter__presets">
+            <button type="button" class="dc-preset" data-preset-year="old">Старые (до 2019)</button>
+            <button type="button" class="dc-preset" data-preset-year="mid">2020 — 2022</button>
+            <button type="button" class="dc-preset" data-preset-year="fresh">Свежие (2023+)</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Nitro</h3>
+          <div class="dc-chipgrid" data-filter-group="nitro">
+            <button type="button" class="dc-chip" data-value="none">Без Nitro</button>
+            <button type="button" class="dc-chip" data-value="basic">Nitro Basic</button>
+            <button type="button" class="dc-chip" data-value="full">Nitro Full</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Регион</h3>
+          <div class="dc-chipgrid" data-filter-group="region">
+            <button type="button" class="dc-chip" data-value="ru">RU</button>
+            <button type="button" class="dc-chip" data-value="cis">CIS</button>
+            <button type="button" class="dc-chip" data-value="eu">EU</button>
+            <button type="button" class="dc-chip" data-value="us">US</button>
+            <button type="button" class="dc-chip" data-value="asia">Asia</button>
+            <button type="button" class="dc-chip" data-value="any">Any</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Доступ к почте</h3>
+          <div class="dc-chipgrid" data-filter-group="mail">
+            <button type="button" class="dc-chip" data-value="yes">Есть доступ</button>
+            <button type="button" class="dc-chip" data-value="no">Без доступа</button>
+            <button type="button" class="dc-chip" data-value="none">Не применимо</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Срок Nitro</h3>
+          <p class="dc-filter__hint">Для гифтов и аккаунтов с остатком.</p>
+          <div class="dc-chipgrid" data-filter-group="duration">
+            <button type="button" class="dc-chip" data-value="1">1 мес</button>
+            <button type="button" class="dc-chip" data-value="3">3 мес</button>
+            <button type="button" class="dc-chip" data-value="6">6 мес</button>
+            <button type="button" class="dc-chip" data-value="12">12 мес</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Способ выдачи</h3>
+          <div class="dc-chipgrid" data-filter-group="delivery">
+            <button type="button" class="dc-chip" data-value="auto">AUTO</button>
+            <button type="button" class="dc-chip" data-value="chat">В чате</button>
+          </div>
+        </section>
+
+        <section class="dc-filter">
+          <h3 class="dc-filter__h">Цена, ₽</h3>
+          <div class="dc-price">
+            <input id="dcMinPrice" class="dc-price__input" type="number" inputmode="numeric" placeholder="от" min="0" />
+            <span class="dc-price__dash">—</span>
+            <input id="dcMaxPrice" class="dc-price__input" type="number" inputmode="numeric" placeholder="до" min="0" />
+          </div>
+          <div class="dc-filter__presets">
+            <button type="button" class="dc-preset" data-preset-price="under100">до 100 ₽</button>
+            <button type="button" class="dc-preset" data-preset-price="under500">до 500 ₽</button>
+            <button type="button" class="dc-preset" data-preset-price="under2k">до 2 000 ₽</button>
+          </div>
+        </section>
+      </aside>
+
+      <div class="dc-main">
+        <div class="dc-toolbar">
+          <label class="dc-search">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <input id="dcSearch" type="search" placeholder="Поиск по лоту…" autocomplete="off" aria-label="Поиск" />
+          </label>
+          <label class="dc-sort">
+            <span class="dc-sort__lbl">Сортировка</span>
+            <select id="dcSort" class="dc-sort__select">
+              <option value="popular">Популярные</option>
+              <option value="new">Новые</option>
+              <option value="cheap">Дешевле</option>
+              <option value="rich">Дороже</option>
+              <option value="year-old">Сначала старые годы</option>
+              <option value="year-new">Сначала свежие годы</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="dc-active" id="dcActive" hidden></div>
+
+        <p class="dc-count" id="dcCount">Найдено лотов: —</p>
+
+        <div class="dc-grid" id="dcGrid">
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2015" data-nitro="none" data-region="ru" data-mail="yes" data-duration="0" data-delivery="auto" data-price="3490" data-rating="4.9" data-views="412" data-added="2026-04-20" data-name="авторег 2015 ru почта">
+            <div class="dc-card__lead">
+              <span class="dc-card__year">2015</span>
+              <span class="dc-card__age">10 лет</span>
+            </div>
+            <h3 class="dc-card__t">Discord авторег 2015 года, RU</h3>
+            <p class="dc-card__d">Редкий акк, чистая история, почта в комплекте, смена всех данных.</p>
+            <ul class="dc-card__tags">
+              <li class="dc-tag dc-tag--region">RU</li>
+              <li class="dc-tag dc-tag--mail-yes">Почта есть</li>
+              <li class="dc-tag dc-tag--auto">AUTO</li>
+            </ul>
+            <div class="dc-card__foot">
+              <span class="dc-card__price">3 490 ₽</span>
+              <a class="dc-card__btn" href="lot.html?id=dc-areg-2015-ru">Купить</a>
+            </div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2015" data-nitro="none" data-region="eu" data-mail="no" data-duration="0" data-delivery="auto" data-price="2790" data-rating="4.8" data-views="287" data-added="2026-04-18" data-name="авторег 2015 eu без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2015</span><span class="dc-card__age">10 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2015 года, EU</h3>
+            <p class="dc-card__d">Старый акк без доступа к почте. Уникальный юзернейм, клиента привязан.</p>
+            <ul class="dc-card__tags">
+              <li class="dc-tag dc-tag--region">EU</li>
+              <li class="dc-tag dc-tag--mail-no">Без почты</li>
+              <li class="dc-tag dc-tag--auto">AUTO</li>
+            </ul>
+            <div class="dc-card__foot"><span class="dc-card__price">2 790 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2015-eu-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2016" data-nitro="none" data-region="ru" data-mail="yes" data-duration="0" data-delivery="auto" data-price="2890" data-rating="4.9" data-views="356" data-added="2026-04-17" data-name="авторег 2016 ru">
+            <div class="dc-card__lead"><span class="dc-card__year">2016</span><span class="dc-card__age">9 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2016 года, RU</h3>
+            <p class="dc-card__d">Полный комплект: почта, токен, UserID. Готов к любой активации.</p>
+            <ul class="dc-card__tags">
+              <li class="dc-tag dc-tag--region">RU</li>
+              <li class="dc-tag dc-tag--mail-yes">Почта есть</li>
+              <li class="dc-tag dc-tag--auto">AUTO</li>
+            </ul>
+            <div class="dc-card__foot"><span class="dc-card__price">2 890 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2016-ru">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2016" data-nitro="none" data-region="any" data-mail="no" data-duration="0" data-delivery="auto" data-price="2190" data-rating="4.7" data-views="198" data-added="2026-04-16" data-name="авторег 2016 any без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2016</span><span class="dc-card__age">9 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2016, без почты</h3>
+            <p class="dc-card__d">Аккаунт без доступа к почте, хорош для burner-задач и бустов.</p>
+            <ul class="dc-card__tags">
+              <li class="dc-tag dc-tag--region">Any</li>
+              <li class="dc-tag dc-tag--mail-no">Без почты</li>
+              <li class="dc-tag dc-tag--auto">AUTO</li>
+            </ul>
+            <div class="dc-card__foot"><span class="dc-card__price">2 190 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2016-any-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2017" data-nitro="none" data-region="us" data-mail="yes" data-duration="0" data-delivery="auto" data-price="2290" data-rating="4.9" data-views="301" data-added="2026-04-15" data-name="авторег 2017 us">
+            <div class="dc-card__lead"><span class="dc-card__year">2017</span><span class="dc-card__age">8 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2017 года, US</h3>
+            <p class="dc-card__d">Почта Outlook, без нарушений. Подходит для серверов с верификацией.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">US</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">2 290 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2017-us">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2017" data-nitro="none" data-region="ru" data-mail="no" data-duration="0" data-delivery="auto" data-price="1690" data-rating="4.6" data-views="174" data-added="2026-04-14" data-name="авторег 2017 ru без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2017</span><span class="dc-card__age">8 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2017, RU, без почты</h3>
+            <p class="dc-card__d">Бюджетный вариант 8-летней давности, только токен и пароль.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">RU</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 690 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2017-ru-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2018" data-nitro="none" data-region="eu" data-mail="yes" data-duration="0" data-delivery="auto" data-price="1790" data-rating="4.8" data-views="262" data-added="2026-04-13" data-name="авторег 2018 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2018</span><span class="dc-card__age">7 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2018 года, EU</h3>
+            <p class="dc-card__d">Почта в комплекте, готов к смене имени и привязки телефона.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 790 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2018-eu">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2018" data-nitro="none" data-region="cis" data-mail="no" data-duration="0" data-delivery="auto" data-price="1290" data-rating="4.5" data-views="143" data-added="2026-04-12" data-name="авторег 2018 cis без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2018</span><span class="dc-card__age">7 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2018, CIS, без почты</h3>
+            <p class="dc-card__d">Аккаунт без доступа к почте, подойдёт для фарма серверов.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">CIS</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 290 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2018-cis-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2019" data-nitro="none" data-region="any" data-mail="yes" data-duration="0" data-delivery="auto" data-price="1190" data-rating="4.8" data-views="234" data-added="2026-04-11" data-name="авторег 2019 any">
+            <div class="dc-card__lead"><span class="dc-card__year">2019</span><span class="dc-card__age">6 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2019 года</h3>
+            <p class="dc-card__d">Универсальный акк с почтой, средняя оценка отлично.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 190 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2019-any">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2019" data-nitro="none" data-region="us" data-mail="no" data-duration="0" data-delivery="auto" data-price="890" data-rating="4.5" data-views="167" data-added="2026-04-10" data-name="авторег 2019 us">
+            <div class="dc-card__lead"><span class="dc-card__year">2019</span><span class="dc-card__age">6 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2019, US, без почты</h3>
+            <p class="dc-card__d">Дешёвый 6-летний акк с US-регионом, без почты.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">US</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">890 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2019-us-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2020" data-nitro="none" data-region="eu" data-mail="yes" data-duration="0" data-delivery="auto" data-price="890" data-rating="4.8" data-views="401" data-added="2026-04-09" data-name="авторег 2020 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2020</span><span class="dc-card__age">5 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2020 года, EU</h3>
+            <p class="dc-card__d">Полный комплект данных, чистая активность, без жалоб.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">890 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2020-eu">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2020" data-nitro="none" data-region="ru" data-mail="no" data-duration="0" data-delivery="auto" data-price="590" data-rating="4.6" data-views="298" data-added="2026-04-08" data-name="авторег 2020 ru без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2020</span><span class="dc-card__age">5 лет</span></div>
+            <h3 class="dc-card__t">Discord авторег 2020, RU, без почты</h3>
+            <p class="dc-card__d">Аккаунт с историей, почта недоступна. Отличный вариант для арбитража.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">RU</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">590 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2020-ru-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2021" data-nitro="none" data-region="any" data-mail="yes" data-duration="0" data-delivery="auto" data-price="590" data-rating="4.7" data-views="321" data-added="2026-04-07" data-name="авторег 2021 any">
+            <div class="dc-card__lead"><span class="dc-card__year">2021</span><span class="dc-card__age">4 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2021 года</h3>
+            <p class="dc-card__d">Хит продаж: универсальный 4-летний акк с почтой.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">590 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2021-any">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2021" data-nitro="none" data-region="asia" data-mail="no" data-duration="0" data-delivery="auto" data-price="390" data-rating="4.4" data-views="112" data-added="2026-04-06" data-name="авторег 2021 asia без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2021</span><span class="dc-card__age">4 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2021, Asia, без почты</h3>
+            <p class="dc-card__d">Азиатский регион, без почты, подходит для таргета.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Asia</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">390 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2021-asia-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2022" data-nitro="none" data-region="eu" data-mail="yes" data-duration="0" data-delivery="auto" data-price="390" data-rating="4.7" data-views="284" data-added="2026-04-05" data-name="авторег 2022 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2022</span><span class="dc-card__age">3 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2022 года, EU</h3>
+            <p class="dc-card__d">Крепкий 3-летний акк с почтой, готов к работе.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">390 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2022-eu">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2022" data-nitro="none" data-region="ru" data-mail="no" data-duration="0" data-delivery="auto" data-price="249" data-rating="4.5" data-views="196" data-added="2026-04-04" data-name="авторег 2022 ru без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2022</span><span class="dc-card__age">3 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2022, RU, без почты</h3>
+            <p class="dc-card__d">Бюджетный вариант, для массового применения.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">RU</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">249 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2022-ru-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2023" data-nitro="none" data-region="any" data-mail="yes" data-duration="0" data-delivery="auto" data-price="249" data-rating="4.7" data-views="377" data-added="2026-04-03" data-name="авторег 2023 any">
+            <div class="dc-card__lead"><span class="dc-card__year">2023</span><span class="dc-card__age">2 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2023 года</h3>
+            <p class="dc-card__d">Сбалансированный акк с почтой, популярен у арбитражников.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">249 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2023-any">Купить</a></div>
+          </article>
+          <article class="dc-card" data-cat="autoreg" data-year="2023" data-nitro="none" data-region="us" data-mail="no" data-duration="0" data-delivery="auto" data-price="179" data-rating="4.5" data-views="203" data-added="2026-04-02" data-name="авторег 2023 us без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2023</span><span class="dc-card__age">2 года</span></div>
+            <h3 class="dc-card__t">Discord авторег 2023, US, без почты</h3>
+            <p class="dc-card__d">US-регион, быстрая выдача, без доступа к почте.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">US</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">179 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2023-us-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2024" data-nitro="none" data-region="eu" data-mail="yes" data-duration="0" data-delivery="auto" data-price="149" data-rating="4.6" data-views="412" data-added="2026-04-01" data-name="авторег 2024 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2024</span><span class="dc-card__age">1 год</span></div>
+            <h3 class="dc-card__t">Discord авторег 2024 года, EU</h3>
+            <p class="dc-card__d">Свежий акк с почтой Outlook/Rambler, оптовые цены.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">149 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2024-eu">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card" data-cat="autoreg" data-year="2025" data-nitro="none" data-region="any" data-mail="yes" data-duration="0" data-delivery="auto" data-price="99" data-rating="4.5" data-views="534" data-added="2026-03-28" data-name="авторег 2025 any">
+            <div class="dc-card__lead"><span class="dc-card__year">2025</span><span class="dc-card__age">~1 год</span></div>
+            <h3 class="dc-card__t">Discord авторег 2025 года</h3>
+            <p class="dc-card__d">Свежий акк, отлёжка 3 мес, почта в комплекте.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">99 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2025-any">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card dc-card--fresh" data-cat="autoreg" data-year="2026" data-nitro="none" data-region="any" data-mail="yes" data-duration="0" data-delivery="auto" data-price="59" data-rating="4.4" data-views="612" data-added="2026-04-21" data-name="авторег 2026 any">
+            <div class="dc-card__lead"><span class="dc-card__year">2026</span><span class="dc-card__age">новый</span></div>
+            <h3 class="dc-card__t">Discord авторег 2026 года, fresh</h3>
+            <p class="dc-card__d">Самый свежий акк, почта Outlook, отлёжка ≥24ч.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">59 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2026-any">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--fresh" data-cat="autoreg" data-year="2026" data-nitro="none" data-region="ru" data-mail="no" data-duration="0" data-delivery="auto" data-price="39" data-rating="4.2" data-views="489" data-added="2026-04-22" data-name="авторег 2026 ru без почты">
+            <div class="dc-card__lead"><span class="dc-card__year">2026</span><span class="dc-card__age">новый</span></div>
+            <h3 class="dc-card__t">Discord авторег 2026, RU, без почты</h3>
+            <p class="dc-card__d">Дешёвый burner-акк для разовых задач, без доступа к почте.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">RU</li><li class="dc-tag dc-tag--mail-no">Без почты</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">39 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-areg-2026-ru-nomail">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card dc-card--nitro" data-cat="nitro" data-year="2020" data-nitro="full" data-region="eu" data-mail="yes" data-duration="12" data-delivery="chat" data-price="3990" data-rating="5.0" data-views="289" data-added="2026-04-16" data-name="nitro full 12 мес 2020 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2020</span><span class="dc-card__badge">Nitro Full · 12 мес</span></div>
+            <h3 class="dc-card__t">Discord 2020 + Nitro Full 12 мес</h3>
+            <p class="dc-card__d">Аккаунт EU с активным Nitro Full, остаток подписки 12 месяцев.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--nitro">Nitro Full</li><li class="dc-tag dc-tag--chat">В чате</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">3 990 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-nitro-full-12-2020">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--nitro" data-cat="nitro" data-year="2022" data-nitro="full" data-region="ru" data-mail="yes" data-duration="6" data-delivery="chat" data-price="2490" data-rating="4.9" data-views="234" data-added="2026-04-15" data-name="nitro full 6 мес 2022 ru">
+            <div class="dc-card__lead"><span class="dc-card__year">2022</span><span class="dc-card__badge">Nitro Full · 6 мес</span></div>
+            <h3 class="dc-card__t">Discord 2022 + Nitro Full 6 мес</h3>
+            <p class="dc-card__d">RU-аккаунт, Nitro Full активно, остаток 6 месяцев.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">RU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--nitro">Nitro Full</li><li class="dc-tag dc-tag--chat">В чате</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">2 490 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-nitro-full-6-2022">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--nitro" data-cat="nitro" data-year="2023" data-nitro="full" data-region="any" data-mail="yes" data-duration="3" data-delivery="chat" data-price="1690" data-rating="4.8" data-views="187" data-added="2026-04-14" data-name="nitro full 3 мес 2023">
+            <div class="dc-card__lead"><span class="dc-card__year">2023</span><span class="dc-card__badge">Nitro Full · 3 мес</span></div>
+            <h3 class="dc-card__t">Discord 2023 + Nitro Full 3 мес</h3>
+            <p class="dc-card__d">Оптимум по цене: 2-летний акк с активным Nitro Full на 3 мес.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--nitro">Nitro Full</li><li class="dc-tag dc-tag--chat">В чате</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 690 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-nitro-full-3-2023">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--nitro" data-cat="nitro" data-year="2021" data-nitro="basic" data-region="any" data-mail="yes" data-duration="12" data-delivery="chat" data-price="1390" data-rating="4.7" data-views="143" data-added="2026-04-13" data-name="nitro basic 12 мес 2021">
+            <div class="dc-card__lead"><span class="dc-card__year">2021</span><span class="dc-card__badge">Nitro Basic · 12 мес</span></div>
+            <h3 class="dc-card__t">Discord 2021 + Nitro Basic 12 мес</h3>
+            <p class="dc-card__d">4-летний акк с Nitro Basic на год вперёд.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--nitro-b">Nitro Basic</li><li class="dc-tag dc-tag--chat">В чате</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 390 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-nitro-basic-12-2021">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--nitro" data-cat="nitro" data-year="2024" data-nitro="full" data-region="eu" data-mail="yes" data-duration="1" data-delivery="chat" data-price="990" data-rating="4.6" data-views="176" data-added="2026-04-12" data-name="nitro full 1 мес 2024 eu">
+            <div class="dc-card__lead"><span class="dc-card__year">2024</span><span class="dc-card__badge">Nitro Full · 1 мес</span></div>
+            <h3 class="dc-card__t">Discord 2024 + Nitro Full 1 мес</h3>
+            <p class="dc-card__d">Свежий EU-аккаунт с Nitro Full на месяц. Для тестов и стикеров.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">EU</li><li class="dc-tag dc-tag--mail-yes">Почта есть</li><li class="dc-tag dc-tag--nitro">Nitro Full</li><li class="dc-tag dc-tag--chat">В чате</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">990 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-nitro-full-1-2024">Купить</a></div>
+          </article>
+
+          
+          <article class="dc-card dc-card--gift" data-cat="gift" data-year="0" data-nitro="basic" data-region="any" data-mail="none" data-duration="1" data-delivery="auto" data-price="190" data-rating="4.9" data-views="723" data-added="2026-04-22" data-name="гифт nitro basic 1 мес">
+            <div class="dc-card__lead"><span class="dc-card__gift" aria-hidden="true">🎁</span><span class="dc-card__badge dc-card__badge--gift">Гифт · 1 мес</span></div>
+            <h3 class="dc-card__t">Nitro Basic — гифт-ссылка, 1 месяц</h3>
+            <p class="dc-card__d">Одноразовая ссылка на Nitro Basic, активация на любой акк.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--nitro-b">Basic</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">190 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-gift-basic-1">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--gift" data-cat="gift" data-year="0" data-nitro="full" data-region="any" data-mail="none" data-duration="1" data-delivery="auto" data-price="390" data-rating="4.9" data-views="891" data-added="2026-04-22" data-name="гифт nitro full 1 мес">
+            <div class="dc-card__lead"><span class="dc-card__gift" aria-hidden="true">🎁</span><span class="dc-card__badge dc-card__badge--gift">Гифт · 1 мес</span></div>
+            <h3 class="dc-card__t">Nitro Full — гифт-ссылка, 1 месяц</h3>
+            <p class="dc-card__d">Ссылка на Nitro Full, любая страна, автовыдача.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--nitro">Full</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">390 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-gift-full-1">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--gift" data-cat="gift" data-year="0" data-nitro="full" data-region="any" data-mail="none" data-duration="3" data-delivery="auto" data-price="990" data-rating="5.0" data-views="612" data-added="2026-04-21" data-name="гифт nitro full 3 мес">
+            <div class="dc-card__lead"><span class="dc-card__gift" aria-hidden="true">🎁</span><span class="dc-card__badge dc-card__badge--gift">Гифт · 3 мес</span></div>
+            <h3 class="dc-card__t">Nitro Full — гифт-ссылка, 3 месяца</h3>
+            <p class="dc-card__d">Выгодный пакет, автовыдача ссылки сразу после оплаты.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--nitro">Full</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">990 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-gift-full-3">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--gift" data-cat="gift" data-year="0" data-nitro="full" data-region="any" data-mail="none" data-duration="6" data-delivery="auto" data-price="1890" data-rating="4.9" data-views="298" data-added="2026-04-20" data-name="гифт nitro full 6 мес">
+            <div class="dc-card__lead"><span class="dc-card__gift" aria-hidden="true">🎁</span><span class="dc-card__badge dc-card__badge--gift">Гифт · 6 мес</span></div>
+            <h3 class="dc-card__t">Nitro Full — гифт-ссылка, 6 месяцев</h3>
+            <p class="dc-card__d">Полгода Nitro Full в одной ссылке, лучшая цена за месяц.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--nitro">Full</li><li class="dc-tag dc-tag--auto">AUTO</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">1 890 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-gift-full-6">Купить</a></div>
+          </article>
+          <article class="dc-card dc-card--gift dc-card--hot" data-cat="gift" data-year="0" data-nitro="full" data-region="any" data-mail="none" data-duration="12" data-delivery="auto" data-price="3290" data-rating="5.0" data-views="1024" data-added="2026-04-19" data-name="гифт nitro full 12 мес">
+            <div class="dc-card__lead"><span class="dc-card__gift" aria-hidden="true">🎁</span><span class="dc-card__badge dc-card__badge--gift">Гифт · 12 мес</span></div>
+            <h3 class="dc-card__t">Nitro Full — гифт-ссылка, 12 месяцев</h3>
+            <p class="dc-card__d">Хит: год Nitro Full по цене 9 месяцев. Активация на любой акк.</p>
+            <ul class="dc-card__tags"><li class="dc-tag dc-tag--region">Any</li><li class="dc-tag dc-tag--nitro">Full</li><li class="dc-tag dc-tag--auto">AUTO</li><li class="dc-tag dc-tag--hot">Хит</li></ul>
+            <div class="dc-card__foot"><span class="dc-card__price">3 290 ₽</span><a class="dc-card__btn" href="lot.html?id=dc-gift-full-12">Купить</a></div>
+          </article>
+        </div>
+
+        <div class="dc-empty" id="dcEmpty" hidden>
+          <div class="dc-empty__ic" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="dc-empty__h">Под фильтры ничего не попало</h3>
+          <p class="dc-empty__p">Ослабьте условия или сбросьте фильтры — в каталоге 32 лота.</p>
+          <button type="button" class="btn btn-primary btn-sm" id="dcEmptyReset">Сбросить фильтры</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="dc-faq" aria-labelledby="dc-faq-h">
+      <div class="dc-faq__inner">
+        <h2 id="dc-faq-h" class="dc-faq__h">Про Discord: что и как покупать</h2>
+        <div class="dc-faq__grid">
+          <details class="dc-faq__item" open>
+            <summary>Чем отличаются «с почтой» и «без почты»?</summary>
+            <p>В аккаунтах <b>с почтой</b> вы получаете и пароль от Discord, и пароль от почтового ящика — можно сменить все данные. <b>Без почты</b> — токен и пароль, но почту сменить нельзя; такой акк дешевле и подходит для разовых задач.</p>
+          </details>
+          <details class="dc-faq__item">
+            <summary>Что за «Nitro Basic» и «Nitro Full»?</summary>
+            <p><b>Basic</b> — дешёвая подписка: загрузка 50 МБ, более длинные сообщения, кастомные эмодзи. <b>Full</b> — всё то же плюс HD-стримы, 500 МБ загрузка, буст 2 серверов и профиль-анимации.</p>
+          </details>
+          <details class="dc-faq__item">
+            <summary>Куда приходит гифт-ссылка?</summary>
+            <p>В раздел «Покупки» вашего кабинета моментально после оплаты. Активируется на любом аккаунте Discord, срок действия ссылки — 48 часов с момента получения.</p>
+          </details>
+          <details class="dc-faq__item">
+            <summary>Что если акк не подошёл?</summary>
+            <p>У вас 24 часа на проверку. Если акк не заходит или данные не те — открываете спор, мы заменяем лот или возвращаем деньги. Все платежи держатся в эскроу до вашего подтверждения.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/mobnav.js"></script>
+  <script src="../assets/js/pages/discord.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

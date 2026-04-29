@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Покупка завершена — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу и поддержкой." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу и поддержкой." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Покупка завершена — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/wallet.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="nav__links"><a href="market.html">Каталог</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 550</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span></button></div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="success-page">
+    <div class="success-card">
+      <div class="success-check" id="successCheck">
+        <svg class="success-check__svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="success-check__circle" cx="26" cy="26" r="25" />
+          <path class="success-check__tick" d="M14 27l8 8 16-16" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1 class="success-card__h">Оплата прошла!</h1>
+      <p class="success-card__sub">Сделка создана и находится в режиме эскроу. Магазин получит оплату после вашего подтверждения получения.</p>
+      <div class="success-deal">
+        <span class="success-deal__label">Номер сделки</span>
+        <span class="success-deal__num font-mono">SNP-20490</span>
+      </div>
+      <div class="success-info">
+        <div class="success-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg>Деньги заморожены у гаранта до вашего подтверждения</div>
+        <div class="success-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Магазин уведомлён и готовит выдачу</div>
+        <div class="success-info__item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Среднее время выдачи: менее 15 минут</div>
+      </div>
+      <div class="success-actions">
+        <a class="btn btn-primary btn-lg" id="successPrimaryLink" href="orders.html">Получить выдачу товара</a>
+        <a class="btn btn-ghost" href="chat.html">Чат</a>
+        <a class="btn btn-ghost" href="orders.html">Мои заказы</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var order = p.get('order');
+      var numEl = document.querySelector('.success-deal__num');
+      if (order && numEl) numEl.textContent = order;
+      var primary = document.getElementById('successPrimaryLink');
+      if (order && primary) {
+        primary.href = 'order.html?order=' + encodeURIComponent(order);
+        primary.textContent = 'Открыть выдачу и данные';
+      }
+      var sub = document.querySelector('.success-card__sub');
+      if (!sub || p.get('src') !== 'telegram') return;
+      var amount = p.get('amount');
+      var kind = p.get('kind');
+      var to = p.get('to');
+      var stars = p.get('stars');
+      var months = p.get('months');
+      var title = p.get('title');
+      var am = amount ? Number(amount).toLocaleString('ru-RU') + ' ₽' : '';
+      var toTxt = to ? ' Получатель: @' + to + '.' : '';
+      if (kind === 'stars' && stars) {
+        sub.textContent = 'Оплачено ' + am + '. ' + Number(stars).toLocaleString('ru-RU') + ' Stars отправляются в Telegram.' + toTxt;
+      } else if (kind === 'gift' && title) {
+        sub.textContent = 'Подарок «' + title + '» оплачен (' + am + ').' + toTxt;
+      } else if (kind === 'premium') {
+        sub.textContent = 'Telegram Premium на ' + (months || '—') + ' мес. оплачен (' + am + ').' + toTxt;
+      } else {
+        sub.textContent = 'Оплата ' + am + ' прошла успешно.' + toTxt;
+      }
+      var escrow = document.querySelector('.success-info');
+      if (escrow) escrow.style.display = 'none';
+    })();
+  </script>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/saved-recent.js"></script>
+  <script>
+    (function () {
+      if (window.Auth && Auth.refreshUser) Auth.refreshUser().catch(function () {});
+    })();
+  </script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

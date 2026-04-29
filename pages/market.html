@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Каталог — Снэплот" />
+  <meta property="og:description" content="Официальный магазин цифровых товаров. Подписки, AI-сервисы и автореги — мгновенная выдача, эскроу на каждой сделке." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Официальный магазин цифровых товаров Снэплот: AI-сервисы, подписки и автореги. Автовыдача или выдача в чате. Эскроу и поддержка 24/7." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Каталог — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/market-home.css" />
+  <link rel="stylesheet" href="../assets/css/cart.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск по каталогу…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links" aria-label="Меню"><a class="is-active" href="market.html" aria-current="page">Каталог</a><a href="../index.html#feat-heading">Безопасность</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button>
+          <div class="nav__notif-drop"><div class="notif-drop__head"><span class="notif-drop__title">Уведомления</span><a class="notif-drop__all" href="notifications.html">Все</a></div><div style="padding:18px;color:var(--c-dim);font-size:.84rem;text-align:center;">Нет уведомлений</div><div class="notif-drop__footer"><a href="notifications.html">Показать все</a></div></div>
+        </div>
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Мой профиль</a><a class="user-drop__item" href="cabinet.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/></svg>Кабинет</a><a class="user-drop__item" href="wallet.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a class="is-active" href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a><a href="orders.html">Сделки</a><div class="nav__mobile-divider"></div><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+  </header>
+
+  <main id="main" class="hub-page">
+
+    <section class="hub-hero" aria-labelledby="hub-h1">
+      <div class="hub-hero__inner">
+        <nav class="hub-crumb" aria-label="Навигация">
+          <a href="../index.html">Главная</a><span>/</span>Каталог
+        </nav>
+
+        <div class="hub-hero__top">
+          <div class="hub-hero__copy">
+            <span class="hub-hero__kicker">Официальный магазин</span>
+            <h1 id="hub-h1" class="hub-hero__h1">Какой сервис нужен?</h1>
+            <p class="hub-hero__sub">Выберите платформу — увидите все товары и способ выдачи: автовыдача после оплаты или ручная в чате. Все покупки защищены эскроу.</p>
+          </div>
+
+          <ul class="hub-trust" aria-label="Гарантии магазина">
+            <li class="hub-trust__item">
+              <span class="hub-trust__dot hub-trust__dot--ok" aria-hidden="true"></span>
+              <span>Автовыдача<br><b>в течение 60 секунд</b></span>
+            </li>
+            <li class="hub-trust__item">
+              <span class="hub-trust__dot hub-trust__dot--cyan" aria-hidden="true"></span>
+              <span>Эскроу<br><b>на каждом заказе</b></span>
+            </li>
+            <li class="hub-trust__item">
+              <span class="hub-trust__dot hub-trust__dot--amber" aria-hidden="true"></span>
+              <span>Поддержка<br><b>24/7 в чате</b></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="hub-search" role="search" onsubmit="return false">
+          <svg class="hub-search__ic" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <input id="hubSearch" class="hub-search__input" type="search" placeholder="Найти платформу: Cursor, ChatGPT, Telegram…" autocomplete="off" aria-label="Поиск по платформам" />
+          <kbd class="hub-search__kbd" aria-hidden="true">/</kbd>
+        </form>
+
+        <dl class="hub-stats" aria-label="Статистика магазина">
+          <div class="hub-stat">
+            <dt>Платформ в каталоге</dt>
+            <dd>2</dd>
+          </div>
+          <div class="hub-stat">
+            <dt>Товаров онлайн</dt>
+            <dd>428</dd>
+          </div>
+          <div class="hub-stat">
+            <dt>Заказов за сутки</dt>
+            <dd>186</dd>
+          </div>
+          <div class="hub-stat">
+            <dt>Средняя оценка</dt>
+            <dd>4.96<span class="hub-stat__unit">/5</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <nav class="hub-nav" aria-label="Категории каталога" id="hubNav">
+      <div class="hub-nav__inner">
+        <a class="hub-nav__chip is-on" data-target="sec-ai" href="#sec-ai">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.7"/></svg>
+          AI-сервисы <span class="hub-nav__n">5</span>
+        </a>
+        <a class="hub-nav__chip" data-target="sec-sub" href="#sec-sub">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Подписки и гифты <span class="hub-nav__n">3</span>
+        </a>
+        <a class="hub-nav__chip" data-target="sec-soc" href="#sec-soc">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 9a5 5 0 1 1-10 0 5 5 0 0 1 10 0zM3 21c0-4 4-7 9-7s9 3 9 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Соцсети <span class="hub-nav__n">2</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="hub-sections" id="hubSections">
+
+      <section class="hub-section" id="sec-ai" data-section="ai">
+        <header class="hub-section__head">
+          <div class="hub-section__title">
+            <span class="hub-section__ic hub-section__ic--ai" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3.8" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <h2>AI-сервисы</h2>
+            <span class="hub-section__badge">скоро</span>
+          </div>
+          <p class="hub-section__lead">Pro-доступы к ведущим AI-инструментам. Активация на ваш аккаунт или персональный слот.</p>
+        </header>
+
+        <div class="hub-grid">
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=cursor" role="group" aria-label="Cursor — скоро" style="--brand:#86efac" data-name="Cursor Pro" data-tags="cursor pro ide ai coding">
+            <div class="hub-card__head">
+              <span class="hub-card__ic hub-card__ic--stroke" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14.5 4L18 19l-5.5-3-3 3L14.5 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12.5 13.5L14 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Cursor</h3>
+              <p class="hub-card__desc">Pro-доступ к IDE с AI, персональный и Business-слоты.</p>
+              <div class="hub-card__tags">
+                <span>#Pro</span><span>#Business</span><span>#Annual</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=chatgpt" role="group" aria-label="ChatGPT — скоро" style="--brand:#10a37f" data-name="ChatGPT Plus OpenAI" data-tags="openai plus gpt4 chatgpt ai team">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="../assets/icons/chatgpt.svg" alt="" width="28" height="28" loading="lazy" decoding="async" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">ChatGPT</h3>
+              <p class="hub-card__desc">Plus-слоты на базе GPT-4o, Team-приглашения, автовыдача.</p>
+              <div class="hub-card__tags">
+                <span>#Plus</span><span>#GPT-4o</span><span>#Team</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=claude" role="group" aria-label="Claude — скоро" style="--brand:#fca5a5" data-name="Claude Pro Anthropic" data-tags="claude anthropic pro ai sonnet opus">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/anthropic/fca5a5" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Claude</h3>
+              <p class="hub-card__desc">Pro-подписка Anthropic с полным доступом к Opus и Sonnet.</p>
+              <div class="hub-card__tags">
+                <span>#Pro</span><span>#Opus</span><span>#Sonnet</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=perplexity" role="group" aria-label="Perplexity — скоро" style="--brand:#93c5fd" data-name="Perplexity Pro" data-tags="perplexity pro ai search">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/perplexity/93c5fd" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Perplexity</h3>
+              <p class="hub-card__desc">Pro-доступ с GPT-4, Claude и безлимитными запросами.</p>
+              <div class="hub-card__tags">
+                <span>#Pro</span><span>#Annual</span><span>#Promo</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=gemini" role="group" aria-label="Gemini — скоро" style="--brand:#fbbf24" data-name="Gemini Advanced Google" data-tags="google gemini advanced ai 2 pro">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/googlegemini/fbbf24" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Gemini</h3>
+              <p class="hub-card__desc">Google One AI с Gemini Advanced, 2 ТБ облака и Veo.</p>
+              <div class="hub-card__tags">
+                <span>#Advanced</span><span>#OneAI</span><span>#Veo</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="hub-section" id="sec-sub" data-section="sub">
+        <header class="hub-section__head">
+          <div class="hub-section__title">
+            <span class="hub-section__ic hub-section__ic--sub" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            </span>
+            <h2>Подписки и гифты</h2>
+            <span class="hub-section__badge">2 в каталоге</span>
+          </div>
+          <p class="hub-section__lead">Премиум-подписки и внутриплатформенные валюты с мгновенной активацией.</p>
+        </header>
+
+        <div class="hub-grid">
+          <a class="hub-card" href="telegram.html" style="--brand:#26A5E4" data-name="Telegram Stars Premium" data-tags="premium stars gift telegram">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">86 лотов</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Telegram</h3>
+              <p class="hub-card__desc">Premium, Stars для реакций и бустов, подарки по @username.</p>
+              <div class="hub-card__tags">
+                <span>#Premium</span><span>#Stars</span><span>#Gift</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price">от 299 ₽</span>
+              <span class="hub-card__cta">Перейти
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="hub-card" href="discord.html" style="--brand:#5865F2" data-name="Discord Nitro Boost" data-tags="nitro basic boost gift discord">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">64 лота</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Discord</h3>
+              <p class="hub-card__desc">Nitro Full и Basic, буст серверов, гифт-ссылки на 1 и 12 мес.</p>
+              <div class="hub-card__tags">
+                <span>#Nitro</span><span>#Basic</span><span>#Boost</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price">от 390 ₽</span>
+              <span class="hub-card__cta">Перейти
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=spotify" role="group" aria-label="Spotify — скоро" style="--brand:#1DB954" data-name="Spotify Premium Family" data-tags="premium family duo student spotify">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Spotify</h3>
+              <p class="hub-card__desc">Premium Individual, Family и Duo — на ваш или наш аккаунт.</p>
+              <div class="hub-card__tags">
+                <span>#Individual</span><span>#Family</span><span>#Duo</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="hub-section" id="sec-soc" data-section="soc">
+        <header class="hub-section__head">
+          <div class="hub-section__title">
+            <span class="hub-section__ic hub-section__ic--soc" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 9a5 5 0 1 1-10 0 5 5 0 0 1 10 0zM3 21c0-4 4-7 9-7s9 3 9 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h2>Соцсети — автореги</h2>
+            <span class="hub-section__badge">скоро</span>
+          </div>
+          <p class="hub-section__lead">Свежие аккаунты с подтверждённой почтой и полной передачей данных.</p>
+        </header>
+
+        <div class="hub-grid">
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=instagram" role="group" aria-label="Instagram — скоро" style="--brand:#E4405F" data-name="Instagram авторег" data-tags="instagram autoreg ig account">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">Instagram</h3>
+              <p class="hub-card__desc">Автореги с почтой, отлёжкой и прогревом, выдача мгновенная.</p>
+              <div class="hub-card__tags">
+                <span>#Autoreg</span><span>#Mail</span><span>#Warm</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+
+          <a class="hub-card hub-card--soon" href="coming-soon.html?from=tiktok" role="group" aria-label="TikTok — скоро" style="--brand:#f472b6" data-name="TikTok авторег" data-tags="tiktok autoreg account">
+            <div class="hub-card__head">
+              <span class="hub-card__ic"><img src="https://cdn.simpleicons.org/tiktok/f472b6" alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></span>
+              <span class="hub-card__count">скоро</span>
+            </div>
+            <div class="hub-card__body">
+              <h3 class="hub-card__name">TikTok</h3>
+              <p class="hub-card__desc">Автореги EU / US / RU с почтой и cookies, формат под арбитраж.</p>
+              <div class="hub-card__tags">
+                <span>#Autoreg</span><span>#Cookies</span><span>#Regions</span>
+              </div>
+            </div>
+            <div class="hub-card__foot">
+              <span class="hub-card__price hub-card__price--soon">—</span>
+              <span class="hub-card__cta hub-card__cta--soon">Скоро</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="hub-empty" id="hubEmpty" hidden>
+        <div class="hub-empty__ic" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="hub-empty__h">Такой платформы пока нет</h3>
+        <p class="hub-empty__p">Напишите, какой сервис добавить — пришлём уведомление, когда появится.</p>
+        <div class="hub-empty__cta">
+          <button type="button" class="btn btn-ghost btn-sm" id="hubEmptyReset">Сбросить поиск</button>
+          <a class="btn btn-primary btn-sm" href="#hub-cta">Запросить платформу</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="hub-info" id="hub-cta" aria-labelledby="hub-info-h">
+      <div class="hub-info__inner">
+        <article class="hub-info__card">
+          <span class="hub-info__ic hub-info__ic--bolt" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="hub-info__h">Автовыдача AUTO</h3>
+          <p class="hub-info__p">Большинство товаров уходит в ваш кабинет автоматически в течение 60 секунд после оплаты.</p>
+        </article>
+        <article class="hub-info__card">
+          <span class="hub-info__ic hub-info__ic--shield" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="hub-info__h">Эскроу на каждой сделке</h3>
+          <p class="hub-info__p">Деньги блокируются на счёте магазина до подтверждения получения. Возврат в один клик при проблеме.</p>
+        </article>
+        <article class="hub-info__card">
+          <span class="hub-info__ic hub-info__ic--chat" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 12c0 4.4-4 8-9 8a9.9 9.9 0 0 1-4.3-1L3 20l1.4-3.7A7.8 7.8 0 0 1 3 12c0-4.4 4-8 9-8s9 3.6 9 8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="hub-info__h">Поддержка 24/7</h3>
+          <p class="hub-info__p">Чат с оператором в правом нижнем углу. Среднее время ответа — меньше 3 минут.</p>
+        </article>
+        <article class="hub-info__card hub-info__card--request">
+          <span class="hub-info__ic hub-info__ic--plus" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3 id="hub-info-h" class="hub-info__h">Не нашли нужное?</h3>
+          <p class="hub-info__p">Напишите, какой сервис нужен — добавим и пришлём уведомление, когда будет готов.</p>
+          <a class="btn btn-primary btn-sm" href="contacts.html">Запросить платформу</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="hub-faq" aria-labelledby="hub-faq-h">
+      <div class="hub-faq__inner">
+        <h2 id="hub-faq-h" class="hub-faq__h">Частые вопросы</h2>
+        <div class="hub-faq__list">
+          <details class="hub-faq__item" open>
+            <summary>Как получить товар после оплаты?</summary>
+            <p>Товары с плашкой <b>AUTO</b> приходят в раздел «Покупки» автоматически в течение 60 секунд. Остальные — через чат со службой выдачи магазина.</p>
+          </details>
+          <details class="hub-faq__item">
+            <summary>Что делать, если получил не то?</summary>
+            <p>Откройте спор по заказу в течение 24 часов. Мы проверим и вернём деньги или обменяем на рабочий товар.</p>
+          </details>
+          <details class="hub-faq__item">
+            <summary>Какими способами можно оплатить?</summary>
+            <p>Карты РФ и мира, СБП, крипта (USDT / BTC). Все оплаты через эскроу — деньги держатся на счёте до подтверждения выдачи.</p>
+          </details>
+          <details class="hub-faq__item">
+            <summary>Нужен ли мне свой аккаунт для подписки?</summary>
+            <p>Зависит от товара. В карточке каждого лота указано: активация на ваш аккаунт, приглашение в семью или выдача нового готового аккаунта.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/mobnav.js"></script>
+  <script src="../assets/js/core/partials.js"></script>
+  <script src="../assets/js/core/i18n.js"></script>
+  <script src="../assets/js/pages/market-home.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

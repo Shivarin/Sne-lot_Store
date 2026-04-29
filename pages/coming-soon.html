@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Скоро в каталоге — Снэплот" />
+  <meta property="og:description" content="Направление готовится к запуску в официальном магазине Снэплот." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Направление скоро появится в каталоге официального магазина Снэплот." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Скоро — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="nav__links" aria-label="Меню"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+  </header>
+
+  <main id="main" class="soon-shell">
+    <span class="soon-shell__badge">В разработке</span>
+    <h1 class="soon-shell__h" id="soonTitle">Скоро в каталоге</h1>
+    <p class="soon-shell__p" id="soonDesc">Мы готовим это направление в официальном магазине: модерация лотов, выдача и поддержка на одной платформе. Загляните позже или напишите, если нужно уведомить о запуске.</p>
+    <div class="soon-shell__actions">
+      <a class="btn btn-primary btn-lg" href="market.html">В каталог</a>
+      <a class="btn btn-ghost btn-lg" href="contacts.html">Связаться</a>
+      <a class="btn btn-ghost btn-lg" href="../index.html">На главную</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/mobnav.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+  <script>
+(function () {
+  var LABELS = {
+    cursor: 'Cursor',
+    chatgpt: 'ChatGPT',
+    claude: 'Claude',
+    perplexity: 'Perplexity',
+    gemini: 'Gemini',
+    spotify: 'Spotify',
+    instagram: 'Instagram',
+    tiktok: 'TikTok',
+    steam: 'Steam',
+    roblox: 'Roblox',
+    windows: 'Ключи ОС',
+    os: 'Ключи ОС'
+  };
+  var key = (new URLSearchParams(location.search).get('from') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '');
+  var name = LABELS[key] || '';
+  var titleEl = document.getElementById('soonTitle');
+  var descEl = document.getElementById('soonDesc');
+  if (name && titleEl) {
+    document.title = name + ' — скоро · Снэплот';
+    titleEl.textContent = name + ' — скоро в каталоге';
+    if (descEl) {
+      descEl.textContent = 'Раздел «' + name + '» появится в официальном магазине Снэплот после финальной настройки выдачи и модерации. Следите за обновлениями или загляните в уже доступные направления.';
+    }
+  }
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Лот — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Лот — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/lot.css" />
+  <link rel="stylesheet" href="../assets/css/cart.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button>
+          <div class="nav__notif-drop"><div class="notif-drop__head"><span class="notif-drop__title">Уведомления</span><a class="notif-drop__all" href="notifications.html">Все</a></div><div style="padding:18px;color:var(--c-dim);font-size:.84rem;text-align:center;">Нет уведомлений</div><div class="notif-drop__footer"><a href="notifications.html">Показать все</a></div></div>
+        </div>
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item" href="orders.html">Мои сделки</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a></nav>
+  </header>
+
+  <main class="lot-page" id="main">
+
+    
+    <section class="lot-missing" id="lotMissing" hidden>
+      <div class="lot-missing__ic">404</div>
+      <h1 class="lot-missing__h">Лот не найден</h1>
+      <p class="lot-missing__sub">Возможно, лот был продан или удалён. Посмотрите похожие предложения в каталоге.</p>
+      <a class="btn btn-primary btn-lg" href="market.html">Вернуться в каталог</a>
+    </section>
+
+    
+    <div class="lot-shell" id="lotContent">
+
+      
+      <nav class="crumb lot-crumb" aria-label="Навигация">
+        <a href="../index.html">Главная</a>
+        <span class="crumb__sep">/</span>
+        <a href="market.html">Каталог</a>
+        <span class="crumb__sep">/</span>
+        <a href="market.html" id="lotCrumbCat">Категория</a>
+        <span class="crumb__sep">/</span>
+        <span id="lotCrumbTitle">Лот</span>
+      </nav>
+
+      
+      <article class="lot-hero" id="lotHero">
+        <div class="lot-hero__glow" aria-hidden="true"></div>
+
+        
+        <div class="lot-hero__top">
+          <div class="lot-hero__icon" id="lotIcon" aria-hidden="true">
+            <span id="lotIconText">–</span>
+          </div>
+          <div class="lot-hero__titlewrap">
+            <div class="lot-hero__tags">
+              <span class="lot-hero__platform" id="lotPlatformBadge">Платформа</span>
+              <span class="lot-hero__cat" id="lotCatBadge">Категория</span>
+              <div class="lot-hero__badges" id="lotBadges"></div>
+            </div>
+            <h1 class="lot-hero__h lot-hero__title">Загрузка…</h1>
+            <div class="lot-hero__id">
+              <span class="lot-hero__id-label">ID лота:</span>
+              <span class="font-mono" id="lotIdOut">—</span>
+              <button class="lot-hero__copy" type="button" id="lotCopyId" aria-label="Скопировать ID">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="lot-hero__actions">
+            <button class="icon-btn" id="lotShare" type="button" aria-label="Поделиться" title="Поделиться">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <button class="icon-btn fav-btn" id="lotFav" type="button" aria-label="В избранное" title="В избранное">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21l-1.45-1.318C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.21L12 21z" stroke="currentColor" stroke-width="1.6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="lot-hero__strip">
+          <div class="lot-strip__item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span class="lot-strip__v" id="lotViews">0</span>
+            <span class="lot-strip__l">просмотров</span>
+          </div>
+          <div class="lot-strip__item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="lot-strip__v" id="lotAdded">—</span>
+            <span class="lot-strip__l">размещено</span>
+          </div>
+          <div class="lot-strip__item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="lot-strip__v" id="lotResponse">—</span>
+            <span class="lot-strip__l">отклик</span>
+          </div>
+          <div class="lot-strip__item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span class="lot-strip__v" id="lotWarranty">24 ч</span>
+            <span class="lot-strip__l">гарантия</span>
+          </div>
+        </div>
+      </article>
+
+      
+      <div class="lot-layout">
+
+        
+        <div class="lot-main">
+
+          
+          <section class="lot-section lot-section--gallery" id="gallerySection">
+            <div class="lot-gallery">
+              <div class="lot-gallery__main" id="galleryMain">
+                <div class="lot-gallery__placeholder">
+                  <svg width="54" height="54" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="8.5" cy="10.5" r="1.5" fill="currentColor"/><path d="M3 16l5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Иллюстрации к лоту</span>
+                </div>
+              </div>
+              <div class="lot-gallery__strip" id="galleryStrip"></div>
+            </div>
+          </section>
+
+          
+          <section class="lot-trustbar">
+            <div class="trust-pill trust-pill--escrow">
+              <div class="trust-pill__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+              <div class="trust-pill__txt"><strong>Эскроу</strong><span>Деньги в залоге</span></div>
+            </div>
+            <div class="trust-pill trust-pill--verify">
+              <div class="trust-pill__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="trust-pill__txt"><strong>Проверено</strong><span>Модерация ✓</span></div>
+            </div>
+            <div class="trust-pill trust-pill--arb">
+              <div class="trust-pill__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+              <div class="trust-pill__txt"><strong>Арбитраж 24 ч</strong><span>Спор — решаем</span></div>
+            </div>
+            <div class="trust-pill trust-pill--refund">
+              <div class="trust-pill__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 0 1 15-6.7l3 3M3 12v-4m18 4a9 9 0 0 1-15 6.7l-3-3M21 12v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="trust-pill__txt"><strong>Возврат</strong><span>При нарушении</span></div>
+            </div>
+          </section>
+
+          
+          <section class="lot-section">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Описание</h2>
+            </header>
+            <div class="lot-desc" id="lotDesc">
+              <p>Загрузка описания…</p>
+            </div>
+          </section>
+
+          
+          <section class="lot-section">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Характеристики</h2>
+              <span class="lot-section__count" id="attrsCount">0</span>
+            </header>
+            <div class="lot-attrs" id="lotAttrs"></div>
+          </section>
+
+          
+          <section class="lot-section lot-section--checks">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Что проверено</h2>
+              <span class="lot-section__tag lot-section__tag--ok">Модерацией</span>
+            </header>
+            <ul class="lot-checks" id="lotChecks"></ul>
+          </section>
+
+          
+          <section class="lot-section lot-section--escrow">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Как проходит сделка</h2>
+              <a class="lot-section__link" href="rules.html#escrow">Подробнее →</a>
+            </header>
+            <div class="lot-timeline">
+              <div class="lot-timeline__step">
+                <div class="lot-timeline__dot"><span>1</span></div>
+                <div class="lot-timeline__body">
+                  <strong>Оплата и бронь</strong>
+                  <p>Средства замораживаются на эскроу-счёте. Магазин фиксирует оплату и готовит выдачу.</p>
+                </div>
+              </div>
+              <div class="lot-timeline__step">
+                <div class="lot-timeline__dot"><span>2</span></div>
+                <div class="lot-timeline__body">
+                  <strong>Выдача товара</strong>
+                  <p>Служба выдачи магазина передаёт данные в чате сделки. При автовыдаче — сразу после оплаты.</p>
+                </div>
+              </div>
+              <div class="lot-timeline__step">
+                <div class="lot-timeline__dot"><span>3</span></div>
+                <div class="lot-timeline__body">
+                  <strong>Проверка</strong>
+                  <p>У вас есть 24 ч на проверку. Всё хорошо — подтверждаете.</p>
+                </div>
+              </div>
+              <div class="lot-timeline__step lot-timeline__step--end">
+                <div class="lot-timeline__dot lot-timeline__dot--end"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="lot-timeline__body">
+                  <strong>Завершение</strong>
+                  <p>После вашего «Получено» сделка закрывается. Средства учитываются в пользу магазина согласно оферте.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+          <section class="lot-section">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Частые вопросы</h2>
+            </header>
+            <div class="lot-faq" id="lotFaq">
+              <details class="lot-faq__item">
+                <summary class="lot-faq__q">Как быстро я получу товар?<svg class="lot-faq__arr" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+                <div class="lot-faq__a">Если включена «Автовыдача» — мгновенно после оплаты. В ручном режиме поддержка магазина отвечает в чате сделки в течение 30 минут.</div>
+              </details>
+              <details class="lot-faq__item">
+                <summary class="lot-faq__q">Что если товар не рабочий?<svg class="lot-faq__arr" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+                <div class="lot-faq__a">Откройте спор в чате сделки в течение 24 часов. Арбитр рассматривает жалобу до 24 ч, при доказанном нарушении деньги возвращаются.</div>
+              </details>
+              <details class="lot-faq__item">
+                <summary class="lot-faq__q">Можно ли оплатить с бонусного баланса?<svg class="lot-faq__arr" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+                <div class="lot-faq__a">Да. При оформлении выберите «Кошелёк Снэплот» — спишем с основного или бонусного баланса.</div>
+              </details>
+              <details class="lot-faq__item">
+                <summary class="lot-faq__q">Безопасно ли покупать аккаунт?<svg class="lot-faq__arr" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary>
+                <div class="lot-faq__a">Платформа удерживает оплату до вашего подтверждения. Лоты проходят модерацию магазина перед публикацией.</div>
+              </details>
+            </div>
+          </section>
+
+          
+          <aside class="lot-safety">
+            <div class="lot-safety__ic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 9v2m0 4h.01M5.07 19H18.93a2 2 0 0 0 1.73-3L13.73 4a2 2 0 0 0-3.46 0L3.34 16a2 2 0 0 0 1.73 3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="lot-safety__body">
+              <strong>Правила безопасной сделки</strong>
+              <p>Не переводите деньги напрямую и не обменивайтесь реквизитами вне Снэплота — без эскроу мы не сможем защитить вас при споре.</p>
+            </div>
+          </aside>
+
+          
+          <section class="lot-section">
+            <header class="lot-section__head">
+              <h2 class="lot-section__h"><span class="lot-section__bar"></span>Похожие лоты</h2>
+              <a class="lot-section__link" href="market.html">Весь каталог →</a>
+            </header>
+            <div class="lot-similar" id="similarLots"></div>
+          </section>
+
+        </div>
+
+        
+        <aside class="lot-side">
+
+          
+          <div class="buy-card">
+            <div class="buy-card__price-row">
+              <div class="buy-card__price">
+                <span class="buy-card__price-v lot-hero__price" id="buyPrice">—</span>
+              </div>
+              <div class="buy-card__availability">
+                <span class="pulse-dot"></span>В наличии
+              </div>
+            </div>
+
+            <div class="buy-card__breakdown" id="buyBreakdown"></div>
+
+            <div class="buy-card__actions">
+              <a class="btn btn-primary btn-lg buy-card__btn" id="buyBtn" href="checkout.html">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M7 10V7a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                Купить через эскроу
+              </a>
+              <button type="button" class="btn btn-ghost btn-lg buy-card__btn" id="addCartBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="18" cy="20" r="1.5" fill="currentColor"/></svg>
+                В корзину
+              </button>
+            </div>
+
+            <div class="buy-card__methods">
+              <span class="buy-card__methods-l">Оплата:</span>
+              <span class="buy-card__chip">Карта</span>
+              <span class="buy-card__chip">СБП</span>
+              <span class="buy-card__chip">Кошелёк</span>
+              <span class="buy-card__chip">Крипта</span>
+            </div>
+
+            <div class="buy-card__divider"></div>
+
+            <a class="btn btn-ghost btn-sm buy-card__msg store-support-link" href="chat.html">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Чат поддержки
+            </a>
+
+            <button class="buy-card__report" type="button" id="lotReport">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 22V4M4 15h12l-2-3 2-3H4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Пожаловаться на лот
+            </button>
+          </div>
+
+          
+          <div class="store-card" id="storeCard">
+            <div class="store-card__head">
+              <div class="store-card__logo" aria-hidden="true">С</div>
+              <div class="store-card__intro">
+                <div class="store-card__title">Снэплот</div>
+                <div class="store-card__tag">Официальный магазин</div>
+              </div>
+            </div>
+            <p class="store-card__note">Все лоты в каталоге оформляет и выдаёт магазин. Поддержка и гарантии — на стороне платформы.</p>
+            <div class="store-card__meta">
+              <span class="store-card__meta-v" id="storeResponse">~2 мин</span>
+              <span class="store-card__meta-l">среднее время ответа</span>
+            </div>
+            <div class="store-card__actions">
+              <a class="btn btn-ghost btn-sm" href="contacts.html">Контакты</a>
+              <a class="btn btn-ghost btn-sm store-support-link" href="chat.html">Поддержка</a>
+            </div>
+          </div>
+
+          
+          <div class="guarantee-card">
+            <div class="guarantee-card__h">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.7"/></svg>
+              Гарантия Снэплот
+            </div>
+            <ul class="guarantee-card__list">
+              <li>Деньги в эскроу до подтверждения</li>
+              <li>Арбитраж спора за 24 ч</li>
+              <li>Возврат при доказанном нарушении</li>
+              <li>Поддержка 24/7 в чате</li>
+            </ul>
+            <a class="guarantee-card__link" href="rules.html">Подробнее о защите →</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Просмотр скриншота" hidden>
+    <button class="lightbox__close" type="button" aria-label="Закрыть">&times;</button>
+    <button class="lightbox__prev" type="button" aria-label="Назад">&#8249;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="скриншот" />
+    <button class="lightbox__next" type="button" aria-label="Далее">&#8250;</button>
+    <div class="lightbox__counter" id="lightboxCounter">1 / 1</div>
+  </div>
+
+  
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/demo-market.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+  <script src="../assets/js/core/catalog.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/core/lightbox.js"></script>
+  <script src="../assets/js/pages/lot.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

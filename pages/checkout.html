@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Оформление покупки — Снэплот" />
+  <meta property="og:description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Снэплот — официальный магазин цифровых товаров с эскроу. Подписки, аккаунты и ключи с гарантией магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Оформление покупки — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/wallet.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="checkout-page">
+    <nav class="crumb" aria-label="Навигация"><a href="../index.html">Главная</a><span class="crumb__sep">/</span><a href="market.html">Каталог</a><span class="crumb__sep">/</span><a href="lot.html" id="checkoutCrumbLot">Лот</a><span class="crumb__sep">/</span>Покупка</nav>
+
+    <div class="checkout-layout">
+      
+      <div class="checkout-main">
+        <h1 class="checkout-h">Оформление покупки</h1>
+
+        <div class="checkout-lot-card" id="checkoutLotCard">
+          <div class="checkout-lot-card__glyph" id="checkoutGlyph" style="color:#818cf8">D</div>
+          <div class="checkout-lot-card__info">
+            <div class="checkout-lot-card__title" id="checkoutTitle">Discord Nitro — 12 месяцев</div>
+            <div class="checkout-lot-card__meta" id="checkoutMeta">Официальный магазин Снэплот · эскроу</div>
+          </div>
+          <div class="checkout-lot-card__price" id="checkoutPrice">690 ₽</div>
+        </div>
+
+        
+        <div class="checkout-timer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2m6-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Лот зарезервирован на <strong id="checkoutTimer">14:59</strong>. Успейте оплатить.
+        </div>
+
+        
+        <h2 class="checkout-h2">Способ оплаты</h2>
+        <div class="checkout-methods" id="checkoutMethods">
+          <label class="checkout-method is-on"><input type="radio" name="pay" value="balance" checked /><div class="checkout-method__body"><div class="checkout-method__name">Баланс кошелька</div><div class="checkout-method__hint">Доступно: 0 ₽</div></div><span class="checkout-method__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
+          <label class="checkout-method"><input type="radio" name="pay" value="card" /><div class="checkout-method__body"><div class="checkout-method__name">Банковская карта</div><div class="checkout-method__hint">Visa, Mastercard, МИР</div></div><span class="checkout-method__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
+          <label class="checkout-method"><input type="radio" name="pay" value="crypto" /><div class="checkout-method__body"><div class="checkout-method__name">Крипто</div><div class="checkout-method__hint">USDT, BTC, ETH</div></div><span class="checkout-method__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
+          <label class="checkout-method"><input type="radio" name="pay" value="sbp" /><div class="checkout-method__body"><div class="checkout-method__name">СБП</div><div class="checkout-method__hint">Система быстрых платежей</div></div><span class="checkout-method__check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></label>
+        </div>
+
+        
+        <div class="checkout-escrow">
+          <div class="checkout-escrow__h"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg>Эскроу-гарантия</div>
+          <ul class="checkout-escrow__list">
+            <li>Деньги замораживаются и не уходят магазину до вашего подтверждения</li>
+            <li>Если товар не соответствует описанию — открываете спор и получаете возврат</li>
+            <li>Арбитраж доступен в течение 48 ч после получения товара</li>
+          </ul>
+        </div>
+
+        <button class="btn btn-primary btn-lg checkout-submit" type="button" id="checkoutPayBtn">Оплатить</button>
+        <p class="checkout-legal">Нажимая «Оплатить», вы принимаете <a href="rules.html">Правила</a> и соглашаетесь с условиями эскроу.</p>
+      </div>
+
+      
+      <aside class="checkout-side">
+        <div class="checkout-summary">
+          <div class="checkout-summary__h">Детали заказа</div>
+          <div class="checkout-summary__row"><span>Лот</span><span id="sumLot">690 ₽</span></div>
+          <div class="checkout-summary__row"><span>Сервисный сбор</span><span id="sumFee">0 ₽</span></div>
+          <div class="checkout-summary__divider"></div>
+          <div class="checkout-summary__row checkout-summary__row--total"><span>Итого</span><span id="sumTotal">690 ₽</span></div>
+        </div>
+        <div class="checkout-store">
+          <div class="checkout-store__h">Магазин</div>
+          <div class="checkout-store__row">
+            <div class="profile-av" style="width:36px;height:36px;font-size:.85rem">С</div>
+            <div><div style="font-weight:800;font-size:.95rem;letter-spacing:-.02em">Снэплот</div><div style="font-size:.78rem;color:var(--fg-muted)">Официальный магазин · выдача на платформе</div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/demo-market.js"></script>
+  <script src="../assets/js/core/saved-recent.js"></script>
+  <script src="../assets/js/pages/checkout.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

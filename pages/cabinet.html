@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Личный кабинет — Снэплот" />
+  <meta property="og:description" content="Снэплот — личный кабинет покупателя и администратора официального магазина." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Кабинет Снэплот: баланс, сделки, для владельца — админка магазина." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Личный кабинет — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/profile.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск лотов…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links"><a href="market.html">Каталог</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <div class="nav__bell"><button class="nav__bell-btn" type="button" aria-label="Уведомления"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6 6 0 0 0-5-5.917V4a1 1 0 0 0-2 0v1.083A6 6 0 0 0 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__bell-badge" style="display:none" aria-hidden="true">0</span></button>
+          <div class="nav__notif-drop"><div class="notif-drop__head"><span class="notif-drop__title">Уведомления</span><a class="notif-drop__all" href="notifications.html">Все</a></div><div style="padding:18px;color:var(--c-dim);font-size:.84rem;text-align:center;">Нет уведомлений</div><div class="notif-drop__footer"><a href="notifications.html">Показать все</a></div></div>
+        </div>
+        <a class="nav__balance" href="wallet.html">₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item" href="orders.html">Мои сделки</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a href="market.html">Каталог</a><a href="cabinet.html" class="is-active">Кабинет</a><a href="wallet.html">Кошелёк</a></nav>
+  </header>
+
+  <main id="main" class="cabinet-page">
+    <div class="cabinet-layout">
+      
+      <aside class="cabinet-side">
+        <div class="cabinet-user">
+          <div class="cabinet-av">ИМ</div>
+          <div class="cabinet-user__info"><div class="cabinet-user__name">Гость</div><div class="cabinet-user__status">Активный покупатель</div></div>
+        </div>
+        <nav class="cabinet-nav" id="cabinetNav">
+          <a class="cabinet-nav__item is-active" href="#" data-section="overview"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/></svg>Обзор</a>
+          <a class="cabinet-nav__item" href="admin.html" data-cabinet-admin-only style="display:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.6"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.22 0 .44.03.65.09V9a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.6"/></svg>Админка</a>
+          <a class="cabinet-nav__item" href="orders.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Покупки</a>
+          <a class="cabinet-nav__item" href="favorites.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>Избранное</a>
+          <a class="cabinet-nav__item" href="chat.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Сообщения <span class="cabinet-nav__badge">2</span></a>
+          <a class="cabinet-nav__item" href="wallet.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg>Кошелёк</a>
+          <div class="cabinet-nav__divider"></div>
+          <a class="cabinet-nav__item" href="#" data-section="settings"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>Настройки</a>
+        </nav>
+      </aside>
+
+      
+      <div class="cabinet-content">
+        
+        <section class="cabinet-section is-active" id="section-overview">
+          <h1 class="cabinet-h">Обзор</h1>
+          <div class="cabinet-cards">
+            <div class="cabinet-card" data-cabinet-admin-only style="display:none;border-color:rgba(94,234,212,.35)"><div class="cabinet-card__icon" style="color:#5eead4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.6"/></svg></div><div class="cabinet-card__val" style="font-size:1rem">Витрина</div><div class="cabinet-card__lbl">Управление каталогом и заказами</div><a class="cabinet-card__link" href="admin.html">Админка →</a></div>
+            <div class="cabinet-card"><div class="cabinet-card__icon" style="color:#818cf8"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6"/></svg></div><div class="cabinet-card__val" id="cabinetBalVal">₽ 0</div><div class="cabinet-card__lbl">Баланс кошелька</div><a class="cabinet-card__link" href="wallet.html">Пополнить →</a></div>
+            <div class="cabinet-card"><div class="cabinet-card__icon" style="color:#4ade80"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cabinet-card__val">14</div><div class="cabinet-card__lbl">Покупок</div><a class="cabinet-card__link" href="orders.html">Смотреть →</a></div>
+            <div class="cabinet-card"><div class="cabinet-card__icon" style="color:#fbbf24"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></div><div class="cabinet-card__val">—</div><div class="cabinet-card__lbl">Избранное</div><a class="cabinet-card__link" href="favorites.html">Открыть →</a></div>
+            <div class="cabinet-card"><div class="cabinet-card__icon" style="color:#f87171"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cabinet-card__val">2</div><div class="cabinet-card__lbl">Непрочитанных</div><a class="cabinet-card__link" href="chat.html">Ответить →</a></div>
+          </div>
+
+          <h2 class="cabinet-h2">Последние сделки</h2>
+          <table class="cabinet-table">
+            <thead><tr><th>Лот</th><th>Дата</th><th>Сумма</th><th>Статус</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><a href="lot.html?id=discord-nitro">Discord Nitro 12м</a></td><td>22 апр 2026</td><td>690 ₽</td><td><span class="status-badge status-badge--active">Активна</span></td><td><a href="chat.html" class="btn btn-ghost btn-xs">Чат</a></td></tr>
+              <tr><td><a href="lot.html?id=chatgpt-plus">ChatGPT Plus</a></td><td>15 апр 2026</td><td>1 190 ₽</td><td><span class="status-badge status-badge--done">Завершена</span></td><td><a href="dispute.html" class="btn btn-ghost btn-xs">Спор</a></td></tr>
+              <tr><td><a href="lot.html?id=steam-acc">Steam аккаунт EU</a></td><td>5 апр 2026</td><td>3 200 ₽</td><td><span class="status-badge status-badge--done">Завершена</span></td><td></td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        
+        <section class="cabinet-section" id="section-settings">
+          <h1 class="cabinet-h">Настройки</h1>
+          <form class="settings-form" id="settingsForm">
+            <h2 class="cabinet-h2">Профиль</h2>
+            <div class="settings-av-row">
+              <div class="cabinet-av settings-av">ИМ</div>
+              <button class="btn btn-ghost btn-sm" type="button">Загрузить аватар</button>
+            </div>
+            <div class="settings-grid">
+              <div class="auth-field"><label class="auth-field__label" for="setName">Отображаемое имя</label><input class="auth-field__input" id="setName" type="text" value="" placeholder="Ваше имя" /></div>
+              <div class="auth-field"><label class="auth-field__label" for="setEmail">Email</label><input class="auth-field__input" id="setEmail" type="email" value="ivan@example.com" /></div>
+            </div>
+            <h2 class="cabinet-h2">Уведомления</h2>
+            <div class="notif-toggles">
+              <label class="notif-toggle"><span>Новые сообщения</span><input type="checkbox" checked /><span class="notif-toggle__sw"></span></label>
+              <label class="notif-toggle"><span>Новая сделка</span><input type="checkbox" checked /><span class="notif-toggle__sw"></span></label>
+              <label class="notif-toggle"><span>Вывод средств</span><input type="checkbox" checked /><span class="notif-toggle__sw"></span></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Сохранить</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+    <script src="../assets/js/core/cmdk.js"></script>
+    <script src="../assets/js/core/quickview.js"></script>
+    <script src="../assets/js/core/compare.js"></script>
+    <script src="../assets/js/core/forms.js"></script>
+    <script src="../assets/js/core/infinity.js"></script>
+    <script src="../assets/js/core/mobnav.js"></script>
+    <script src="../assets/js/core/lazy-img.js"></script>
+    <script src="../assets/js/core/partials.js"></script>
+    <script src="../assets/js/core/i18n.js"></script>
+    <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+    <script src="../assets/js/core/auth-session.js"></script>
+    <script src="../assets/js/core/saved-recent.js"></script>
+    <script src="../assets/js/pages/cabinet.js"></script>
+  <script src="../assets/js/pages/pages.js"></script>
+    <script src="../assets/js/core/footer-plus.js"></script>
+    <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

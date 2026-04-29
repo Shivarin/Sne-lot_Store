@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Нет подключения к интернету — Снэплот оффлайн." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Нет связи — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/vars.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <style>
+    body { display:grid; place-items:center; min-height:100vh; padding:20px; background:var(--c-bg); color:var(--c-text); font-family:var(--font); }
+    .off { text-align:center; max-width:480px; }
+    .off__ic { font-size:4rem; margin-bottom:18px; animation: pulse 2.2s ease-in-out infinite; }
+    .off__h { font-size:2rem; font-weight:900; letter-spacing:-.03em; margin-bottom:10px; }
+    .off__d { color:var(--c-muted); line-height:1.55; margin-bottom:24px; }
+    @keyframes pulse { 0%,100% { opacity:.8; transform:scale(1); } 50% { opacity:1; transform:scale(1.05); } }
+  </style>
+</head>
+<body>
+  <section class="off">
+    <div class="off__ic">📡</div>
+    <h1 class="off__h">Нет соединения</h1>
+    <p class="off__d">Похоже, интернет сейчас недоступен. Проверьте подключение и попробуйте снова — мы тут, как только связь вернётся.</p>
+    <button class="btn btn-primary btn-lg" onclick="location.reload()">Обновить страницу</button>
+    <a class="btn btn-ghost btn-lg" href="/" style="margin-left:8px;">На главную</a>
+  </section>
+</body>
+</html>

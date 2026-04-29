@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="snaplot-demo" content="1" />
+  <meta name="snaplot-local-auth" content="1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Telegram — Stars, подарки, Premium и аккаунты — Снэплот" />
+  <meta property="og:description" content="Покупка Telegram Stars с мгновенной доставкой по @username, коллекционные подарки, Premium 1–12 мес и аккаунты с Premium/без Premium." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0a0c13" />
+  <meta name="description" content="Telegram Stars, редкие и NFT-подарки, Premium-подписка и аккаунты с фильтром по региону и Premium. Автовыдача и эскроу в каждом заказе." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Telegram — Stars, подарки, Premium, аккаунты — Снэплот</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/vars.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/new-pages.css" />
+  <link rel="stylesheet" href="../assets/css/telegram.css" />
+  <link rel="stylesheet" href="../assets/css/cart.css" />
+</head>
+<body data-platform="telegram">
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="nav" id="mainNav">
+    <div class="nav__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <div class="nav__search"><svg class="nav__search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><input class="nav__search-input" type="search" placeholder="Поиск по каталогу…" autocomplete="off" aria-label="Поиск" /></div>
+      <nav class="nav__links" aria-label="Меню"><a class="is-active" href="market.html">Каталог</a><a href="../index.html#feat-heading">Безопасность</a><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+      <div class="nav__actions">
+        <a class="nav__balance" href="wallet.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>₽ 0</a>
+        <div class="nav__user"><button class="nav__user-btn" type="button"><span class="nav__avatar">—</span><span class="nav__user-name">Гость</span><svg class="nav__user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__user-drop"><a class="user-drop__item" href="profile.html">Мой профиль</a><a class="user-drop__item" href="cabinet.html">Кабинет</a><a class="user-drop__item" href="wallet.html">Кошелёк</a><a class="user-drop__item user-drop__item--danger" href="login.html">Выйти</a></div>
+        </div>
+        <button class="nav__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav__mobile"><a href="../index.html">Главная</a><a class="is-active" href="market.html">Каталог</a><a href="cabinet.html">Кабинет</a><a href="wallet.html">Кошелёк</a><a href="orders.html">Сделки</a><div class="nav__mobile-divider"></div><a href="rules.html">Правила</a><a href="faq.html">FAQ</a></nav>
+  </header>
+
+  <main id="main" class="tg-page">
+
+    <section class="tg-hero" aria-labelledby="tg-h1">
+      <div class="tg-hero__inner">
+        <nav class="tg-crumb" aria-label="Навигация">
+          <a href="../index.html">Главная</a><span>/</span><a href="market.html">Каталог</a><span>/</span>Telegram
+        </nav>
+
+        <div class="tg-hero__row">
+          <div class="tg-hero__left">
+            <span class="tg-hero__logo" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/telegram/ffffff" alt="" width="40" height="40" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            </span>
+            <div>
+              <span class="tg-hero__kicker">Платформа</span>
+              <h1 id="tg-h1" class="tg-hero__h1">Telegram</h1>
+            </div>
+          </div>
+          <a class="btn btn-ghost btn-sm tg-hero__back" href="market.html">← Все платформы</a>
+        </div>
+
+        <p class="tg-hero__sub">Четыре раздела в одном магазине: покупка Stars с доставкой на @username, коллекционные и недоступные подарки, Premium-подписка и аккаунты с фильтром по региону и Premium.</p>
+
+        <ul class="tg-hero__pills" aria-label="Гарантии">
+          <li><span class="tg-pill-dot tg-pill-dot--cyan"></span> Доставка Stars за 30 секунд</li>
+          <li><span class="tg-pill-dot tg-pill-dot--gold"></span> Курс от 1.45 ₽ за звезду</li>
+          <li><span class="tg-pill-dot tg-pill-dot--ok"></span> Эскроу и возврат при любой проблеме</li>
+        </ul>
+      </div>
+    </section>
+
+    <nav class="tg-tabs" aria-label="Разделы Telegram">
+      <div class="tg-tabs__inner" id="tgTabs" role="tablist">
+        <button type="button" class="tg-tab is-on" data-tab="stars" role="tab" aria-selected="true">
+          <span class="tg-tab__ic tg-tab__ic--star" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 6.8L21 9.5l-5 4.6 1.5 7-5.5-3.5L6.5 21 8 14.1 3 9.5l6.5-.7L12 2z"/></svg>
+          </span>
+          <span class="tg-tab__t">Купить звёзды</span>
+          <span class="tg-tab__s">На любой @username</span>
+        </button>
+        <button type="button" class="tg-tab" data-tab="gifts" role="tab" aria-selected="false">
+          <span class="tg-tab__ic tg-tab__ic--gift" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12v9H4v-9M2 8h20v4H2zM12 8v13M12 8c-1 0-4-.5-4-3s2-3 3-2 1 5 1 5zM12 8c1 0 4-.5 4-3s-2-3-3-2-1 5-1 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tg-tab__t">Подарки</span>
+          <span class="tg-tab__s">Редкие, NFT, недоступные</span>
+        </button>
+        <button type="button" class="tg-tab" data-tab="premium" role="tab" aria-selected="false">
+          <span class="tg-tab__ic tg-tab__ic--premium" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3h12l3 6-9 12L3 9l3-6zM9 3l3 6 3-6M3 9h18" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tg-tab__t">Premium</span>
+          <span class="tg-tab__s">1 / 3 / 6 / 12 мес</span>
+        </button>
+        <button type="button" class="tg-tab" data-tab="accounts" role="tab" aria-selected="false">
+          <span class="tg-tab__ic tg-tab__ic--acc" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <span class="tg-tab__t">Аккаунты</span>
+          <span class="tg-tab__s">Регион + Premium</span>
+        </button>
+      </div>
+    </nav>
+
+    
+    <section class="tg-section tg-section--stars" data-section="stars" aria-labelledby="tg-stars-h">
+      <div class="tg-section__inner">
+        <header class="tg-section__head">
+          <h2 id="tg-stars-h" class="tg-section__h">Покупка Telegram Stars</h2>
+          <p class="tg-section__lead">Выберите количество, укажите @username получателя — и Stars прилетят в течение 30 секунд напрямую в аккаунт Telegram.</p>
+        </header>
+
+        <div class="tg-stars">
+          <div class="tg-stars__calc">
+            <div class="tg-stars__amount">
+              <label class="tg-stars__label">Количество звёзд</label>
+              <div class="tg-stars__presets" id="starsPresets">
+                <button type="button" class="tg-preset" data-amount="50">50 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="100">100 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="250">250 ⭐</button>
+                <button type="button" class="tg-preset is-on" data-amount="500">500 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="1000">1 000 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="2500">2 500 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="5000">5 000 ⭐</button>
+                <button type="button" class="tg-preset" data-amount="10000">10 000 ⭐</button>
+              </div>
+              <div class="tg-stars__custom">
+                <input id="starsAmount" class="tg-stars__input" type="number" inputmode="numeric" min="1" max="100000" value="500" />
+                <span class="tg-stars__suffix">⭐</span>
+              </div>
+              <p class="tg-stars__hint">От 1 до 100 000 звёзд за один заказ. Чем больше пакет — тем выгоднее курс.</p>
+            </div>
+
+            <div class="tg-stars__recipient">
+              <label class="tg-stars__label" for="starsUser">Получатель</label>
+              <div class="tg-stars__user">
+                <span class="tg-stars__at">@</span>
+                <input id="starsUser" type="text" class="tg-stars__input tg-stars__input--user" placeholder="username" autocomplete="off" spellcheck="false" />
+              </div>
+              <p class="tg-stars__hint" id="starsUserHint">Укажите ник получателя (с @ или без).</p>
+            </div>
+
+            <div class="tg-stars__summary">
+              <div class="tg-stars__row">
+                <span class="tg-stars__k">Курс</span>
+                <b class="tg-stars__v" id="starsRate">1 ⭐ = 1.60 ₽</b>
+              </div>
+              <div class="tg-stars__row">
+                <span class="tg-stars__k">Количество</span>
+                <b class="tg-stars__v" id="starsCount">500 ⭐</b>
+              </div>
+              <div class="tg-stars__row tg-stars__row--total">
+                <span class="tg-stars__k">К оплате</span>
+                <b class="tg-stars__total" id="starsTotal">800 ₽</b>
+              </div>
+            </div>
+
+            <button type="button" class="tg-stars__btn" id="starsBuy">
+              <span class="tg-stars__btn-ic" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.5 6.8L21 9.5l-5 4.6 1.5 7-5.5-3.5L6.5 21 8 14.1 3 9.5l6.5-.7L12 2z"/></svg>
+              </span>
+              <span id="starsBtnText">Купить 500 ⭐ за 800 ₽</span>
+            </button>
+          </div>
+
+          <aside class="tg-stars__info">
+            <div class="tg-stars__info-card">
+              <h3>Как это работает</h3>
+              <ol class="tg-stars__steps">
+                <li><span class="tg-step-n">1</span><p>Выбираете количество и вводите @username получателя.</p></li>
+                <li><span class="tg-step-n">2</span><p>Оплачиваете — карта, СБП или с баланса Снэплота.</p></li>
+                <li><span class="tg-step-n">3</span><p>Stars приходят в Telegram получателя за 30 секунд.</p></li>
+              </ol>
+            </div>
+
+            <div class="tg-stars__info-card tg-stars__info-card--rate">
+              <h3>Выгодный курс</h3>
+              <ul class="tg-rate-list">
+                <li><span>50 — 99 ⭐</span><b>1.70 ₽ / ⭐</b></li>
+                <li><span>100 — 499 ⭐</span><b>1.65 ₽ / ⭐</b></li>
+                <li><span>500 — 999 ⭐</span><b>1.60 ₽ / ⭐</b></li>
+                <li><span>1 000 — 2 499 ⭐</span><b>1.55 ₽ / ⭐</b></li>
+                <li><span>2 500 — 4 999 ⭐</span><b>1.50 ₽ / ⭐</b></li>
+                <li><span>5 000 — 9 999 ⭐</span><b>1.47 ₽ / ⭐</b></li>
+                <li class="is-best"><span>10 000+ ⭐</span><b>1.45 ₽ / ⭐</b></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="tg-section tg-section--gifts" data-section="gifts" aria-labelledby="tg-gifts-h" hidden>
+      <div class="tg-section__inner">
+        <header class="tg-section__head">
+          <h2 id="tg-gifts-h" class="tg-section__h">Подарки Telegram</h2>
+          <p class="tg-section__lead">Коллекционные, праздничные и недоступные в официальном магазине подарки. Отправим на любой @username в течение минуты.</p>
+        </header>
+
+        <div class="tg-gifts__filters" id="tgGiftsFilters">
+          <button type="button" class="tg-gchip is-on" data-gift-cat="all">Все <span>20</span></button>
+          <button type="button" class="tg-gchip" data-gift-cat="common">Обычные <span>5</span></button>
+          <button type="button" class="tg-gchip" data-gift-cat="holiday">Праздничные <span>5</span></button>
+          <button type="button" class="tg-gchip" data-gift-cat="rare">Недоступные <span>5</span></button>
+          <button type="button" class="tg-gchip" data-gift-cat="nft">NFT / Коллекция <span>5</span></button>
+        </div>
+
+        <div class="tg-gifts" id="tgGifts">
+
+          
+          <article class="tg-gift" data-gift-cat="common" data-price="49">
+            <div class="tg-gift__glyph" aria-hidden="true">🌹</div>
+            <h3 class="tg-gift__t">Красная роза</h3>
+            <p class="tg-gift__d">Классический маленький подарок. В наличии всегда.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">25 ⭐</span>
+              <span class="tg-gift__price">49 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift" data-gift-cat="common" data-price="89">
+            <div class="tg-gift__glyph" aria-hidden="true">🎂</div>
+            <h3 class="tg-gift__t">Торт</h3>
+            <p class="tg-gift__d">Идеально на день рождения — с анимацией свечей.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">50 ⭐</span>
+              <span class="tg-gift__price">89 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift" data-gift-cat="common" data-price="89">
+            <div class="tg-gift__glyph" aria-hidden="true">🎁</div>
+            <h3 class="tg-gift__t">Подарочная коробка</h3>
+            <p class="tg-gift__d">Универсальный вариант для любого повода.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">50 ⭐</span>
+              <span class="tg-gift__price">89 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift" data-gift-cat="common" data-price="49">
+            <div class="tg-gift__glyph" aria-hidden="true">🍫</div>
+            <h3 class="tg-gift__t">Шоколад</h3>
+            <p class="tg-gift__d">Сладкий знак внимания, доступен всем.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">25 ⭐</span>
+              <span class="tg-gift__price">49 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift" data-gift-cat="common" data-price="165">
+            <div class="tg-gift__glyph" aria-hidden="true">💐</div>
+            <h3 class="tg-gift__t">Букет цветов</h3>
+            <p class="tg-gift__d">Красивая анимация распускающихся цветов.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">100 ⭐</span>
+              <span class="tg-gift__price">165 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+
+          
+          <article class="tg-gift tg-gift--holiday" data-gift-cat="holiday" data-price="165">
+            <div class="tg-gift__glyph" aria-hidden="true">🎄</div>
+            <span class="tg-gift__badge">Новый год</span>
+            <h3 class="tg-gift__t">Новогодняя ёлка</h3>
+            <p class="tg-gift__d">Сезонный подарок, доступен только зимой.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">100 ⭐</span>
+              <span class="tg-gift__price">165 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--holiday" data-gift-cat="holiday" data-price="320">
+            <div class="tg-gift__glyph" aria-hidden="true">⛄</div>
+            <span class="tg-gift__badge">Новый год</span>
+            <h3 class="tg-gift__t">Снеговик</h3>
+            <p class="tg-gift__d">Лимитированный подарок декабря–января.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">200 ⭐</span>
+              <span class="tg-gift__price">320 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--holiday" data-gift-cat="holiday" data-price="800">
+            <div class="tg-gift__glyph" aria-hidden="true">🎆</div>
+            <span class="tg-gift__badge">Новый год</span>
+            <h3 class="tg-gift__t">Салют</h3>
+            <p class="tg-gift__d">Эффектная анимация фейерверка в чате.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">500 ⭐</span>
+              <span class="tg-gift__price">800 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--holiday" data-gift-cat="holiday" data-price="245">
+            <div class="tg-gift__glyph" aria-hidden="true">🧧</div>
+            <span class="tg-gift__badge">Нов. год Азии</span>
+            <h3 class="tg-gift__t">Красный конверт</h3>
+            <p class="tg-gift__d">Подарок к азиатскому Новому году.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">150 ⭐</span>
+              <span class="tg-gift__price">245 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--holiday" data-gift-cat="holiday" data-price="320">
+            <div class="tg-gift__glyph" aria-hidden="true">🐰</div>
+            <span class="tg-gift__badge">Пасха</span>
+            <h3 class="tg-gift__t">Пасхальный кролик</h3>
+            <p class="tg-gift__d">Появляется на платформе только весной.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars">200 ⭐</span>
+              <span class="tg-gift__price">320 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+
+          
+          <article class="tg-gift tg-gift--rare" data-gift-cat="rare" data-price="1990">
+            <div class="tg-gift__glyph" aria-hidden="true">🐻</div>
+            <span class="tg-gift__badge tg-gift__badge--rare">Недоступен</span>
+            <h3 class="tg-gift__t">Плюшевый мишка</h3>
+            <p class="tg-gift__d">Снят с продажи в 2024 году. Доступен только у нас.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--rare">1 200 ⭐</span>
+              <span class="tg-gift__price">1 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--rare" data-gift-cat="rare" data-price="2490">
+            <div class="tg-gift__glyph" aria-hidden="true">💎</div>
+            <span class="tg-gift__badge tg-gift__badge--rare">Недоступен</span>
+            <h3 class="tg-gift__t">Бриллиант</h3>
+            <p class="tg-gift__d">Коллекционный подарок, снят с официального магазина.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--rare">1 500 ⭐</span>
+              <span class="tg-gift__price">2 490 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--rare" data-gift-cat="rare" data-price="3290">
+            <div class="tg-gift__glyph" aria-hidden="true">🌙</div>
+            <span class="tg-gift__badge tg-gift__badge--rare">Недоступен</span>
+            <h3 class="tg-gift__t">Лунная призма</h3>
+            <p class="tg-gift__d">Редкий подарок с анимацией свечения, вне продажи.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--rare">2 000 ⭐</span>
+              <span class="tg-gift__price">3 290 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--rare" data-gift-cat="rare" data-price="4490">
+            <div class="tg-gift__glyph" aria-hidden="true">🔮</div>
+            <span class="tg-gift__badge tg-gift__badge--rare">Недоступен</span>
+            <h3 class="tg-gift__t">Магический кристалл</h3>
+            <p class="tg-gift__d">Лимитированная серия 2023, больше не выпускается.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--rare">2 800 ⭐</span>
+              <span class="tg-gift__price">4 490 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+          <article class="tg-gift tg-gift--rare" data-gift-cat="rare" data-price="5990">
+            <div class="tg-gift__glyph" aria-hidden="true">🏆</div>
+            <span class="tg-gift__badge tg-gift__badge--rare">Недоступен</span>
+            <h3 class="tg-gift__t">Золотой кубок</h3>
+            <p class="tg-gift__d">Лимитированный подарок, редкий на рынке.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--rare">3 700 ⭐</span>
+              <span class="tg-gift__price">5 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Отправить</button>
+          </article>
+
+          
+          <article class="tg-gift tg-gift--nft" data-gift-cat="nft" data-price="14990">
+            <div class="tg-gift__glyph" aria-hidden="true">🧢</div>
+            <span class="tg-gift__badge tg-gift__badge--nft">NFT</span>
+            <h3 class="tg-gift__t">Telegram Hoodie</h3>
+            <p class="tg-gift__d">Коллекционный NFT-подарок с сертификатом на TON.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--nft">NFT</span>
+              <span class="tg-gift__price">14 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Купить</button>
+          </article>
+          <article class="tg-gift tg-gift--nft" data-gift-cat="nft" data-price="19990">
+            <div class="tg-gift__glyph" aria-hidden="true">💖</div>
+            <span class="tg-gift__badge tg-gift__badge--nft">NFT · 1 / 100</span>
+            <h3 class="tg-gift__t">Heart Locket</h3>
+            <p class="tg-gift__d">Ограниченный тираж 100 штук, передаётся как NFT.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--nft">NFT</span>
+              <span class="tg-gift__price">19 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Купить</button>
+          </article>
+          <article class="tg-gift tg-gift--nft" data-gift-cat="nft" data-price="29990">
+            <div class="tg-gift__glyph" aria-hidden="true">✨</div>
+            <span class="tg-gift__badge tg-gift__badge--nft">NFT · редкий</span>
+            <h3 class="tg-gift__t">Astral Shard</h3>
+            <p class="tg-gift__d">Уникальный NFT-подарок из коллекции «Galaxy».</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--nft">NFT</span>
+              <span class="tg-gift__price">29 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Купить</button>
+          </article>
+          <article class="tg-gift tg-gift--nft" data-gift-cat="nft" data-price="49990">
+            <div class="tg-gift__glyph" aria-hidden="true">🎩</div>
+            <span class="tg-gift__badge tg-gift__badge--nft">NFT · legendary</span>
+            <h3 class="tg-gift__t">Durov's Cap</h3>
+            <p class="tg-gift__d">Легендарный NFT, символ экосистемы Telegram.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--nft">NFT</span>
+              <span class="tg-gift__price">49 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Купить</button>
+          </article>
+          <article class="tg-gift tg-gift--nft tg-gift--top" data-gift-cat="nft" data-price="89990">
+            <div class="tg-gift__glyph" aria-hidden="true">🐸</div>
+            <span class="tg-gift__badge tg-gift__badge--nft">NFT · ultra</span>
+            <h3 class="tg-gift__t">Plush Pepe</h3>
+            <p class="tg-gift__d">Топовый NFT-подарок коллекционеров Telegram.</p>
+            <div class="tg-gift__foot">
+              <span class="tg-gift__stars tg-gift__stars--nft">NFT</span>
+              <span class="tg-gift__price">89 990 ₽</span>
+            </div>
+            <button type="button" class="tg-gift__btn">Купить</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="tg-section tg-section--premium" data-section="premium" aria-labelledby="tg-prem-h" hidden>
+      <div class="tg-section__inner">
+        <header class="tg-section__head">
+          <h2 id="tg-prem-h" class="tg-section__h">Telegram Premium</h2>
+          <p class="tg-section__lead">Оформление подписки на чужой @username — моментально. Доступны все 4 тарифа: от 1 до 12 месяцев.</p>
+        </header>
+
+        <div class="tg-prem-recipient">
+          <label class="tg-stars__label" for="premUser">Аккаунт, на который оформить Premium</label>
+          <div class="tg-stars__user">
+            <span class="tg-stars__at">@</span>
+            <input id="premUser" type="text" class="tg-stars__input tg-stars__input--user" placeholder="username" autocomplete="off" spellcheck="false" />
+          </div>
+        </div>
+
+        <div class="tg-prem-grid">
+          <article class="tg-prem" data-months="1" data-price="249">
+            <div class="tg-prem__head">
+              <span class="tg-prem__months">1</span>
+              <span class="tg-prem__mo">месяц</span>
+            </div>
+            <h3 class="tg-prem__t">Premium на 1 месяц</h3>
+            <p class="tg-prem__d">Для пробы: безлимит на каналы, 4 ГБ загрузки, без рекламы.</p>
+            <div class="tg-prem__price">249 ₽</div>
+            <button type="button" class="tg-prem__btn">Оформить</button>
+          </article>
+
+          <article class="tg-prem" data-months="3" data-price="649">
+            <div class="tg-prem__head">
+              <span class="tg-prem__months">3</span>
+              <span class="tg-prem__mo">месяца</span>
+            </div>
+            <h3 class="tg-prem__t">Premium на 3 месяца</h3>
+            <p class="tg-prem__d">Выгода 13%: 216 ₽ за месяц вместо 249 ₽.</p>
+            <div class="tg-prem__price">649 ₽ <span class="tg-prem__old">747 ₽</span></div>
+            <button type="button" class="tg-prem__btn">Оформить</button>
+          </article>
+
+          <article class="tg-prem tg-prem--hit" data-months="6" data-price="1190">
+            <span class="tg-prem__ribbon">Популярно</span>
+            <div class="tg-prem__head">
+              <span class="tg-prem__months">6</span>
+              <span class="tg-prem__mo">месяцев</span>
+            </div>
+            <h3 class="tg-prem__t">Premium на 6 месяцев</h3>
+            <p class="tg-prem__d">Выгода 20%: 198 ₽ за месяц. Оптимум по соотношению.</p>
+            <div class="tg-prem__price">1 190 ₽ <span class="tg-prem__old">1 494 ₽</span></div>
+            <button type="button" class="tg-prem__btn">Оформить</button>
+          </article>
+
+          <article class="tg-prem tg-prem--top" data-months="12" data-price="2190">
+            <span class="tg-prem__ribbon tg-prem__ribbon--best">Выгоднее всего</span>
+            <div class="tg-prem__head">
+              <span class="tg-prem__months">12</span>
+              <span class="tg-prem__mo">месяцев</span>
+            </div>
+            <h3 class="tg-prem__t">Premium на 12 месяцев</h3>
+            <p class="tg-prem__d">Выгода 27%: 183 ₽ за месяц, всего 2 190 ₽ за год.</p>
+            <div class="tg-prem__price">2 190 ₽ <span class="tg-prem__old">2 988 ₽</span></div>
+            <button type="button" class="tg-prem__btn">Оформить</button>
+          </article>
+        </div>
+
+        <div class="tg-prem-feats">
+          <h3 class="tg-prem-feats__h">Что даёт Premium:</h3>
+          <ul>
+            <li>📎 Загрузка файлов до 4 ГБ (вместо 2 ГБ)</li>
+            <li>📺 Без рекламы в публичных каналах</li>
+            <li>🔤 Расширенный лимит на каналы и папки</li>
+            <li>✨ Эксклюзивные стикеры, эмодзи и реакции</li>
+            <li>🎨 Анимированный аватар и уникальный бейдж</li>
+            <li>📞 Приоритетные голосовые в «Избранное»</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="tg-section tg-section--accounts" data-section="accounts" aria-labelledby="tg-acc-h" hidden>
+      <div class="tg-section__inner">
+        <header class="tg-section__head">
+          <h2 id="tg-acc-h" class="tg-section__h">Аккаунты Telegram</h2>
+          <p class="tg-section__lead">Готовые аккаунты с привязкой разных стран и возможностью Premium на борту.</p>
+        </header>
+
+        <div class="tg-acc-layout">
+          <aside class="tg-acc-side" aria-label="Фильтры">
+            <div class="tg-acc-side__head">
+              <span>Фильтры</span>
+              <button type="button" id="tgAccReset">↺ Сбросить</button>
+            </div>
+
+            <div class="tg-acc-filter">
+              <h4>Регион</h4>
+              <div class="tg-chipgrid" data-acc-group="region">
+                <button type="button" class="tg-chip" data-value="ru">🇷🇺 RU</button>
+                <button type="button" class="tg-chip" data-value="ua">🇺🇦 UA</button>
+                <button type="button" class="tg-chip" data-value="kz">🇰🇿 KZ</button>
+                <button type="button" class="tg-chip" data-value="by">🇧🇾 BY</button>
+                <button type="button" class="tg-chip" data-value="eu">🇪🇺 EU</button>
+                <button type="button" class="tg-chip" data-value="us">🇺🇸 US</button>
+                <button type="button" class="tg-chip" data-value="asia">🌏 Asia</button>
+                <button type="button" class="tg-chip" data-value="any">🌐 Any</button>
+              </div>
+            </div>
+
+            <div class="tg-acc-filter">
+              <h4>Premium</h4>
+              <div class="tg-chipgrid" data-acc-group="premium">
+                <button type="button" class="tg-chip" data-value="yes">С Premium</button>
+                <button type="button" class="tg-chip" data-value="no">Без Premium</button>
+              </div>
+            </div>
+
+            <div class="tg-acc-filter">
+              <h4>Год регистрации</h4>
+              <div class="tg-chipgrid tg-chipgrid--tight" data-acc-group="year">
+                <button type="button" class="tg-chip" data-value="2015">2015</button>
+                <button type="button" class="tg-chip" data-value="2016">2016</button>
+                <button type="button" class="tg-chip" data-value="2017">2017</button>
+                <button type="button" class="tg-chip" data-value="2018">2018</button>
+                <button type="button" class="tg-chip" data-value="2019">2019</button>
+                <button type="button" class="tg-chip" data-value="2020">2020</button>
+                <button type="button" class="tg-chip" data-value="2021">2021</button>
+                <button type="button" class="tg-chip" data-value="2022">2022</button>
+                <button type="button" class="tg-chip" data-value="2023">2023</button>
+                <button type="button" class="tg-chip" data-value="2024">2024</button>
+                <button type="button" class="tg-chip" data-value="2025">2025</button>
+                <button type="button" class="tg-chip" data-value="2026">2026</button>
+              </div>
+            </div>
+
+            <div class="tg-acc-filter">
+              <h4>Цена, ₽</h4>
+              <div class="tg-price">
+                <input id="tgAccMin" class="tg-stars__input" type="number" placeholder="от" min="0" />
+                <span>—</span>
+                <input id="tgAccMax" class="tg-stars__input" type="number" placeholder="до" min="0" />
+              </div>
+            </div>
+          </aside>
+
+          <div class="tg-acc-main">
+            <div class="tg-acc-toolbar">
+              <label class="tg-acc-search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <input id="tgAccSearch" type="search" placeholder="Поиск по аккаунту…" autocomplete="off" />
+              </label>
+              <select id="tgAccSort" class="tg-acc-sort">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешевле</option>
+                <option value="rich">Дороже</option>
+                <option value="year-old">Сначала старые</option>
+                <option value="year-new">Сначала свежие</option>
+              </select>
+            </div>
+
+            <p class="tg-acc-count" id="tgAccCount">Найдено: —</p>
+
+            <div class="tg-acc-grid" id="tgAccGrid">
+              <article class="tg-acc" data-year="2015" data-region="ru" data-premium="yes" data-price="4990" data-views="312" data-name="аккаунт 2015 ru premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2015</span><span class="tg-acc__flag">🇷🇺</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2015, RU</h3>
+                <p class="tg-acc__d">Старый номер +7, активный Premium.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">4 990 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2015-ru-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2015" data-region="eu" data-premium="no" data-price="2890" data-views="198" data-name="аккаунт 2015 eu">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2015</span><span class="tg-acc__flag">🇪🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2015, EU</h3>
+                <p class="tg-acc__d">Европейский номер, без Premium.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">2 890 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2015-eu">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2016" data-region="ru" data-premium="no" data-price="1890" data-views="243" data-name="аккаунт 2016 ru">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2016</span><span class="tg-acc__flag">🇷🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2016, RU</h3>
+                <p class="tg-acc__d">Российский номер +7, доступ ко всем чатам.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">1 890 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2016-ru">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2017" data-region="ru" data-premium="no" data-price="1290" data-views="189" data-name="аккаунт 2017 ru">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2017</span><span class="tg-acc__flag">🇷🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2017, RU</h3>
+                <p class="tg-acc__d">Чистая история, готов к передаче.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">1 290 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2017-ru">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2017" data-region="eu" data-premium="yes" data-price="3490" data-views="171" data-name="аккаунт 2017 eu premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2017</span><span class="tg-acc__flag">🇪🇺</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2017, EU + Premium</h3>
+                <p class="tg-acc__d">Европейский акк с активным Premium 9 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">3 490 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2017-eu-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2018" data-region="ru" data-premium="no" data-price="890" data-views="267" data-name="аккаунт 2018 ru">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2018</span><span class="tg-acc__flag">🇷🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2018, RU</h3>
+                <p class="tg-acc__d">Универсальный акк с номером +7.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">890 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2018-ru">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2019" data-region="ua" data-premium="no" data-price="690" data-views="143" data-name="аккаунт 2019 ua">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2019</span><span class="tg-acc__flag">🇺🇦</span></div>
+                <h3 class="tg-acc__t">Telegram 2019, UA</h3>
+                <p class="tg-acc__d">Украинский номер +380, без Premium.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">690 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2019-ua">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2020" data-region="kz" data-premium="no" data-price="490" data-views="156" data-name="аккаунт 2020 kz">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2020</span><span class="tg-acc__flag">🇰🇿</span></div>
+                <h3 class="tg-acc__t">Telegram 2020, KZ</h3>
+                <p class="tg-acc__d">Казахстанский номер +7, популярен в арбитраже.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">490 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2020-kz">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2020" data-region="by" data-premium="no" data-price="490" data-views="112" data-name="аккаунт 2020 by">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2020</span><span class="tg-acc__flag">🇧🇾</span></div>
+                <h3 class="tg-acc__t">Telegram 2020, BY</h3>
+                <p class="tg-acc__d">Белорусский номер +375, чистый.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">490 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2020-by">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2021" data-region="ru" data-premium="no" data-price="390" data-views="287" data-name="аккаунт 2021 ru">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2021</span><span class="tg-acc__flag">🇷🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2021, RU</h3>
+                <p class="tg-acc__d">Популярный вариант, RU-номер.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">390 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2021-ru">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2021" data-region="ru" data-premium="yes" data-price="1990" data-views="198" data-name="аккаунт 2021 ru premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2021</span><span class="tg-acc__flag">🇷🇺</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2021, RU + Premium</h3>
+                <p class="tg-acc__d">RU-акк с активным Premium на 6 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">1 990 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2021-ru-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2022" data-region="eu" data-premium="no" data-price="290" data-views="229" data-name="аккаунт 2022 eu">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2022</span><span class="tg-acc__flag">🇪🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2022, EU</h3>
+                <p class="tg-acc__d">Европейский номер, бюджетный вариант.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">290 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2022-eu">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2022" data-region="us" data-premium="yes" data-price="2290" data-views="176" data-name="аккаунт 2022 us premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2022</span><span class="tg-acc__flag">🇺🇸</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2022, US + Premium</h3>
+                <p class="tg-acc__d">Американский номер +1 с Premium на 12 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">2 290 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2022-us-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2023" data-region="ru" data-premium="no" data-price="199" data-views="412" data-name="аккаунт 2023 ru">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2023</span><span class="tg-acc__flag">🇷🇺</span></div>
+                <h3 class="tg-acc__t">Telegram 2023, RU</h3>
+                <p class="tg-acc__d">Свежий RU-акк, быстрая выдача.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">199 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2023-ru">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2023" data-region="ua" data-premium="no" data-price="149" data-views="234" data-name="аккаунт 2023 ua">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2023</span><span class="tg-acc__flag">🇺🇦</span></div>
+                <h3 class="tg-acc__t">Telegram 2023, UA</h3>
+                <p class="tg-acc__d">UA-номер, бюджетный вариант.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">149 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2023-ua">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2024" data-region="any" data-premium="no" data-price="129" data-views="348" data-name="аккаунт 2024 any">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2024</span><span class="tg-acc__flag">🌐</span></div>
+                <h3 class="tg-acc__t">Telegram 2024, Any</h3>
+                <p class="tg-acc__d">Виртуальный номер, универсальное использование.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">129 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2024-any">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2024" data-region="eu" data-premium="yes" data-price="1490" data-views="198" data-name="аккаунт 2024 eu premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2024</span><span class="tg-acc__flag">🇪🇺</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2024, EU + Premium</h3>
+                <p class="tg-acc__d">EU-акк с Premium на 3 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">1 490 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2024-eu-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2025" data-region="any" data-premium="no" data-price="79" data-views="567" data-name="аккаунт 2025 any">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2025</span><span class="tg-acc__flag">🌐</span></div>
+                <h3 class="tg-acc__t">Telegram 2025, Any</h3>
+                <p class="tg-acc__d">Свежий акк, отлёжка 2 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">79 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2025-any">Купить</a></div>
+              </article>
+              <article class="tg-acc" data-year="2025" data-region="ru" data-premium="yes" data-price="1290" data-views="256" data-name="аккаунт 2025 ru premium">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2025</span><span class="tg-acc__flag">🇷🇺</span><span class="tg-acc__prem">★ Premium</span></div>
+                <h3 class="tg-acc__t">Telegram 2025, RU + Premium</h3>
+                <p class="tg-acc__d">Свежий RU-акк с Premium на 1 мес.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">1 290 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2025-ru-prem">Купить</a></div>
+              </article>
+              <article class="tg-acc tg-acc--fresh" data-year="2026" data-region="any" data-premium="no" data-price="49" data-views="489" data-name="аккаунт 2026 any">
+                <div class="tg-acc__lead"><span class="tg-acc__year">2026</span><span class="tg-acc__flag">🌐</span></div>
+                <h3 class="tg-acc__t">Telegram 2026, Any</h3>
+                <p class="tg-acc__d">Самый свежий акк, виртуальный номер.</p>
+                <div class="tg-acc__foot"><span class="tg-acc__price">49 ₽</span><a class="tg-acc__btn" href="lot.html?id=tg-2026-any">Купить</a></div>
+              </article>
+            </div>
+
+            <div class="tg-acc-empty" id="tgAccEmpty" hidden>
+              <p>Под фильтры ничего не попало. Попробуйте ослабить критерии.</p>
+              <button type="button" class="btn btn-primary btn-sm" id="tgAccEmptyReset">Сбросить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tg-faq" aria-labelledby="tg-faq-h">
+      <div class="tg-faq__inner">
+        <h2 id="tg-faq-h" class="tg-faq__h">Про Telegram: коротко о главном</h2>
+        <div class="tg-faq__grid">
+          <details class="tg-faq__item" open>
+            <summary>Куда приходят Stars и Premium?</summary>
+            <p>Прямо на @username, который вы укажете. Stars отображаются в кошельке Telegram, Premium активируется автоматически. Ждать не нужно — обычно 30 секунд.</p>
+          </details>
+          <details class="tg-faq__item">
+            <summary>Что за «недоступные» подарки?</summary>
+            <p>Это сезонные и лимитированные подарки, которые Telegram убрал из официальной витрины. У нас они есть в запасе — покупаете у нас, получаете на свой ник.</p>
+          </details>
+          <details class="tg-faq__item">
+            <summary>Чем NFT-подарки отличаются?</summary>
+            <p>NFT-подарки передаются через блокчейн TON, у вас будет сертификат владения. Их можно перепродавать, они не исчезают при удалении чата.</p>
+          </details>
+          <details class="tg-faq__item">
+            <summary>Чем отличается аккаунт «с Premium»?</summary>
+            <p>У акка уже активна подписка — платить за неё отдельно не нужно. Срок остатка указан в описании лота.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="../index.html"><span class="logo__mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="logo__name">Снэплот</span></a>
+      <nav class="footer__links"><a href="rules.html">Правила</a><a href="faq.html">FAQ</a><a href="aml.html">AML / KYC</a><a href="contacts.html">Контакты</a></nav>
+      <p class="footer__copy">© 2026 Снэплот</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/core/cart.js"></script>
+  <script src="../assets/js/core/ui.js"></script>
+  <script src="../assets/js/core/nav-shell.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
+    <script src="../assets/js/core/api.js"></script>
+  <script src="../assets/js/core/auth-session.js"></script>
+  <script src="../assets/js/core/header.js"></script>
+  <script src="../assets/js/core/mobnav.js"></script>
+  <script src="../assets/js/pages/telegram.js"></script>
+  <script src="../assets/js/core/footer-plus.js"></script>
+  <script src="../assets/js/core/sw-register.js"></script>
+</body>
+</html>

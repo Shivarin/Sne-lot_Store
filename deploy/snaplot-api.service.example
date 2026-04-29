@@ -1,0 +1,19 @@
+# Пример: /etc/systemd/system/snaplot-api.service
+# Скопируйте, поправьте User и пути, затем: systemctl daemon-reload && systemctl enable --now snaplot-api
+
+[Unit]
+Description=Snaplot API and static site (uvicorn)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/snaplot/market/backend
+EnvironmentFile=/opt/snaplot/market/backend/.env
+ExecStart=/opt/snaplot/market/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /pages/cabinet.html
+Disallow: /pages/wallet.html
+Disallow: /pages/checkout.html
+Disallow: /pages/orders.html
+Disallow: /pages/chat.html
+Disallow: /pages/security.html
+Disallow: /pages/withdrawal.html
+Disallow: /pages/promo.html
+Disallow: /pages/referral.html
+
+Sitemap: https://snaplot.ru/sitemap.xml
