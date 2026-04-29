@@ -1,32 +1,29 @@
-Снэплот — карта проекта (статический фронт)
+Снэплот — карта проекта (статический фронт, демо без бэкенда)
 
-Корень (только точка входа и общие файлы)
-  index.html          главная лендинг
+Корень (точка входа и общие файлы)
+  index.html          главная, лендинг
   favicon.svg, robots.txt, sitemap.xml
-  styles.css          legacy-стили для совместимости; основной UI в assets/css/
+  styles.css          legacy; основной UI в assets/css/
   offline.html, sw.js — PWA / офлайн
-  start-server.bat    при необходимости локального сервера
 
 pages/
-  Все рабочие HTML-страницы (каталог pages/market.html, лот pages/lot.html, auth pages/login.html и т.д.)
+  Рабочие HTML-страницы (каталог pages/market.html, лот pages/lot.html, auth и т.д.)
 
 assets/
-  css/                дизайн-система (vars, base, components) и стили по разделам
-  js/                 скрипты: core/, components/, data/listings-seed.js, страничные *.js
+  css/                vars, base, components и стили по разделам
+  js/core/            api-мок, auth, store, cart, catalog, ui, …
+  js/pages/           логика экранов
+  js/data/            сиды каталога (listings-seed.js, listings.js)
+  data/               listings.json
   icons/
 
-backend/
-  FastAPI + PostgreSQL (docker-compose в backend/, запуск: start-server.bat)
-
-Подключение ресурсов
+Подключение
   Страницы из pages/ → пути ../assets/...
   Главная index.html → assets/...
 
-Каталог: Discord и Telegram — отдельные страницы; остальные направления в хабе ведут на единую
-  pages/coming-soon.html?from=... (вместо восьми отдельных заглушек).
+Каталог: отдельные хабы (discord, telegram и др.), общие сценарии через market.html / category.html.
 
 deploy/
-  UBUNTU.md — развёртывание на сервере Ubuntu (nginx, systemd, Postgres)
+  Примеры nginx/systemd под будущий API-сервер (для статического демо не обязательны).
 
-Примечание: дубликаты в корне (старые lot/market/login/register, gallery, inject-скрипты) удалены —
-используйте только pages/* и assets/*.
+Актуальное описание архитектуры и демо — в README.md.
