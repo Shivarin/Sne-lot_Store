@@ -22,11 +22,11 @@
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/new-pages.css" />
-  <link rel="stylesheet" href="assets/css/landing.css?v=2" />
+  <link rel="stylesheet" href="assets/css/landing.css?v=6" />
   <link rel="stylesheet" href="assets/css/cart.css" />
   <link rel="stylesheet" href="assets/css/home-grotesk.css" />
 </head>
-<body>
+<body class="is-landing">
   <a class="skip-link" href="#main">К основному содержанию</a>
 
   
@@ -287,12 +287,22 @@
       <div class="section__label">Примеры</div>
       <h2 id="examples-heading" class="section__h2">Разные товары — одна логика сделки</h2>
       <p class="section__lead">Перед оплатой покупатель видит сводку. Набор параметров зависит от типа лота.</p>
-      <div class="fan-row">
-        <div class="fan-card fc-1"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Cursor Pro</p><p class="fc-meta">1 месяц · регион совпал</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус активен</li><li><span class="fc-ok">✓</span> Код за 60 сек</li></ul></div>
-        <div class="fan-card fc-2"><span class="fc-pill fc-pill--game">Игра</span><p class="fc-name">Brawl Stars</p><p class="fc-meta">Аккаунт · легендарки</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Проверка входа</li><li><span class="fc-ok">✓</span> Гарант на сделку</li></ul></div>
-        <div class="fan-card fc-3"><span class="fc-pill fc-pill--ai">Нейросеть</span><p class="fc-name">ChatGPT Plus</p><p class="fc-meta">Личный слот · актив</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус подписки</li><li><span class="fc-warn">!</span> Выдача сразу</li></ul></div>
-        <div class="fan-card fc-4"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Discord Nitro</p><p class="fc-meta">12 мес · гифт-ссылка</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Активация сразу</li><li><span class="fc-ok">✓</span> Лог сохранён</li></ul></div>
-        <div class="fan-card fc-5"><span class="fc-pill fc-pill--key">Ключ</span><p class="fc-name">Windows 11 Pro</p><p class="fc-meta">OEM ключ · EU/RU</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Ключ активен</li><li><span class="fc-ok">✓</span> Один владелец</li></ul></div>
+      <div class="fan-shell" id="fanShell" style="--fan-index:0" tabindex="0" aria-labelledby="examples-heading">
+        <div class="fan-scroll" id="fanExamples" role="region" aria-roledescription="карусель" aria-label="Примеры сводок по типам лотов">
+          <div class="fan-row">
+            <div class="fan-card fc-1"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Cursor Pro</p><p class="fc-meta">1 месяц · регион совпал</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус активен</li><li><span class="fc-ok">✓</span> Код за 60 сек</li></ul></div>
+            <div class="fan-card fc-2"><span class="fc-pill fc-pill--game">Игра</span><p class="fc-name">Brawl Stars</p><p class="fc-meta">Аккаунт · легендарки</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Проверка входа</li><li><span class="fc-ok">✓</span> Гарант на сделку</li></ul></div>
+            <div class="fan-card fc-3"><span class="fc-pill fc-pill--ai">Нейросеть</span><p class="fc-name">ChatGPT Plus</p><p class="fc-meta">Личный слот · актив</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Статус подписки</li><li><span class="fc-warn">!</span> Выдача сразу</li></ul></div>
+            <div class="fan-card fc-4"><span class="fc-pill fc-pill--sub">Подписка</span><p class="fc-name">Discord Nitro</p><p class="fc-meta">12 мес · гифт-ссылка</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Активация сразу</li><li><span class="fc-ok">✓</span> Лог сохранён</li></ul></div>
+            <div class="fan-card fc-5"><span class="fc-pill fc-pill--key">Ключ</span><p class="fc-name">Windows 11 Pro</p><p class="fc-meta">OEM ключ · EU/RU</p><ul class="fc-checks"><li><span class="fc-ok">✓</span> Ключ активен</li><li><span class="fc-ok">✓</span> Один владелец</li></ul></div>
+          </div>
+        </div>
+        <button type="button" class="fan-scroll__edge fan-scroll__edge--prev" aria-controls="fanExamples" aria-label="Предыдущий пример">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="fan-scroll__edge fan-scroll__edge--next" aria-controls="fanExamples" aria-label="Следующий пример">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </section>
 
@@ -368,6 +378,7 @@
     <script src="assets/js/core/forms.js"></script>
     <script src="assets/js/core/infinity.js"></script>
     <script src="assets/js/core/mobnav.js"></script>
+    <script src="assets/js/core/home-fan.js"></script>
     <script src="assets/js/core/lazy-img.js"></script>
     <script src="assets/js/core/partials.js"></script>
     <script src="assets/js/core/i18n.js"></script>

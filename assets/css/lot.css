@@ -864,6 +864,19 @@
   white-space: nowrap;
 }
 .toast.is-visible { transform: translate(-50%, 0); }
+@media (max-width: 720px) {
+  .toast {
+    max-width: min(92vw, 420px);
+    padding: 11px 16px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+    bottom: 16px;
+  }
+  body.has-mobnav .toast {
+    bottom: calc(16px + var(--mobnav-bar, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+  }
+}
 
 
 @media (max-width: 1100px) {

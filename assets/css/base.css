@@ -1,6 +1,10 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   font-family: var(--font);
@@ -453,9 +457,16 @@ body.is-modal-open { overflow: hidden; }
 
 @media (max-width: 720px) {
   .btn-lg { padding: 12px 20px; font-size: .9rem; }
-  .toast-stack { bottom: 14px; }
+  .toast-stack {
+    bottom: 14px;
+    max-width: calc(100vw - 20px);
+  }
+  body.has-mobnav .toast-stack {
+    bottom: calc(14px + var(--mobnav-bar, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+  }
   .toast-stack .toast { min-width: 0; max-width: calc(100vw - 28px); }
-  .ui-modal { padding: 22px 20px 18px; border-radius: 16px; }
+  .ui-modal__backdrop { padding: 16px; align-items: flex-end; }
+  .ui-modal { padding: 22px 20px 18px; border-radius: 16px; max-width: 100%; width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }

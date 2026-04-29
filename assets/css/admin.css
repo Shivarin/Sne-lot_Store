@@ -13,6 +13,11 @@
 .admin-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 24px; }
 .admin-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 28px; }
 @media (max-width: 1020px) { .admin-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px) {
+  .admin-shell { padding: 0 var(--page-pad-x, 16px); }
+  .admin-head { padding: 16px 0 6px; }
+  .admin-actions { margin: 14px 0 18px; }
+}
 @media (max-width: 520px) { .admin-grid { grid-template-columns: 1fr; } }
 .admin-stat {
   border: 1px solid var(--c-border); border-radius: 14px; padding: 16px 18px;

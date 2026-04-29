@@ -24,4 +24,8 @@
   --mono:       "JetBrains Mono", monospace;
   --max:        1160px;
   --nav-h:      66px;
+  --mobnav-bar: 56px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --page-pad-x: clamp(12px, 4vw, 28px);
 }
