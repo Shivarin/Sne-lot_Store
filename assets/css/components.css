@@ -210,6 +210,60 @@
 .nav__balance:hover { background: rgba(74,222,128,.12); border-color: rgba(74,222,128,.4); }
 
 
+.nav__cart {
+  position: relative;
+}
+.nav__cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid var(--c-border2);
+  background: rgba(255,255,255,.05);
+  color: var(--c-text);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.nav__cart-btn:hover {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(34,211,238,.35);
+  color: var(--c-cyan);
+}
+.nav__cart-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34,211,238,.25);
+}
+.nav__cart-btn svg {
+  flex-shrink: 0;
+  color: inherit;
+}
+.nav__cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 99px;
+  font-size: .65rem;
+  font-weight: 800;
+  line-height: 18px;
+  text-align: center;
+  background: linear-gradient(135deg, #22d3ee, #5eead4);
+  color: #050810;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+.nav__cart-badge:empty,
+.nav__cart-badge[data-count="0"] {
+  display: none;
+}
+
+
 .nav__user { position: relative; }
 .nav__user-btn {
   display: flex; align-items: center; gap: 8px;
