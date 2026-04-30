@@ -152,6 +152,13 @@
   letter-spacing: -.02em;
   margin-bottom: 2px;
 }
+.chat-win__head-subtitle {
+  font-size: .72rem;
+  color: var(--c-dim);
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: .01em;
+}
 .chat-win__head-deal { font-size: .78rem; color: var(--c-muted); font-weight: 600; }
 .chat-win__head-deal a { color: var(--c-cyan); }
 .chat-win__head-deal a:hover { text-decoration: underline; }

@@ -646,7 +646,6 @@ body.nav-drawer-open { overflow: hidden; }
 }
 .nav__lang:hover { color: var(--c-cyan); border-color: rgba(34,211,238,.35); transform: translateY(-1px); }
 
-#cartDrawer.cart-drawer,
 .cart-drawer {
   position: fixed;
   inset: 0;
@@ -656,6 +655,7 @@ body.nav-drawer-open { overflow: hidden; }
   visibility: hidden;
   transition: opacity .2s, visibility .2s;
 }
+#cartDrawer.cart-drawer.is-open,
 .cart-drawer.is-open {
   pointer-events: all;
   opacity: 1;

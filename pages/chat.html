@@ -52,24 +52,24 @@
       </div>
       <ul class="chat-dialog-list" id="chatDialogList" role="listbox">
         <li class="chat-dialog is-active" role="option" aria-selected="true" data-dialog="1">
-          <div class="chat-dialog__av">NM</div>
+          <div class="chat-dialog__av">СН</div>
           <div class="chat-dialog__info">
-            <div class="chat-dialog__row"><span class="chat-dialog__name">NitroMart</span><span class="chat-dialog__time">13:42</span></div>
-            <div class="chat-dialog__row"><span class="chat-dialog__preview">Лот готов, жду вашего подтверждения</span><span class="chat-dialog__unread">2</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__name">Снэплот</span><span class="chat-dialog__time">13:42</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__preview">Поддержка · автовыдача по заказу</span><span class="chat-dialog__unread">2</span></div>
           </div>
         </li>
         <li class="chat-dialog" role="option" aria-selected="false" data-dialog="2">
-          <div class="chat-dialog__av">SV</div>
+          <div class="chat-dialog__av">СН</div>
           <div class="chat-dialog__info">
-            <div class="chat-dialog__row"><span class="chat-dialog__name">SteamVault</span><span class="chat-dialog__time">вчера</span></div>
-            <div class="chat-dialog__row"><span class="chat-dialog__preview">Спасибо за покупку!</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__name">Снэплот</span><span class="chat-dialog__time">вчера</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__preview">Заказ выполнен · спасибо за покупку</span></div>
           </div>
         </li>
         <li class="chat-dialog" role="option" aria-selected="false" data-dialog="3">
-          <div class="chat-dialog__av" style="background:var(--col-ok)">AI</div>
+          <div class="chat-dialog__av" style="background:var(--col-ok)">СН</div>
           <div class="chat-dialog__info">
-            <div class="chat-dialog__row"><span class="chat-dialog__name">AI_Slot_RU</span><span class="chat-dialog__time">15 апр</span></div>
-            <div class="chat-dialog__row"><span class="chat-dialog__preview">Вы: Получено, всё работает</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__name">Снэплот</span><span class="chat-dialog__time">15 апр</span></div>
+            <div class="chat-dialog__row"><span class="chat-dialog__preview">Вы: Получил данные, всё ок</span></div>
           </div>
         </li>
       </ul>
@@ -80,10 +80,11 @@
       
       <div class="chat-win__head">
         <div class="chat-win__head-left">
-          <div class="chat-dialog__av">NM</div>
+          <div class="chat-dialog__av">СН</div>
           <div>
-            <div class="chat-win__head-name">NitroMart</div>
-            <div class="chat-win__head-deal"><a href="lot.html?id=discord-nitro">SNP-20490 · Discord Nitro</a></div>
+            <div class="chat-win__head-name">Снэплот</div>
+            <div class="chat-win__head-subtitle">Поддержка официального магазина</div>
+            <div class="chat-win__head-deal"><a id="chatLotLink" href="lot.html?id=discord-nitro">SNP-20490 · Discord Nitro — 12 мес (гифт)</a></div>
           </div>
         </div>
         <div class="chat-win__head-right">
@@ -94,29 +95,29 @@
       </div>
 
       
-      <div class="chat-deal-card">
-        <div class="chat-deal-card__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg>Сделка SNP-20490 — Эскроу</div>
-        <div class="chat-deal-card__row"><strong>Discord Nitro — 12 месяцев, гифт-ссылка</strong></div>
-        <div class="chat-deal-card__row">Сумма: <strong>690 ₽</strong> · Статус: <span class="status-badge status-badge--active" style="font-size:.75rem">Активна</span></div>
+      <div class="chat-deal-card" id="chatDealCard">
+        <div class="chat-deal-card__badge" id="chatDealBadge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.6"/></svg><span id="chatDealBadgeText">Сделка SNP-20490 — эскроу · официальный магазин</span></div>
+        <div class="chat-deal-card__row"><strong id="chatDealTitle">Discord Nitro — 12 месяцев, гифт-ссылка</strong></div>
+        <div class="chat-deal-card__row">Сумма: <strong id="chatDealPrice">690 ₽</strong> · Статус: <span class="status-badge status-badge--active" style="font-size:.75rem">Активна</span></div>
       </div>
 
       
       <div class="chat-messages" id="chatMessages">
-        <div class="chat-msg chat-msg--sys">Сделка SNP-20490 создана. Деньги заморожены у гаранта.</div>
+        <div class="chat-msg chat-msg--sys">Сделка SNP-20490 создана. Оплата удержана эскроу до подтверждения получения.</div>
         <div class="chat-msg chat-msg--in">
-          <div class="chat-msg__bubble">Привет! Готовлю ссылку, буду через пару минут.</div>
+          <div class="chat-msg__bubble">Здравствуйте! Это поддержка Снэплота. По автовыдаче гифта пришлю ссылку сюда и продублируем в «Мои сделки».</div>
           <span class="chat-msg__time">13:40</span>
         </div>
         <div class="chat-msg chat-msg--out">
-          <div class="chat-msg__bubble">Ок, жду!</div>
+          <div class="chat-msg__bubble">Ок, жду.</div>
           <span class="chat-msg__time">13:41</span>
         </div>
         <div class="chat-msg chat-msg--in">
-          <div class="chat-msg__bubble">Держи ссылку: <span style="color:var(--col-primary)">discord.gift/xxxxxxxxxxxx</span><br>Как активируешь — нажми «Подтвердить получение».</div>
+          <div class="chat-msg__bubble">Гифт-ссылка: <span style="color:var(--col-primary)">discord.gift/xxxxxxxxxxxx</span><br>После активации нажмите «Подтвердить получение» — эскроу закроется в пользу магазина.</div>
           <span class="chat-msg__time">13:42</span>
         </div>
         <div class="chat-msg chat-msg--in">
-          <div class="chat-msg__bubble">Лот готов, жду вашего подтверждения</div>
+          <div class="chat-msg__bubble">Если ссылка не открывается — напишите, перевыдадим из кабинета заказа.</div>
           <span class="chat-msg__time">13:42</span>
         </div>
       </div>
@@ -135,6 +136,9 @@
   </main>
 
   <script src="../assets/js/core/store.js"></script>
+  <script src="../assets/js/data/listings.js"></script>
+  <script src="../assets/js/data/listings-seed.js"></script>
+  <script src="../assets/js/core/demo-state.js"></script>
   <script src="../assets/js/core/cart.js"></script>
   <script src="../assets/js/core/nav-shell.js"></script>
   <script src="../assets/js/core/ui.js"></script>
